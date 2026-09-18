@@ -291,3 +291,242 @@ IMAGOdb.npcs.CAT_LIGHT["moira_thaurissan_midnight"].lore = [[브론즈비어드�
 전 마그니 왕의 유일한 계승자이자 고 검은바위 산 다그란 타우릿산 황제의 미망인으로 태어나 드워프 세 통치 씨족 중 둘의 일원이다. 아들 다그란 2세는 성년이 되면 모든 씨족의 다음 왕이 될 태세다.
 
 아버지와 의견을 같이한 적 없으나 최근 화해 첫걸음을 내디뎠다. 가족 시간은 잘아타스의 공격에 곧바로 방해받았다. 달라란에 먼저 지금은 실버문에.]]
+IMAGOdb.npcs.CAT_LIGHT["moira_thaurissan_midnight"].zones = {"쿠엘다나스 섬", "실버문"}
+
+-- CAPTAIN FAREEYA --
+IMAGOdb.npcs.CAT_LIGHT["captain_fareeya_midnight"].name = "대장 파리야"
+IMAGOdb.npcs.CAT_LIGHT["captain_fareeya_midnight"].aliases = {"Fareeya", "파리야"}
+IMAGOdb.npcs.CAT_LIGHT["captain_fareeya_midnight"].race = "빛벼림 드레나이"
+IMAGOdb.npcs.CAT_LIGHT["captain_fareeya_midnight"].lore = [[고위집정관 투랄리온의 부관인 파리야는 빛의 군대 지도자 중 하나다. 불타는 군단의 생존자로서 예언자 벨렌과 함께 아르고스를 탈출했으나 이후 길이 타락한 고향 세계로 다시 이어졌다. 최정예 드레나이 병사와 함께 도망치지 않고 맞서 싸기로 굳게 결심했다.
+
+부대는 빛의 군대가 되었고 몸과 영혼 모두 빛에 온전히 바쳤다. 신성한 성전이 자라 다른 종족도 사명에 합류하도록 고무했다. 마침내 아제로스 용사의 도움으로 악마가 완전히 패했다. 파리야는 월계관에 안주할 생각이 없어 투랄리온을 따라 아제로스의 얼라이언스 대열에 합류했고, 신성하고 선한 모든 것을 위해 계속 싸기로 결심했다.]]
+IMAGOdb.npcs.CAT_LIGHT["captain_fareeya_midnight"].zones = {"쿠엘다나스 섬", "실버문"}
+
+-- DELAS MOONFANG --
+IMAGOdb.npcs.CAT_LIGHT["delas_moonfang_midnight"].name = "델라스 문팽"
+IMAGOdb.npcs.CAT_LIGHT["delas_moonfang_midnight"].aliases = {"Delas", "델라스"}
+IMAGOdb.npcs.CAT_LIGHT["delas_moonfang_midnight"].race = "나이트 엘프"
+IMAGOdb.npcs.CAT_LIGHT["delas_moonfang_midnight"].lore = [[델라스 문팽은 긴 삶의 거의 전체를 엘룬의 사제로 살았다. 고대 전쟁 때 자라며 악마 시대에 도움이 분명히 필요했기에 남을 돕고자 신성한 직업을 택했다. 치유와 악마 연구에 인생을 바쳤고 에레둔어까지 배웠다.
+
+군단이 돌아오자 델라스는 알론서스 파올 휘하 콘클라베 합류를 지체하지 않았다. 그러나 빛의 참길은 최초의 나이트 엘프 성기사가 되는 데 있었으니, 실버 핸드의 대영주를 만나 알게 되었다. 수천 년 만에 비로소 참운명을 이룰 수 있을 느낌이다.]]
+IMAGOdb.npcs.CAT_LIGHT["delas_moonfang_midnight"].zones = {"쿠엘다나스 섬"}
+
+
+-- GRAYSON SHADOWBREAKER --
+IMAGOdb.npcs.CAT_LIGHT["lord_grayson_shadowbreaker_midnight"].name = "군주 그레이슨 섀도브레이커"
+IMAGOdb.npcs.CAT_LIGHT["lord_grayson_shadowbreaker_midnight"].aliases = {"Grayson Shadowbreaker", "그레이슨"}
+IMAGOdb.npcs.CAT_LIGHT["lord_grayson_shadowbreaker_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_LIGHT["lord_grayson_shadowbreaker_midnight"].lore = [[인간 성기사의 대표 조련관이자 실버 핸드 기사단의 노련한 전사인 그레이슨 섀도브레이커 군주는 수십 년 얼라이언스에 없어서는 안 될 자산이었다.
+
+새 신병 훈련과 정의의 등불로 이끄는 일뿐 아니라 아제로스 곳곳의 위협을 감독하고 필요에 따라 지원군을 보낸다.
+
+섀도브레이커는 매우 전통적 가치의 성기사라 평가할 수 있고 언데드를 여전히 높이 경멸한다. 수련생과 적 모두에게 다정하거나 관대하지 않으나 궁극에는 얼라이언스와 실버 핸드 기사단에 최선을 바란다.]]
+IMAGOdb.npcs.CAT_LIGHT["lord_grayson_shadowbreaker_midnight"].zones = {"쿠엘다나스 섬"}
+
+-- EADRIC THE PURE --
+IMAGOdb.npcs.CAT_LIGHT["eadric_the_pure_midnight"].name = "순결한 이드릭"
+IMAGOdb.npcs.CAT_LIGHT["eadric_the_pure_midnight"].aliases = {"Eadric", "이드릭"}
+IMAGOdb.npcs.CAT_LIGHT["eadric_the_pure_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_LIGHT["eadric_the_pure_midnight"].lore = [[은빛십자군의 성기사이자 병참장교인 이드릭은 노스렌드의 리치 왕과의 전쟁 때 교단에 한 공헌으로 주로 알려져 있다. 얼라이언스와 호드 사이 긴장이 다시 고조되자 티리온 폴드링 대영주가 갈등 방지를 위한 친선 대회를 열자고 제안했다. 대회 대부분을 조직한 책임자가 그의 용사 이드릭이었다.
+
+이후 주로 노스렌드에 주둔했으나 참성기사답게 빛이 부르는 곳으로 간다.]]
+IMAGOdb.npcs.CAT_LIGHT["eadric_the_pure_midnight"].zones = {"파르헬리온 광장"}
+
+-- YALIA SAGEWHISPER --
+IMAGOdb.npcs.CAT_LIGHT["yalia_sagewhisper_midnight"].name = "얄리아 세이지위스퍼"
+IMAGOdb.npcs.CAT_LIGHT["yalia_sagewhisper_midnight"].aliases = {"Yalia", "얄리아"}
+IMAGOdb.npcs.CAT_LIGHT["yalia_sagewhisper_midnight"].race = "판다렌"
+IMAGOdb.npcs.CAT_LIGHT["yalia_sagewhisper_midnight"].lore = [[어부로 자라 음영파로 훈련받고 사제이자 연금술사로 일하는 얄리아는 재주 많은 여인이다. 어린 나이에 가족을 뒤에 남겨야 했고, 쿤라이 정상의 음영파 수도원에서 동료 판다렌을 치유하는 데 인생 대부분을 바쳤다.
+
+레이 셴과 불타는 군단 같은 적과 싸우는 데 힘을 보탠 뒤, 얄리아의 지혜와 세상을 더 낫게 하려는 필요가 성스러운 빛에 인정받았다. 이제 실버문으로 불려 세상을 위해 다시 싸운다.]]
+IMAGOdb.npcs.CAT_LIGHT["yalia_sagewhisper_midnight"].zones = {"파르헬리온 광장"}
+
+-- FIONA --
+IMAGOdb.npcs.CAT_LIGHT["fiona_midnight"].name = "피오나"
+IMAGOdb.npcs.CAT_LIGHT["fiona_midnight"].aliases = {"피오나"}
+IMAGOdb.npcs.CAT_LIGHT["fiona_midnight"].race = "워겐"
+IMAGOdb.npcs.CAT_LIGHT["fiona_midnight"].lore = [[보살피고 충성스러운 이 워겐 여인과 대상은 수년 아제로스 곳곳을 여행해 왔다. 떠돌이 약초꾼이자 치유자로 생계를 세우지만 마음은 모험에 만나는 다른 사람의 동행을 갈망한다. 여행자에게 역마차 자리를 기꺼이 내주고 도움이 필요한 영혼을 그냥 지나치지 못해 도울 수 있는 대로 돕는다. 소박한 삶이지만 피오나는 크게 만족한다.
+
+가장 가까운 두 친구는 자주 동행하는 성기사 타레나르 선스트라이크와 기드윈 골드브레이즈다.
+
+태양샘이 그녀의 자비와 남 돕는 마음을 느끼고 실버문 수호로 불렀다. 언제나처럼 피오나는 할 수 있는 대로 하리라.]]
+IMAGOdb.npcs.CAT_LIGHT["fiona_midnight"].zones = {"쿠엘다나스 섬"}
+
+-- LOTHRAXION --
+IMAGOdb.npcs.CAT_LIGHT["lothraxion_midnight"].name = "로스락시온"
+IMAGOdb.npcs.CAT_LIGHT["lothraxion_midnight"].aliases = {"로스락시온"}
+IMAGOdb.npcs.CAT_LIGHT["lothraxion_midnight"].race = "빛벼림 나스레짐"
+IMAGOdb.npcs.CAT_LIGHT["lothraxion_midnight"].lore = [[공포의 군주는 잔인하고 가학적이며 조종하는 존재라 한다. 불타는 군단의 첩자이거나 죽음 영역에서 왔다. 적 대열에 침투해 고결한 영혼마저 서로 반목하게 하는 변신자다. 믿어서는 안 된다 한다.
+
+로스락시온은 이 진리의 유일한 예외다. 살게라스의 거대한 비전에 봉사하며 무수한 세계를 멸망시켰고 공허를 최대의 적으로 삼았다. 악마의 성전이 드레나이를 만나게 하자 로스락시온은 옛 주군을 배반하도록 기울었다. 빛의 군대에 합류해 빛벼림이 되었다.
+
+지옥과 공허가 우주에 일으킨 모든 공포를 아는 로스락시온은 이 세력 생물 처리에 타협을 받아들이지 않는다. 오직 빛만이 이 사악함을 물리칠 수 있다 확신한다. 이제 고위집정관 투랄리온 지휘 아래 로스락시온이 태양샘으로 불려 어둠 세력에 맞서 다시 싸운다.]]
+IMAGOdb.npcs.CAT_LIGHT["lothraxion_midnight"].zones = {"쿠엘다나스 섬", "넥서스 거점 제나스", "파르헬리온 광장", "실버문", "공허폭풍"}
+
+-- ALONSUS FAOL --
+IMAGOdb.npcs.CAT_LIGHT["alonsus_faol_midnight"].name = "대주교 알론서스 파올"
+IMAGOdb.npcs.CAT_LIGHT["alonsus_faol_midnight"].aliases = {"Alonsus Faol", "알론서스"}
+IMAGOdb.npcs.CAT_LIGHT["alonsus_faol_midnight"].race = "언데드"
+IMAGOdb.npcs.CAT_LIGHT["alonsus_faol_midnight"].lore = [[전에는 성스러운 빛 교회의 대주교였던 알론서스 파올은 로데론에서 가장 존경받는 사내였다고 해도 과언이 아니다. 호드가 처음 아제로스를 침공하자 최초 성기사를 훈련 임명해 얼라이언스에 전쟁 승리를 안긴 것이 파올이었다. 업적을 자랑하는 나이 든 주교가 평화롭게 죽었다.
+
+아서스 메네실이 쉬게 두지 않고 스컬지의 생각 없는 졸개로 되살렸다. 알론서스가 쓰러진 성기사의 지배에서 마침내 풀려나자 얼라이언스에 기피당하고 빛의 급진 하수인에게 사냥당했으며 본인이 성스러운 마법을 쓸 때마다 끔찍한 고통을 겪었다. 수년 세상에서 물러났다.
+
+군단이 침공하자 알론서스는 보고만 있을 수 없었다. 이제 콘클라베를 이끌고 사제 교단을 하나로 모아 악마와 싸울 여러 유물을 찾는 데 도왔다. 그 유물 중 하나가 검은 제국의 검 잘아타스였다.
+
+이제 알론서스는 태양샘과 빛을 위해, 그리고 실수를 바로잡고자 싸운다.]]
+IMAGOdb.npcs.CAT_LIGHT["alonsus_faol_midnight"].zones = {"불타는 평원", "아라시 고원", "쿠엘다나스 섬", "동부 역병지대", "파르헬리온 광장", "실버문", "티리스팔 숲"}
+
+-- TAHU SAGEWIND --
+IMAGOdb.npcs.CAT_LIGHT["tahu_sagewind_midnight"].name = "타후 세이지윈드"
+IMAGOdb.npcs.CAT_LIGHT["tahu_sagewind_midnight"].aliases = {"Tahu", "타후"}
+IMAGOdb.npcs.CAT_LIGHT["tahu_sagewind_midnight"].race = "타우렌"
+IMAGOdb.npcs.CAT_LIGHT["tahu_sagewind_midnight"].lore = [[타우렌은 백성의 여명부터 드루이드 가르침을 닦았다. 마법은 아제로스의 달 무샤, 즉 대지모신의 두 눈 중 하나에 경의를 표했다. 타후와 친구 아포니 브라이트메인은 대지모신의 다른 눈 안쉬, 즉 태양의 본성을 곱씹고 타우렌이 왜 그리 오래 그를 소홀히 했는지 궁금해했다. 그리하여 백성의 새 길에 첫 씨앗이 뿌려졌다.
+
+아포니가 성기사가 되는 동안 타후는 사제 교단 선견자회를 세웠고 둘 다 빛의 안쉬 가르침에 귀 기울였다. 이후 수많은 사제를 훈련시키고 여러 차례 아제로스에 도움을 주었다.]]
+IMAGOdb.npcs.CAT_LIGHT["tahu_sagewind_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장", "실버문"}
+
+-- APONI BRIGHTMANE --
+IMAGOdb.npcs.CAT_LIGHT["aponi_brightmane_midnight"].name = "아포니 브라이트메인"
+IMAGOdb.npcs.CAT_LIGHT["aponi_brightmane_midnight"].aliases = {"Aponi", "아포니"}
+IMAGOdb.npcs.CAT_LIGHT["aponi_brightmane_midnight"].race = "타우렌"
+IMAGOdb.npcs.CAT_LIGHT["aponi_brightmane_midnight"].lore = [[노스렌드에서 리치 왕과의 전쟁 때 타우렌 전사 아포니 브라이트메인이 깨달음을 얻었다. 힘만으로 백성과 호드를 돕고 싶지 않았다. 친구 타후 세이지윈드와 논의한 뒤 아포니는 안쉬 신의 가르침, 즉 태양을 싸움에 들였다. 그리하여 최초의 타우렌 성기사가 되었다.
+
+불타는 군단의 세 번째이자 마지막 침공 때 실버 핸드 기사단에 전열로 합류한 이후 아포니의 태양 방랑자는 도움이 필요한 자를 돕며 아제로스 곳곳에 있다.]]
+IMAGOdb.npcs.CAT_LIGHT["aponi_brightmane_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장"}
+
+-- WAR CHAPLAIN SENN --
+IMAGOdb.npcs.CAT_LIGHT["war_chaplain_senn_midnight"].name = "전쟁 군목 센"
+IMAGOdb.npcs.CAT_LIGHT["war_chaplain_senn_midnight"].aliases = {"Chaplain Senn", "Senn", "센"}
+IMAGOdb.npcs.CAT_LIGHT["war_chaplain_senn_midnight"].race = "빛벼림 드레나이"
+IMAGOdb.npcs.CAT_LIGHT["war_chaplain_senn_midnight"].lore = [[투랄리온의 충실한 부관인 센은 수백 년 빛의 군대에 봉사하며 우주적 사악함과 싸웠다. 공허 세력에 격렬한 증오를 키워 렌도레이 동맹에 대한 혐오를 간신히 누를 수 있다.
+
+이제 태양샘에 소환되어 다시 빛을 위해 싸운다. 그러나 센은 실버문 수호에 흥미가 없다. 그녀의 우선순위는 어떤 대가로든 잘아타스와 졸개를 섬멸하는 데 있다.]]
+IMAGOdb.npcs.CAT_LIGHT["war_chaplain_senn_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장", "실버문", "공허첨탑", "공허폭풍"}
+
+-- FAERIN LOTHAR --
+IMAGOdb.npcs.CAT_LIGHT["faerin_lothar_midnight"].name = "파에린 로서"
+IMAGOdb.npcs.CAT_LIGHT["faerin_lothar_midnight"].aliases = {"Faerin", "파에린"}
+IMAGOdb.npcs.CAT_LIGHT["faerin_lothar_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_LIGHT["faerin_lothar_midnight"].lore = [[이 젊은 성기사는 동료 병사에게 희망과 낙관의 등불로, 흔히 가장 먼저 전투에 뛰어들어 방패와 빛에 대한 믿음으로 남을 지킨다. 파에린은 어려서부터 위험에 재주가 있어 할로우폴행 아라시 원정 비행선에 몰래 탔다. 이어진 추락에 눈과 팔을 잃었으나 싸워 이기고 없이 사는 법을 배웠다.
+
+제국에서 오래 살지 않아 파에린은 출생지에 돌아갈 생각이 없고 세상 나머지를 탐험하고 싶어 한다. 특히 아라시이자 로서로서 유산에 중요한 장소를. 그러나 태양샘이 확보된 뒤로 미뤄야 하리라.]]
+IMAGOdb.npcs.CAT_LIGHT["faerin_lothar_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장", "실버문"}
+
+-- GENERAL AMAIS BELLAMY --
+IMAGOdb.npcs.CAT_LIGHT["general_amias_bellamy_midnight"].name = "장군 아미아스 벨라미"
+IMAGOdb.npcs.CAT_LIGHT["general_amias_bellamy_midnight"].aliases = {"Amias Bellamy", "벨라미"}
+IMAGOdb.npcs.CAT_LIGHT["general_amias_bellamy_midnight"].race = "아라시"
+IMAGOdb.npcs.CAT_LIGHT["general_amias_bellamy_midnight"].lore = [[할로우폴의 아라시만큼 믿음이 인생에 중요한 역할을 했다고 말할 자가 몇 있으리라. 동료 성기사와 같이 벨라미는 빛의 환영을 따라 위험한 바다 원정에 나섰다.
+
+마침내 카즈 알가르 아래 고립되었고, 신성한 불꽃과 별 벨레다르만이 끊임없는 어둠과 위험의 새 삶에 유일한 밝음이었다. 믿음은 더 이상 단순한 위안이 아니었고 살게 한 것이었다.
+
+물론 할로우폴을 안전하게 지킨 뒤 태양샘에 소환되었다.
+
+물론 빛을 위해 오직 빛을 위해 계속 싸우리라.
+
+물론 공허의 모든 존재를 적으로 간주해야 한다.]]
+IMAGOdb.npcs.CAT_LIGHT["general_amias_bellamy_midnight"].zones = {"쿠엘다나스 섬", "실버문", "공허첨탑", "공허폭풍"}
+
+IMAGOdb.npcs.CAT_LIGHT["arator_midnight"].name = "구원자 아라토르"
+IMAGOdb.npcs.CAT_LIGHT["arator_midnight"].aliases = {"Arator", "Arator Windrunner", "아라토르"}
+IMAGOdb.npcs.CAT_LIGHT["arator_midnight"].race = "하프 엘프"
+IMAGOdb.npcs.CAT_LIGHT["arator_midnight"].lore =
+[[
+부모 알레리아 윈드러너와 투랄리온이 아제로스를 구하고자 드레노어로 떠나자 갓난아기를 뒤에 남겼다. 가족이 키워 아라토르는 부모를 전설으로만 알았다. 얼라이언스 가장 유명한 전쟁 영웅 둘의 자녀로서 아라토르는 언제나 그늘에서 벗어나 자신의 운명을 찾고자 애썼다.
+
+아버지를 본받고자 얼라이언스 성기사가 되었고 참힘과 빛에 대한 믿음을 보여 계급을 올랐다. 이제 부모와 재회한 아라토르는 서로 다른 방향에 끌리는 가족을 하나로 묶고자 애쓴다.]]
+IMAGOdb.npcs.CAT_LIGHT["arator_midnight"].zones = {"아미드랏실", "아칸티나", "불타는 평원", "아라시 고원", "공허첨탑", "하란다르", "대가들의 소굴", "영원노래 숲", "쿠엘다나스 섬", "공허폭풍", "동부 역병지대", "파르헬리온 광장", "실버문", "줄아만"}
+
+-- NOLAKI --
+IMAGOdb.npcs.CAT_LIGHT["nolaki_midnight"].name = "놀아키"
+IMAGOdb.npcs.CAT_LIGHT["nolaki_midnight"].aliases = {"놀아키"}
+IMAGOdb.npcs.CAT_LIGHT["nolaki_midnight"].race = "잔달라 트롤"
+IMAGOdb.npcs.CAT_LIGHT["nolaki_midnight"].lore = [[잘 웃고 화내기 어려운 이 잔달라 여인은 라와니 카나에 휘하 성기사가 되었다. 젊어 얼라이언스가 다자알로를 공격할 때 뒤에 남았다. 전사 하나쯤 차이가 없을 것이라 확신했기 때문이다. 스승과 라스타칸 왕이 모두 살해되자 태도가 바뀌었다.
+
+이후 놀아키는 크게 성숙해 남을 자신보다 앞세우는 데 인생을 바쳤다. 그것이 성기사임을 믿어 티르의 경비대에 희생의 모범으로 합류해 적과 보호가 필요한 자 사이에 설 준비가 되었다.]]
+IMAGOdb.npcs.CAT_LIGHT["nolaki_midnight"].zones = {"쿠엘다나스 섬"}
+
+-- VALUNEI --
+IMAGOdb.npcs.CAT_LIGHT["valunei_midnight"].name = "발루네이"
+IMAGOdb.npcs.CAT_LIGHT["valunei_midnight"].aliases = {"발루네이"}
+IMAGOdb.npcs.CAT_LIGHT["valunei_midnight"].race = "빛벼림 드레나이"
+IMAGOdb.npcs.CAT_LIGHT["valunei_midnight"].lore = [[발루네이는 싸움에 언제나 반대했다. 그러나 불타는 군단이 고향 세계를 정복하자 선택이 없었다. 전쟁은 마침내 승리했으나 발루네이는 절친을 악마에게 잃었고 너무 오래 싸워 시작 전 자신이 누군지 기억하지 못했다.
+
+아제로스의 동족에 합류한 발루네이는 목적 없이 느꼈다. 할 수 있는 많은 사람을 돕고자 새 세계를 헤매며 천천히 희망을 되찾았다. 보인 친절이 트라바드의 눈에 띄어 발루네이가 너무도운 티르의 경비대에 자비의 모범으로 영입되었다.]]
+IMAGOdb.npcs.CAT_LIGHT["valunei_midnight"].zones = {"쿠엘다나스 섬"}
+
+-- MARIELLA WARD --
+IMAGOdb.npcs.CAT_LIGHT["mariella_ward_midnight"].name = "마리엘라 워드"
+IMAGOdb.npcs.CAT_LIGHT["mariella_ward_midnight"].aliases = {"마리엘라"}
+IMAGOdb.npcs.CAT_LIGHT["mariella_ward_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_LIGHT["mariella_ward_midnight"].lore = [[마리엘라 "이단자"로 알려진 그녀는 한때 붉은돌격대에서 일했다. 빛을 다루는 광신적 방식에 반대해 불복종으로 사형을 선고받았다. 때마침 구하러 온 알론서스 파올이 보낸 고위 사제가 그녀를 구해 콘클라베에 합류했다.
+
+이제 행위를 용서받아 태양샘에 소환되어 빛의 선봉대의 일부로 실버문을 지킨다.]]
+IMAGOdb.npcs.CAT_LIGHT["mariella_ward_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장"}
+
+-- HADWIN --
+IMAGOdb.npcs.CAT_LIGHT["hadwin_midnight"].name = "해드윈"
+IMAGOdb.npcs.CAT_LIGHT["hadwin_midnight"].aliases = {"해드윈"}
+IMAGOdb.npcs.CAT_LIGHT["hadwin_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_LIGHT["hadwin_midnight"].lore = [[소박한 출신의 건장한 사내로 무뚝뚝한 태도의 해드윈은 성기사가 되리라 생각한 적이 없다. 대부분 쿨 티란인처럼 파도어머니를 섬기며 자랐다. 작은 소년 시절부터 아버지가 바다에 나가면 어머니의 가게가 여러 번 강도당하는 것을 애타게 지켜보며 정의에 대한 불타는 열망이 행동의 원동력이 되었다.
+
+강한 팔이 필요한 사람을 지키겠다고 맹세하고 드러스트바의 잿불 기사단 심문관이 되고자 지원했다. 그곳에서 빛과 묘한 연결을 느끼기 시작했다. 아직 잘 설명하지 못하는 연결이다. 호기심과 인생의 참길을 찾고자 성기사 훈련을 시작했다. 이제 티르의 경비대에 정의의 모범이 되었고 태양샘이 선한 마음을 알아보고 실버문으로 소환했다.]]
+IMAGOdb.npcs.CAT_LIGHT["hadwin_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장"}
+
+-- TALTHIS --
+IMAGOdb.npcs.CAT_LIGHT["talthis_midnight"].name = "탈디스"
+IMAGOdb.npcs.CAT_LIGHT["talthis_midnight"].aliases = {"탈디스"}
+IMAGOdb.npcs.CAT_LIGHT["talthis_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_LIGHT["talthis_midnight"].lore = [[쿠엘탈라스에서 3차 대전쟁 때 자라난 것이 탈디스의 인생관을 바꾸고 평화로운 어린 시절을 빼앗았다. 세상이 질서를 벗어났고 리치 왕과 불타는 군단 같은 사악함과 무질서의 세력을 제거해야 구조와 조화가 돌아온다는 결론에 달했다.
+
+죽음의 상처에서 날뛰는 스컬지 잔당을 소탕하고자 블러드 기사에 합류했고 이후 용의 섬에 가서 정령 무질서를 막았다. 티르의 경비대에 영입되어 질서를 통한 평화라는 티탄 철학에 크게 공감했다. 그리하여 질서의 모범이 되어 거대한 섭리의 역할에 만족했다.]]
+IMAGOdb.npcs.CAT_LIGHT["talthis_midnight"].zones = {"쿠엘다나스 섬"}
+
+
+IMAGOdb.npcs.CAT_LIGHT["vindicator_boros_midnight"].name = "구원자 보로스"
+IMAGOdb.npcs.CAT_LIGHT["vindicator_boros_midnight"].aliases = {"Boros", "보로스"}
+IMAGOdb.npcs.CAT_LIGHT["vindicator_boros_midnight"].race = "드레나이"
+IMAGOdb.npcs.CAT_LIGHT["vindicator_boros_midnight"].lore = [[아르고스의 손과 실버 핸드 양쪽의 지도자인 보로스는 성기사 전통을 살리겠다고 맹세했다. 백성 드레나이를 위해 여러 차례 유능한 군사 지휘관임이 입증되었으나 도움이 필요한 자라면 누구에게든 망치와 믿음을 바치기를 주저하지 않는다.
+
+이제 구원자 보로스가 태양샘에 불려 공허와 싸운다. 언제나처럼 아제로스 백성에 대한 의무를 다하리라 믿을 수 있다.]]
+IMAGOdb.npcs.CAT_LIGHT["vindicator_boros_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장"}
+
+
+-- SUNWALKER DEZCO --
+IMAGOdb.npcs.CAT_LIGHT["sunwalker_dezco_midnight"].name = "태양 방랑자 데즈코"
+IMAGOdb.npcs.CAT_LIGHT["sunwalker_dezco_midnight"].aliases = {"Dezco", "데즈코"}
+IMAGOdb.npcs.CAT_LIGHT["sunwalker_dezco_midnight"].race = "타우렌"
+IMAGOdb.npcs.CAT_LIGHT["sunwalker_dezco_midnight"].lore =
+[[
+여명추적자 부족의 족장인 태양 방랑자 데즈코는 태양 안쉬를 섬기며 그 빛에서 막강한 힘을 얻는 굳건한 타우렌이다. 보잘것없는 영혼을 꺾을 상상 못할 개인적인 비극을 견디고 목적을 찾아 먼 땅으로 여행했다. 여행이 먼 대륙은 물론 내세 영역에까지 이르렀으나 가장 고향 같았던 곳은 아제로스의 보통 백성과 함께였다.
+
+봉사에 헌신한 데즈코는 태양 방랑자 사이 노련한 노장이자 현명한 장로로 선다. 갈등이 다시 고조되자 빛의 길을 걷는 데 열렬한 열정뿐 아니라 깊은 자비도 필요함을 가르치는 이끄는 스승으로 봉사한다.]]
+IMAGOdb.npcs.CAT_LIGHT["sunwalker_dezco_midnight"].zones = {"아라시 고원"}
+
+-- AEONARA DAWNSHADE --
+IMAGOdb.npcs.CAT_LIGHT["aeonara_dawnshade_midnight"].name = "에오나라 돈셰이드"
+IMAGOdb.npcs.CAT_LIGHT["aeonara_dawnshade_midnight"].aliases = {"Aeonara", "에오나라"}
+IMAGOdb.npcs.CAT_LIGHT["aeonara_dawnshade_midnight"].race = "공허 엘프"
+IMAGOdb.npcs.CAT_LIGHT["aeonara_dawnshade_midnight"].lore = [[알려진 유일한 공허 엘프 성기사인 에오나라 돈셰이드는 공허 군세에 맞서 싸운다. 그림자수호단 공허 비술사에게서 텔로그러스 균열을 지켰고 이후 카레쉬의 마나용광로 오메가에서 디멘시우스 세력과 싸웠다.
+
+이제 잘아타스의 포식의 군단에게서 태양샘을 지키고자 빛의 선봉대의 일부로 소환되었다.]]
+IMAGOdb.npcs.CAT_LIGHT["aeonara_dawnshade_midnight"].zones = {"파르헬리온 광장"}
+
+-- TARENAR SUNSTRIKE --
+IMAGOdb.npcs.CAT_LIGHT["tarenar_sunstrike_midnight"].name = "타레나르 선스트라이크"
+IMAGOdb.npcs.CAT_LIGHT["tarenar_sunstrike_midnight"].aliases = {"Tarenar", "타레나르"}
+IMAGOdb.npcs.CAT_LIGHT["tarenar_sunstrike_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_LIGHT["tarenar_sunstrike_midnight"].lore = [[어릴 적부터 타레나르와 절친 기드윈 골드브레이즈는 영웅 흉내를 냈다. '성기사 짝꿍'으로 나란히 사악함과 싸우고 싶었다. 희망의 빛 예배당에서 꿈을 현실로 만들어 은빛십자군에 합류했다.
+
+무모함과 진지하지 않은 경향으로 타레나르는 기드윈과 공동 친구 피오나 모두에게 자주 좌절을 유발한다. 그러나 실수를 만회하고 책임지는 일을 결코 주저하지 않는다.]]
+IMAGOdb.npcs.CAT_LIGHT["tarenar_sunstrike_midnight"].zones = {"아칸티나", "실버문", "쿠엘다나스 섬", "파르헬리온 광장"}
+
+
+-- GRAND ARTIFICER ROMUUL --
+IMAGOdb.npcs.CAT_LIGHT["grand_artificer_romuul_midnight"].name = "대기술자 로무울"
+IMAGOdb.npcs.CAT_LIGHT["grand_artificer_romuul_midnight"].aliases = {"Romuul", "Artificer Romuul", "로무울"}
+IMAGOdb.npcs.CAT_LIGHT["grand_artificer_romuul_midnight"].race = "드레나이"
+IMAGOdb.npcs.CAT_LIGHT["grand_artificer_romuul_midnight"].lore = [[기술자, 즉 드레나이 기술자와 건축가의 지도자이자 엑소다르 조직 업무에 벨렌의 주요 측근인 로무울은 수천 년 전 아르고스를 처음 탈출한 이래 벨렌 곁에 충성스레 있었다. 불타는 군단의 세 번째 침공 때 빈디카르호 수리 유지 조종을 맡았고 군단 패망 뒤에도 빛의 군대 작전 기지가 되도록 함선을 갖췄다.
+
+티샤마트 때 벨렌과 로무울이 아제로스의 새 도시 건설 계획을 발표해 드레나이가 다시 고향이라 부를 세계에 마침내 정착할 기회를 주었다. 그러나 대기술자가 태양샘에 불려 공허와 싸우느라 작업이 중단되었다. 봉사할 준비가 되어 끌 대신 성스러운 망치를 들고 빛을 위해, 백성의 새 새벽을 위해, 아제로스 전체를 위해 싸운다.]]
+IMAGOdb.npcs.CAT_LIGHT["grand_artificer_romuul_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장", "공허폭풍"}
