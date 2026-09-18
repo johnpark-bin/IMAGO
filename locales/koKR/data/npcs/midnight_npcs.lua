@@ -822,3 +822,322 @@ IMAGOdb.npcs.CAT_VOID["xal_atath_midnight"].lore = [[그녀의 미소는 위협�
 
 우주의 운명이 아제로스 용사에 달렸을지도 모른다.]]
 IMAGOdb.npcs.CAT_VOID["xal_atath_midnight"].zones = {"공허첨탑", "쿠엘다나스 섬"}
+
+-- CAT_AMANI
+IMAGOdb.npcs.CAT_AMANI["zaljarra_midnight"].name = "줄자라"
+IMAGOdb.npcs.CAT_AMANI["zaljarra_midnight"].aliases = {"줄자라"}
+IMAGOdb.npcs.CAT_AMANI["zaljarra_midnight"].race = "숲 트롤"
+IMAGOdb.npcs.CAT_AMANI["zaljarra_midnight"].lore =
+[[두 남매 중 맏이인 줄자라는 전사로 자랐다. 악명 높은 줄진의 손녀로 로아를 공경하고 미래 씨족을 명예롭게 이끄는 전통을 배웠다. 이끌 때가 예상보다 빨리 왔다. 조부와 부친이 줄아만 사원 도시에서 살해될 때 그저 아이였기 때문이다. 다스리기 너무 어리다 판단되어 어머니 자라마가 수십 년 아마니를 다스렸다. 불구가 된 자라마가 마침내 딸에게 칭호를 물려주려 하자 라이벌 족장이 줄자라의 통치권을 다퉜다. 결투 복귀가 늦어 줄자라는 어머니가 대신 쓰러지는 것만 보러 도착했고, 자라마의 복수와 피의 출생 권리를 주장해야 했다.
+
+이제 수년 뒤 마침내 줄아만 부족을 로아 신과 다시 잇고자 시도한다. 오빠 줄잔의 지지, 때로 반대를 받으며.]]
+IMAGOdb.npcs.CAT_AMANI["zaljarra_midnight"].zones = {"아탈아만", "분노의 심장", "영원노래 숲", "쿠엘다나스 섬", "날로라크의 소굴", "줄아만"}
+
+-- NALORAKK --
+IMAGOdb.npcs.CAT_AMANI["nalorakk_midnight"].name = "날로라크"
+IMAGOdb.npcs.CAT_AMANI["nalorakk_midnight"].aliases = {"loa of war", "Bear Loa", "전쟁의 로아", "곰 로아"}
+IMAGOdb.npcs.CAT_AMANI["nalorakk_midnight"].race = "곰 (로아)"
+IMAGOdb.npcs.CAT_AMANI["nalorakk_midnight"].lore = [[굴하지 않는 자, 꿈꾸는 자, 무쇠턱... 전쟁과 대지의 로아는 많은 이름으로 숭배받았다. 거대한 곰은 레반터스크 부족의 으뜸 신으로 전투에 힘과 수확에 풍요를 내렸다. 석공이 공물을 바쳤고 그는 보답으로 주변 성벽을 굳혔다.
+
+그러자 줄진과 주술 군주 말라크라스가 와서 쿠엘탈라스 엘프와의 신성모독적인 전투에서 가장 사나운 전사들에게 그의 신성한 정수를 강제로 봉인했다. 줄진이 실패하고 군대가 패하자 날로라크는 줄아만의 다른 로아와 함께 한때 충성스러웠던 추종자에게 등을 돌렸다.]]
+IMAGOdb.npcs.CAT_AMANI["nalorakk_midnight"].zones = {"날로라크의 소굴", "분노의 심장", "줄아만"}
+
+IMAGOdb.npcs.CAT_AMANI["akilzon_midnight"].name = "아킬존"
+IMAGOdb.npcs.CAT_AMANI["akilzon_midnight"].aliases = {"loa of victory", "Eagle Loa", "승리의 로아", "독수리 로아"}
+IMAGOdb.npcs.CAT_AMANI["akilzon_midnight"].race = "독수리 (로아)"
+IMAGOdb.npcs.CAT_AMANI["akilzon_midnight"].lore = "아킬존은 승리의 로아로 아마니 트롤 뒤에 오래 섰다. 거대한 독수리는 아마니 부족과 깊은 유대를 맺고 불멸의 정신과 사나움을 나타낸다. 아킬존의 축복을 받은 아마니 광전사가 엘프 대대를 찢고 무사히 돌아올 수 있다 한다. 하쉬에이 줄자라 아래 돌아온 아킬존이 발톱을 세우고 황혼의 칼날에 시선을 고정한다."
+IMAGOdb.npcs.CAT_AMANI["akilzon_midnight"].zones = {"줄아만"}
+
+IMAGOdb.npcs.CAT_AMANI["janalai_midnight"].name = "잔알라이"
+IMAGOdb.npcs.CAT_AMANI["janalai_midnight"].aliases = {"loa of fire", "Dragonhawk Loa", "불의 로아", "용매 로아"}
+IMAGOdb.npcs.CAT_AMANI["janalai_midnight"].race = "용매 (로아)"
+IMAGOdb.npcs.CAT_AMANI["janalai_midnight"].lore = [[매년 섀도우파인 트롤이 페트나 알라이나즈도, 즉 불 계절 축제를 기념한다. 계절의 변화, 여름, 불에 대한 헌사로 모두 잔알라이의 위대한 불타는 날개 아래 영역이다. 강력한 용매 로아는 삶, 죽음, 갱생, 불, 마법의 수호자다. 하늘에 태양을 쫓고 아마니 마음에 불을 붙인다. 죽음이 다가오면 섀도우파인 트롤이 양팔을 벌려 맞이하며 외친다. "잔알라이는 죽어야 한다. 우리 모두 죽어야 한다. 그리고 그녀는 일어나리라! 우리도 일어나리라!"]]
+IMAGOdb.npcs.CAT_AMANI["janalai_midnight"].zones = {"줄아만"}
+
+IMAGOdb.npcs.CAT_AMANI["halazzi_midnight"].name = "할라지"
+IMAGOdb.npcs.CAT_AMANI["halazzi_midnight"].aliases = {"the Silver Shadow", "Lynx Loa", "Lynx God", "은빛 그림자", "스라소니 로아"}
+IMAGOdb.npcs.CAT_AMANI["halazzi_midnight"].race = "스라소니 (로아)"
+IMAGOdb.npcs.CAT_AMANI["halazzi_midnight"].lore = [[사냥의 로아. 꾀쟁이. 은빛 그림자. 긴 귀. 숲 트롤이 그에게 많은 이름을 붙이나 어느 것도 할라지의 본성을 완전히 담지 못한다. 줄아만 숲 깊숙이 위더바크 트롤이 할라지를 숭배하고 사냥할 때 도움을 청한다. 스라소니 로아가 사냥꾼을 먹이에게 숨기고 야생에 안개와 비를 내려 축복해 언제나 풍요롭게 한다. 할라지가 장난스러운 로아라도 그의 귀와 눈을 피할 것은 없다. 보이지 않는 것을 보고 모든 거짓을 드러낸다. 아마니 숲에 헤매게 되면 가볍게 밟으라. 할라지가 멀리 있지 않으니.]]
+IMAGOdb.npcs.CAT_AMANI["halazzi_midnight"].zones = {"줄아만"}
+
+-- Zul'Jan --
+IMAGOdb.npcs.CAT_AMANI["zuljan_midnight"].name = "줄잔"
+IMAGOdb.npcs.CAT_AMANI["zuljan_midnight"].aliases = {"줄잔"}
+IMAGOdb.npcs.CAT_AMANI["zuljan_midnight"].race = "트롤"
+IMAGOdb.npcs.CAT_AMANI["zuljan_midnight"].lore = [[충동적인 줄잔은 현 아마니 부족 통치자, 즉 친누이 줄자라의 수석 조언자다. 그녀와 달리 줄잔은 로아를 믿지 않는다. 그가 보기에 가장 필요할 때 트롤을 버렸다. 이런 문제에 누이와 의견이 달라도 진심으로 아끼며 지키고자 최선을 다한다.
+
+이제 줄잔은 로아나 누구에도 의지하지 않고 자신의 공적으로 강해지자고 아마니를 모은다.]]
+IMAGOdb.npcs.CAT_AMANI["zuljan_midnight"].zones = {"아탈아만", "영원노래 숲", "줄아만"}
+
+-- Loa Speaker Kinduru --
+IMAGOdb.npcs.CAT_AMANI["loa_speaker_kinduru_midnight"].name = "로아 대변자 킨두루"
+IMAGOdb.npcs.CAT_AMANI["loa_speaker_kinduru_midnight"].aliases = {"Kinduru", "킨두루"}
+IMAGOdb.npcs.CAT_AMANI["loa_speaker_kinduru_midnight"].race = "숲 트롤"
+IMAGOdb.npcs.CAT_AMANI["loa_speaker_kinduru_midnight"].lore = [[줄진의 아들인 킨두루는 아버지의 악명 높은 행적을 좋게 돌아보지 않는다. 언제나 로아 숭배자였던, 아킬존 본인의 대변자로 일했던 그에게 줄진의 마지막 전투에 일어난 일은 잔학 행위로 보였다. 뒤이은 로아 상실이 깊이 슬프게 했다.
+
+이제 신을 곁에 두지 못하고 킨두루는 아마니 지도자 줄자라를 조언자로 섬긴다. 더 중요하게는 삼촌으로 조카와 오빠 줄잔 모두를 깊이 아낀다.
+
+둘에게 로아 숭배 전통을 심으려 했고, 오랜 세월 뒤에도 언젠가 신이 돌아오리라는 희망을 여전히 붙든다.]]
+IMAGOdb.npcs.CAT_AMANI["loa_speaker_kinduru_midnight"].zones = {"아탈아만", "줄아만"}
+
+-- FILO --
+IMAGOdb.npcs.CAT_AMANI["filo_midnight"].name = "필로"
+IMAGOdb.npcs.CAT_AMANI["filo_midnight"].aliases = {"loa of children", "Kapara Loa", "아이들의 로아", "카파라 로아"}
+IMAGOdb.npcs.CAT_AMANI["filo_midnight"].race = "카파라 (로아)"
+IMAGOdb.npcs.CAT_AMANI["filo_midnight"].lore = [[줄아만에서 아이들의 로아로 숭배받는 필로는 스스로 말하지 않고 대신 각 마을 막내 아이를 대변자로 삼는다. 지키는 자에게 온화하나 아이를 해치는 자는 복수 맹세로 쫓는다.
+
+부모보다 아이가 먼저 죽으면 필로가 부모가 내세에 합류할 때까지 영혼을 지킨다.]]
+IMAGOdb.npcs.CAT_AMANI["filo_midnight"].zones = {"줄아만", "아탈아만"}
+
+-- TORUNDO THE GRIZZLED --
+IMAGOdb.npcs.CAT_AMANI["torundo_the_grizzled_midnight"].name = "백전노장 토룬도"
+IMAGOdb.npcs.CAT_AMANI["torundo_the_grizzled_midnight"].aliases = {"Torundo", "토룬도"}
+IMAGOdb.npcs.CAT_AMANI["torundo_the_grizzled_midnight"].race = "숲 트롤"
+IMAGOdb.npcs.CAT_AMANI["torundo_the_grizzled_midnight"].lore = [[토룬도가 그저 아이일 때 고향 젠타마니가 쿠엘탈라스 원거리순찰대에 불타 몇 안 되는 생존자만 무력하고 쓰라리게 남았다. 아마니자르로 피신해 아마니 전쟁군주 줄진에 충성스러운 만만치 않은 전사로 자랐다. 백성에 복수와 영광을 약속한 줄진이었다. 줄진 패망 뒤에도 혈통을 섬기며 남았다.
+
+이제 줄자라 족장의 전쟁 조언자로 일하며 황혼의 칼날에게서 줄아만을 지킨다. 나이 들어 다소 누그러졌으나 죽은 적이 보이면 여전히 덥수룩한 얼굴에 미소가 돈다.]]
+IMAGOdb.npcs.CAT_AMANI["torundo_the_grizzled_midnight"].zones = {"줄아만", "아탈아만", "소굴"}
+
+-- SHADRA --
+IMAGOdb.npcs.CAT_AMANI["shadra_midnight"].name = "샤드라"
+IMAGOdb.npcs.CAT_AMANI["shadra_midnight"].aliases = {"Spider Loa", "거미 로아"}
+IMAGOdb.npcs.CAT_AMANI["shadra_midnight"].race = "거미 (로아)"
+IMAGOdb.npcs.CAT_AMANI["shadra_midnight"].lore = [[맹독 여왕은 메아리 섬부터 잔달라, 줄파락 사막까지 거의 모든 트롤 부족이 숭배하는 로아다. 추종자에게 무기에 바를 치명적 독과 적을 몰래 염탐할 은신을 내린다.
+
+많은 이에게 거미 로아는 사악함의 세력으로 여겨진다. 그러나 적에 자비 없어도 잔인함이 동맹에 미치지 않는다. 샤드라에게 한 번 이상 크게 대가를 치르게 한 특징이다. 추종자가 4차 대전쟁 때 힘을 노리고 그녀를 살해했고 영혼이 나락에 보내져 단죄에 고통받았다.
+
+이제 첩보의 여주인이 다시 태어났다.]]
+IMAGOdb.npcs.CAT_AMANI["shadra_midnight"].zones = {"줄아만"}
+
+-- CAT_HARATI
+IMAGOdb.npcs.CAT_HARATI["orweyna_midnight"].name = "오르웨이나"
+IMAGOdb.npcs.CAT_HARATI["orweyna_midnight"].aliases = {"오르웨이나"}
+IMAGOdb.npcs.CAT_HARATI["orweyna_midnight"].race = "하라니르"
+IMAGOdb.npcs.CAT_HARATI["orweyna_midnight"].lore =
+[[하라니르라는 신비 종족의 정찰병인 오르웨이나는 동족 대부분과 꽤 다르다. 고향 밖 세상과 백성에 매료되어 비밀과 은둔의 맹세를 어기고 먼저 아즈카헤트에서 아제로스 용사, 이제 쿠엘탈라스 엘프와 접촉해 지원을 청했다.
+
+여신 알른하라와 특수한 연결이 있어 광휘의 노래를 닮은 다가오는 위험의 환영을 받는다. 알른하라를 위협하는 공허에 하라니르 세력 이상이 필요함을 안다.]]
+IMAGOdb.npcs.CAT_HARATI["orweyna_midnight"].zones = {"눈부신 골짜기", "소굴", "하란다르", "영원노래 숲", "쿠엘다나스 섬", "실버문"}
+
+-- ELDER HAGAR --
+IMAGOdb.npcs.CAT_HARATI["elder_hagar_midnight"].name = "장로 하가르"
+IMAGOdb.npcs.CAT_HARATI["elder_hagar_midnight"].aliases = {"Hagar", "하가르"}
+IMAGOdb.npcs.CAT_HARATI["elder_hagar_midnight"].race = "하라니르"
+IMAGOdb.npcs.CAT_HARATI["elder_hagar_midnight"].lore = [[하라니르에 많은 규칙과 전통이 있고 통치 평의회 장로로서 집행이 하가르의 의무다. 그러나 옛 관습 다수에 더 이상 동의하지 않는다.
+
+장로가 되기 전 텔드랏실의 뿌리수호자로 거대 세계수를 지키는 보호를 맡았다. 그러나 지상 나무 전체가 잿더미에 타면 잘 가꾼 뿌리가 무슨 소용인가? 하가르는 맡은 자의 쇠퇴를 막지 못했고 일어난 일에 여전히 시달리나 예전 참이라 여긴 것을 다시 생각하기 시작했다. 하라니르는 바깥 세상과 영원히 고립되어 살 수 없고 오르웨이나가 외부인과 접촉하고자 나서자 하가르는 유일하게 지지한 장로였다.]]
+IMAGOdb.npcs.CAT_HARATI["elder_hagar_midnight"].zones = {"실버문", "영원노래 숲", "하란다르", "소굴"}
+
+-- AMARAKK --
+IMAGOdb.npcs.CAT_HARATI["amarakk_midnight"].name = "아마라크"
+IMAGOdb.npcs.CAT_HARATI["amarakk_midnight"].aliases = {"아마라크"}
+IMAGOdb.npcs.CAT_HARATI["amarakk_midnight"].race = "하라니르"
+IMAGOdb.npcs.CAT_HARATI["amarakk_midnight"].lore = [[아마라크가 젊을 때 여신의 노래를 들었다. 좋은 집안의 좋은 아들로 절친 오르웨이나와 모험을 더 좋아했고 인생을 진지히 여기지 않았다. 그러나 모험이 알른의 균열로 이끌자 아마라크는 바로 발아래 도사리는 광기와 공포를 보았다.
+
+술카의 길을 택한다는 것은 여신의 노래와 영원히 단절한다는 것, 대부분 하라니르에 정신 훼손이다. 그러나 아마라크는 이것이 자신의 길임을 알고 다시 균열에 들어가 싸워야 했고 백성을 위해 행복을 희생했다. 오르웨이나는 이해하지 못했다.]]
+IMAGOdb.npcs.CAT_HARATI["amarakk_midnight"].zones = {"쿠엘다나스 섬", "하란다르", "꿈의 균열"}
+
+-- ROOTWARDEN RUIA --
+IMAGOdb.npcs.CAT_HARATI["rootwarden_ruia_midnight"].name = "뿌리수호자 루이아"
+IMAGOdb.npcs.CAT_HARATI["rootwarden_ruia_midnight"].aliases = {"Ruia", "루이아"}
+IMAGOdb.npcs.CAT_HARATI["rootwarden_ruia_midnight"].race = "하라니르"
+IMAGOdb.npcs.CAT_HARATI["rootwarden_ruia_midnight"].lore = [[샬라드랏실의 뿌리수호자로서 루이아는 세계수 뿌리에서 하란다르로 번진 빛꽃 감염 효과를 너무 잘 보았다. 하랄노르 마을이 심각한 위험에 빠지자 필사적 수단을 생각 중이다.
+
+언제나 다소 거리감 있던 장로가 이제 빛꽃 황폐의 책임을 태양샘 간섭 엘프에 돌리고 외부인과 일함에 강히 반대한다.]]
+IMAGOdb.npcs.CAT_HARATI["rootwarden_ruia_midnight"].zones = {"눈부신 골짜기", "영원노래 숲", "소굴", "하란다르"}
+
+-- CAT_ARCANTINA
+IMAGOdb.npcs.CAT_ARCANTINA["thisalee_crow_midnight"].name = "디살리 크로우"
+IMAGOdb.npcs.CAT_ARCANTINA["thisalee_crow_midnight"].aliases = {"Thisalle", "디살리"}
+IMAGOdb.npcs.CAT_ARCANTINA["thisalee_crow_midnight"].race = "나이트 엘프"
+IMAGOdb.npcs.CAT_ARCANTINA["thisalee_crow_midnight"].lore = [[발톱의 젊은 나이트 엘프 드루이드 중 하나인 디살리는 아제로스에서 가장 큰 분쟁을 거치며 자연과 얼라이언스를 위해 싸웠다. 인내는 그녀의 미덕 중 하나가 아니었고 상관의 명령을 제안 이상으로 취급하는 경향이 있다. 그러나 결과가 말해준다. "먼저 죽이고 나중에 묻는다" 태도가 대격변 때 야생의 신 아비아나를 구하는 데 한몫했기 때문이다.
+
+무모해도 디살리는 분수를 알고 가장 중요할 때 믿을 수 있다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["thisalee_crow_midnight"].zones = {"아칸티나"}
+
+-- GARONA HALFORCEN --
+IMAGOdb.npcs.CAT_ARCANTINA["garona_halforcen_midnight"].name = "가로나 하프오큰"
+IMAGOdb.npcs.CAT_ARCANTINA["garona_halforcen_midnight"].aliases = {"Garona", "가로나"}
+IMAGOdb.npcs.CAT_ARCANTINA["garona_halforcen_midnight"].race = "하프 오크, 하프 드레나이"
+IMAGOdb.npcs.CAT_ARCANTINA["garona_halforcen_midnight"].lore = [[가로나는 스톰윈드의 레인 린 왕 암살로 언제나 알려지리라. 옛 호드의 1차 대전쟁을 결정한 것이다. 대부분 굴단의 거의 생각 없는 꼭두각시였고 무자비한 호드가 일생 보여준 것보다 친절을 베푼 인간을 배신한 것으로 기억한다. 이름이 의미하듯 가로나는 드레나이 어머니와 오크 아버지 사이에서 태어났고 유산이 특이한 개인으로 만든다.
+
+호드와 틀어진 관계는 세월이 아물었고 이제 백성을 위해 다시 암살자 겸 첩자로 일하나 목표에 부합하면 얼라이언스와 일한 적도 있다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["garona_halforcen_midnight"].zones = {"아칸티나"}
+
+-- ZEN TABRA --
+IMAGOdb.npcs.CAT_ARCANTINA["zen_tabra_midnight"].name = "젠타브라"
+IMAGOdb.npcs.CAT_ARCANTINA["zen_tabra_midnight"].aliases = {"젠타브라"}
+IMAGOdb.npcs.CAT_ARCANTINA["zen_tabra_midnight"].race = "트롤"
+IMAGOdb.npcs.CAT_ARCANTINA["zen_tabra_midnight"].lore = [[젠타브라는 에메랄드의 꿈을 통해 랩터 로아 공크가 접촉하자 드루이드 예술을 배운 최초의 검은창 부족 트롤 중 하나였다. 이 새로 얻은 힘으로 메아리 섬을 적에게서 여러 차례 안전하게 지키고 검은창 드루이드의 세나리온 의회 가입을 협상했다.
+
+아미드랏실 탄생 때 에메랄드의 꿈에서 피락 세력을 막는 데 도운 뒤 젠타브라는 자연에 다음 위협이 불가피하게 닥칠 때까지 한결 느긋이 지내고 있다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["zen_tabra_midnight"].zones = {"아칸티나"}
+
+-- REXXAR --
+IMAGOdb.npcs.CAT_ARCANTINA["rexxar_midnight"].name = "렉사르"
+IMAGOdb.npcs.CAT_ARCANTINA["rexxar_midnight"].aliases = {"렉사르"}
+IMAGOdb.npcs.CAT_ARCANTINA["rexxar_midnight"].race = "하프 오우거, 하프 오크"
+IMAGOdb.npcs.CAT_ARCANTINA["rexxar_midnight"].lore = [[오크도 오우거도 아닌 모크나탈 사냥꾼 렉사르는 족장 레오록스의 아들로 남의 다툼에 크게 개의치 않았다. 옛 호드가 지옥 타락 광기에 빠지는 것을 목격하고 씨족을 살리고자 블랙핸드 대족장에게 충성을 맹세했다.
+
+2차 대전쟁이 끝나자 렉사르는 호드를 버렸다. 씨족에 추방당하고 얼라이언스에 두려움을 사며 백성에 다시 합류할 가망 없이 칼림도어 야생에 살기 시작했다. 언제나 곁에는 신뢰하는 동물 동료, 그중 절친 곰 미샤가 있었다. 이 짐승은 애완동물도 무기도 아니고 가족이다.
+
+렉사르는 이후 새 호드와 사회 전체에 다소 복귀했으나 도시에 오래 머무르지 않으리라.]]
+IMAGOdb.npcs.CAT_ARCANTINA["rexxar_midnight"].zones = {"아칸티나"}
+
+-- KELSEY STEELSPARK --
+IMAGOdb.npcs.CAT_ARCANTINA["kelsey_steelspark_midnight"].name = "켈시 스틸스파크"
+IMAGOdb.npcs.CAT_ARCANTINA["kelsey_steelspark_midnight"].aliases = {"켈시"}
+IMAGOdb.npcs.CAT_ARCANTINA["kelsey_steelspark_midnight"].race = "노움"
+IMAGOdb.npcs.CAT_ARCANTINA["kelsey_steelspark_midnight"].lore = [[스틸스파크 요원은 놈리건 비밀작전단 가장 저명한 일원이자 직업상 발명가다. 나이프 수집을 하고 언크라운드라 불리는 도적 교단 일원이어도 맨손 전투에 특별히 능하지 않고 도구와 폭발물으로 적을 처치하길 좋아한다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["kelsey_steelspark_midnight"].zones = {"아칸티나"}
+
+-- GORGONNA --
+IMAGOdb.npcs.CAT_ARCANTINA["gorgonna_midnight"].name = "고르고나"
+IMAGOdb.npcs.CAT_ARCANTINA["gorgonna_midnight"].aliases = {"고르고나"}
+IMAGOdb.npcs.CAT_ARCANTINA["gorgonna_midnight"].race = "오크"
+IMAGOdb.npcs.CAT_ARCANTINA["gorgonna_midnight"].lore = [[고르고나는 현 전쟁노래 씨족 족장으로 다른 모든 미덕보다 전투의 힘과 명예를 귀히 여긴다.
+
+스랄에게 수용소에서 풀려난 이래 새 호드에 충성하며 옛 호드의 과오를 배우고 내면화했다. 가로쉬 헬스크림 몰락 뒤 전쟁노래 씨족을 다시 비슷한 어둠 길로 이끄지 않겠다고 맹세했다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["gorgonna_midnight"].zones = {"아칸티나"}
+
+-- LILLIAN VOSS --
+IMAGOdb.npcs.CAT_ARCANTINA["lillian_voss_midnight"].name = "릴리안 보스"
+IMAGOdb.npcs.CAT_ARCANTINA["lillian_voss_midnight"].aliases = {"릴리안"}
+IMAGOdb.npcs.CAT_ARCANTINA["lillian_voss_midnight"].race = "언데드"
+IMAGOdb.npcs.CAT_ARCANTINA["lillian_voss_midnight"].lore = [[살았을 때 릴리안 보스는 붉은십자군 일원이었다. 적은 언데드였고 포세이큰과 스컬지를 구별하지 않았다. 사냥했고 증오했다. 그리고 그중 하나가 되었다.
+
+자신이 된 것을 받아들이고 자기혐오를 놓는 데 오래 걸렸다. 마침내 호드 포세이큰 대열에 동류를 찾아 새로 일어난 일원이 새 언데드 삶을 받아들이도록 도우며 위로를 주었다.
+
+백성을 위해 상당한 능력을 쓰고 비열한 수단도 마다하지 않는다. 싸움에 익숙해도 이제 진영 평화를 껴안는다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["lillian_voss_midnight"].zones = {"아칸티나"}
+
+-- TEHD SHOEMAKER --
+IMAGOdb.npcs.CAT_ARCANTINA["tehd_shoemaker_midnight"].name = "테드 슈메이커"
+IMAGOdb.npcs.CAT_ARCANTINA["tehd_shoemaker_midnight"].aliases = {"Tehd", "테드"}
+IMAGOdb.npcs.CAT_ARCANTINA["tehd_shoemaker_midnight"].race = "언데드 인간"
+IMAGOdb.npcs.CAT_ARCANTINA["tehd_shoemaker_midnight"].lore = [[일리단 스톰레이지가 "펠베인의 애완 흑마법사"라 부르는 이 언데드 지옥 사용자는 악마사냥꾼 마리우스 펠베인과 어울리지 않는 동행을 이뤘다. 서로 상징하는 것을 혐오해 두 사람은 함께 매우 효율적으로 일함을 마지못해 받아들였다.
+
+불타는 군단의 세 번째 침공 이래 함께 백쉰 마리 악마를 물리친 뒤 두 전우가 이제 포식의 군단에 눈을 돌렸다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["tehd_shoemaker_midnight"].zones = {"실버문", "아칸티나"}
+
+-- TAOSHI --
+IMAGOdb.npcs.CAT_ARCANTINA["taoshi_midnight"].name = "타오시"
+IMAGOdb.npcs.CAT_ARCANTINA["taoshi_midnight"].aliases = {"타오시"}
+IMAGOdb.npcs.CAT_ARCANTINA["taoshi_midnight"].race = "판다렌"
+IMAGOdb.npcs.CAT_ARCANTINA["taoshi_midnight"].lore = [[음영파의 2인자인 이 건달 같은 판다렌은 안개 땅이 내세울 가장 치명적인 첩자 겸 암살자 중 하나다. 타오시는 사마귀, 샤, 천둥왕, 느조스 세력에게서 판다리아를 지키는 최전선에 있었다. 위험한 작전을 좀처럼 피하지 않고 일의 위험을 즐기는 부분이 있는 듯하다. 그녀를 제어할 유일한 이는 음영파 지도자 타란 주로 타오시가 맹렬히 충성하는 상대다.
+
+불타는 군단 귀환에 아제로스가 위협받자 타오시는 달라란의 언크라운드 고위 일원으로 고향 너머 세계 수호를 도왔다. 호드와 얼라이언스 모두 필요할 때 그녀의 도움을 믿을 수 있다. 무엇이 맞서든 동맹의 등을 지킴을 잘 알기에.]]
+IMAGOdb.npcs.CAT_ARCANTINA["taoshi_midnight"].zones = {"아칸티나"}
+
+-- VANESSA VANCLEEF --
+IMAGOdb.npcs.CAT_ARCANTINA["vanessa_vancleef_midnight"].name = "바네사 밴클리프"
+IMAGOdb.npcs.CAT_ARCANTINA["vanessa_vancleef_midnight"].aliases = {"Vanessa", "바네사"}
+IMAGOdb.npcs.CAT_ARCANTINA["vanessa_vancleef_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_ARCANTINA["vanessa_vancleef_midnight"].lore = [[바네사 밴클리프는 스톰윈드의 석공에 대한 끔찍한 처사와 귀족 계급의 탐욕 이야기를 들으며 자랐다.아버지 에드윈이 얼라이언스 모험가에게 살해되어 참수당하는 것을 보자 신념만 굳어졌다. 호프 살딘으로 위장해 데피아스 형제단 지도자가 되어 어떤 수단으로든 복수를 추구했다.
+
+세월이 흘러 바네사는 스톰윈드와의 전쟁이 진정 중요한 것의 해법이 아님을 깨달았다. 고향 서부 몰락지대다. 왕관을 여전히 믿지 않아 형제단을 떠나 이제 서부 몰락지대 백성을 돕고자 빵바구니 길드를 돕는다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["vanessa_vancleef_midnight"].zones = {"아칸티나"}
+
+--SCALECOMMANDER AZUREATHEL --
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_azurathel_midnight"].name = "비늘사령관 아주라텔"
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_azurathel_midnight"].aliases = {"Azurathel", "아주라텔"}
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_azurathel_midnight"].race = "드랙티르"
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_azurathel_midnight"].lore = [[아주라텔은 넬타리온이 만든 최초 드랙티르 중 하나였고 다른 드랙티르를 지키는 최전선 방패 흑요석 감시자를 이끌도록 창조자에게 직접 뽑혔다. 화신 부상 때 정지에서 깨어난 뒤 무리를 얼라이언스 대열에 이끌었다.
+
+아제로스를 위험에서 안전하게 지키겠다고 맹세했어도 넬타리온을 다정히 기억하기로 했다. 데스윙이 된 폭군이 아닌 아버지로 기억에 두길 좋아한다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_azurathel_midnight"].zones = {"아칸티나"}
+
+-- CECILIA CLESSINGTON --
+IMAGOdb.npcs.CAT_ARCANTINA["cecilia_clessington_midnight"].name = "세실리아 클레싱턴"
+IMAGOdb.npcs.CAT_ARCANTINA["cecilia_clessington_midnight"].aliases = {"Cecilia", "세실리아"}
+IMAGOdb.npcs.CAT_ARCANTINA["cecilia_clessington_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_ARCANTINA["cecilia_clessington_midnight"].lore = [[스톰윈드 귀족 계급 클레싱턴 백작의 둘째 세실리아 프림로즈 클레싱턴, 유일한 계승자다. 왕국 다른 귀족과 같다고 판단하면 오해다. 세실리아는 권력, 부, 영향력에 흥미가 없다. 짓밟힌 자를 돕고 출생권으로 서부 몰락지대 농부 노동자의 정치 목소리를 내고자 진심으로 바란다.
+
+바네사 밴클리프와 함께 빵바구니 길드를 세웠고 데피아스 전 지도자와 우정을 쌓았다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["cecilia_clessington_midnight"].zones = {"아칸티나"}
+
+-- MARIUS FELBANE --
+IMAGOdb.npcs.CAT_ARCANTINA["marius_felbane_midnight"].name = "마리우스 펠베인"
+IMAGOdb.npcs.CAT_ARCANTINA["marius_felbane_midnight"].aliases = {"마리우스"}
+IMAGOdb.npcs.CAT_ARCANTINA["marius_felbane_midnight"].race = "나이트 엘프"
+IMAGOdb.npcs.CAT_ARCANTINA["marius_felbane_midnight"].lore = [[악마사냥꾼 마리우스 펠베인은 몇 안 되는 이가 견줄 불타는 군단 증오를 품는다. 혐오가 깊어 언데드 동료가 상징하는 것을 경멸해도 흑마법사 테드 슈메이커와 손잡을 정도였다. 처음에는 사람으로도 간신히 여겼으나 함께 유난히 잘 싸움을 마지못해 인정해야 했다.
+
+부서진 해변의 군단 침공 이래 백쉰 마리가 넘는 악마를 쓰러뜨린 뒤 이제 새 적에 눈을 돌렸다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["marius_felbane_midnight"].zones = {"아칸티나"}
+
+-- FLYNN FAIRWIND --
+IMAGOdb.npcs.CAT_ARCANTINA["flynn_fairwind_midnight"].name = "플린 페어윈드"
+IMAGOdb.npcs.CAT_ARCANTINA["flynn_fairwind_midnight"].aliases = {"Flynn", "플린"}
+IMAGOdb.npcs.CAT_ARCANTINA["flynn_fairwind_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_ARCANTINA["flynn_fairwind_midnight"].lore = [[멋진 쾌걸 플린 페어윈드 선장은 손에 술잔, 입에 재담 없이 좀처럼 발견되지 않는다. 어려서 해적에 내몰려 거리 영리함과 매력으로 쿨 티라스 바다에 이름을 알렸다. 범죄 인생을 살아도 타고난 정의감을 완전히 놓지 못했다.
+
+이제 쿨 티란 해군에 일하며 두 배의 선장이자 은밀한 일의 전문가로 더 창의적 해법을 요하는 일을 맡는다. 4차 대전쟁 발발 때 얼라이언스 첩자 SI:7과 여러 임무를 수행했다. 스톰윈드 첩보대장 마티아스 쇼를 만나 둘이 마침내 사랑에 빠졌다. 플린의 다소 집요한 구애 뒤에.
+
+전쟁이 끝나자 플린은 이제 한적한 삶을 즐긴다. 스톰윈드에 살며 가끔 모험을 떠난다. 얼라이언스에 도움이 크게 감사하다. 이따금 여전한 밀수에도.]]
+IMAGOdb.npcs.CAT_ARCANTINA["flynn_fairwind_midnight"].zones = {"아칸티나"}
+
+-- SCALECOMMANDER EMBERTHAL --
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_emberthal_midnight"].name = "비늘사령관 엠버탈"
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_emberthal_midnight"].aliases = {"Emberthal", "엠버탈"}
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_emberthal_midnight"].race = "드랙티르"
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_emberthal_midnight"].lore = [[엠버탈은 검은 용군단 마법이 깃든 드랙티르 무리 에본 스케일의 지도자다. 동료 병사처럼 타락에 굴하기 전 넬타리온에게 창조되었고 수천 년 감금 뒤에도 아버지의 운명에 슬픔과 당혹을 느끼지 않을 수 없었다.
+
+옛 친구 사카레스와 달리 엠버탈은 데스윙의 유산을 거부하고 드랙티르를 조화와 아제로스 평화 열망에 하나로 모았다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["scalecommander_emberthal_midnight"].zones = {"아칸티나"}
+
+-- WRATHION --
+IMAGOdb.npcs.CAT_ARCANTINA["wrathion_midnight"].name = "래시온"
+IMAGOdb.npcs.CAT_ARCANTINA["wrathion_midnight"].aliases = {"Black Prince", "래시온"}
+IMAGOdb.npcs.CAT_ARCANTINA["wrathion_midnight"].race = "검은 용"
+IMAGOdb.npcs.CAT_ARCANTINA["wrathion_midnight"].lore = [[데스윙의 아들, 타락한 용군단의 계승자. 래시온은 알에서 부화하기도 전 사악한 유산을 들었다. 고대 신 오염 없이 태어난 젊은 용이 용군단 나머지처럼 파멸을 추구하기보다 해로운 세력에게서 아제로스를 지키고자 의식적인 노력을 기울였다.
+
+야심찬 계획에 얼라이언스를 호드 완전 승리로 이끌어 불타는 군단에 맞서 세계를 하나로 모으고, 무한의 용군단과 동맹해 다른 차원에 군대를 만들며, 타락한 검은 용을 체계적으로 제거할 첩자 그물을 만드는 것이 포함되었다. 성숙한 지금 과거 행동 다수를 후회하고 이후 고대 신 느조스에게서 세상을 구했으며 원시 화신에 맞서 다른 용과 뭉쳤다. 대부분 아제로스인이 이제 동맹 겸 영웅으로 보나 과거와 데스윙 유산이 여전히 괴롭힌다.
+
+새끼용 시절부터 사냥당해 의지할 친구 가족이 없었고 일부는 혼자이며 사랑받을 자격 없다는 느낌을 영원히 떨치지 못하리라. 유일한 친구 안두인 린을 배신했고 용 동족은 죽었다. 용의 섬에서 마침내 수용과 평화의 장소를 찾았다. 형들과 유대를 맺고 개혁한 무리를 이끌고 아제로스에 봉사했다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["wrathion_midnight"].zones = {"아칸티나"}
+
+-- TRAVARD --
+IMAGOdb.npcs.CAT_ARCANTINA["travard_midnight"].name = "트라바드"
+IMAGOdb.npcs.CAT_ARCANTINA["travard_midnight"].aliases = {"트라바드"}
+IMAGOdb.npcs.CAT_ARCANTINA["travard_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_ARCANTINA["travard_midnight"].lore = [[트라바드는 늙은 성기사이자 원래 티르의 경비대 마지막 생존자다. 고대 신에 맞선 희생 뒤 쓰러진 티탄 수호자 티르를 수호하는 데 헌신한 교단이다.
+
+원시술사 부상 이래 티르의 경비대를 재건해 용의 섬에서 새 일원을 영입했다. 청동과 무한 용군단과 일하며 트라바드와 성기사 무리가 티르를 다시 살려냈다.
+
+이제 임무는 새 세상에서 영웅을 이끌고 다시 수호자로 자리를 찾도록 돕는 것이다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["travard_midnight"].zones = {"아칸티나"}
+
+-- NISHA --
+IMAGOdb.npcs.CAT_ARCANTINA["nisha_midnight"].name = "니샤"
+IMAGOdb.npcs.CAT_ARCANTINA["nisha_midnight"].aliases = {"니샤"}
+IMAGOdb.npcs.CAT_ARCANTINA["nisha_midnight"].race = "불페라"
+IMAGOdb.npcs.CAT_ARCANTINA["nisha_midnight"].lore = [[불페라의 분노는 대상이 아직 볼둔 사막을 헤매던 때 다른 불페라가 뒤에 숨을 방패였다. 내성적인 지도자 겸 친구 키로와 달리 니샤는 적을 상대할 때 최선의 수비가 공격이라고 여긴다. 호드 합류를 열광한 것은 말할 필요도 없다.
+
+4차 대전쟁이 끝나자 니샤는 이제 세상을 탐험하며 난투, 음주, 새 친구 사귀기, 대체로 최고의 인생을 산다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["nisha_midnight"].zones = {"아칸티나"}
+
+-- CYRUS CRESTFALL --
+IMAGOdb.npcs.CAT_ARCANTINA["cyrus_crestfall_midnight"].name = "사이러스 크레스트폴"
+IMAGOdb.npcs.CAT_ARCANTINA["cyrus_crestfall_midnight"].aliases = {"사이러스"}
+IMAGOdb.npcs.CAT_ARCANTINA["cyrus_crestfall_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_ARCANTINA["cyrus_crestfall_midnight"].lore = [[이 사내는 쿨 티라스의 참애국자이자 2차 대전쟁의 노장이다. 데일린 프라우드무어 휘하 충성스레 싸웠고 부탁받으면 용감히 맞선 모든 전투의 장황한 이야기를 기꺼이 나눈다. 호드에 맞서 쓰러진 모든 친구 전우의 상실이 여전히 슬프나 싸움을 그리워하고, 테라모어 공격 때 군주 제독이 어린 소녀를 돌보고자 뒤에 남으라 명하자 당황했다. 그러나 언제나처럼 군주의 명령을 따랐다.
+
+어린 맡은 아이가 탤리아 포드라곤이라는 용감한 성기사로 자랐고 스승으로서 그녀가 된 모습이 이보다 자랑스러울 수 없다. 덕분에 책상 업무를 떠맡게 된 것을 더 이상 후회하지 않고 쿨 티라스에 자랑스레 봉사하며 보랄러스 항만관리자로 일한다. 쿨 티라스의 얼라이언스 복귀에 핵심 역할을 했고 더 이상 국가를 위해 싸우리라 기대하지 않으나 필요하면 다시 뽑을 때 검이 여전히 손에 맞는다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["cyrus_crestfall_midnight"].zones = {"아칸티나"}
+
+IMAGOdb.npcs.CAT_ARCANTINA["misha_midnight"].name = "미샤"
+IMAGOdb.npcs.CAT_ARCANTINA["misha_midnight"].aliases = {"미샤"}
+IMAGOdb.npcs.CAT_ARCANTINA["misha_midnight"].race = "곰"
+IMAGOdb.npcs.CAT_ARCANTINA["misha_midnight"].lore = [[렉사르 곁에 충실한 친구이자 동료 미샤가 멀리 있지 않다. 페랄라스에서 어린 새끼 때 고아가 되어 떠돌던 모크나탈에게 우연히 발견되었다. 둘 다 혼자였고 가족 친족이 없어 금방 떨어질 수 없게 되었다.
+
+포근한 겉모습을 해롭지 않다고 오해하면 어리석다. 렉사르 심기를 건드리면 사냥꾼이 끝내지 않아도 미샤가 반드시 끝낸다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["misha_midnight"].zones = {"아칸티나"}
+
+-- LORD DARIUS CROWLEY --
+IMAGOdb.npcs.CAT_ARCANTINA["lord_darius_crowley_midnight"].name = "다리우스 크롤리 군주"
+IMAGOdb.npcs.CAT_ARCANTINA["lord_darius_crowley_midnight"].aliases = {"Darius Crowley", "Lord Crowley", "다리우스"}
+IMAGOdb.npcs.CAT_ARCANTINA["lord_darius_crowley_midnight"].race = "워겐"
+IMAGOdb.npcs.CAT_ARCANTINA["lord_darius_crowley_midnight"].lore = [[자랑스럽고 사심 없는 길니아스 귀족이자 한때 겐 그레이메인 왕 가장 가까운 친구. 다리우스는 3차 대전쟁 직후 왕이 국가에 정한 고립주의 노선에 항의해 반란을 선동하자 조국에 배신자로 낙인찍혔다. 이상주의를 잃지 않은 크롤리는 워겐 저주와 포세이큰 점령이 쇠퇴 왕국 운명을 굳히자 다시 주저 없이 길니아스를 위해 싸웠다. 대의를 위해 인간성마저 버렸다.
+
+이제 길니아스가 해방되어 평화롭자 다리우스는 마침내 잠시 쉬며 함께 싸운 세상에서 딸이 자라는 것을 자랑스러워할 수 있다.]]
+IMAGOdb.npcs.CAT_ARCANTINA["lord_darius_crowley_midnight"].zones = {"아칸티나"}
