@@ -1,21 +1,293 @@
 -- ============================================================
--- IMAGO — locales/koKR/data/npcs/midnight_npcs.lua (Midnight NPC entries)
+-- IMAGO — locales/koKR/data/npcs/midnight_npcs.lua (한밤 NPC)
+-- 이름·전승 한국어 현지화. slug·원문 별칭·출처·연표는 유지한다.
+-- 별칭에는 한글 약칭을 추가해 본문 링크 연결이 되게 한다.
 -- ============================================================
 
 if GetLocale() ~= "koKR" then return end
 
--- === CAT_QUELTHALAS ===
+-- CAT_QUELTHALAS
+IMAGOdb.npcs.CAT_QUELTHALAS["lorthemar_theron_midnight"].name = "로르테마르 테론"
+IMAGOdb.npcs.CAT_QUELTHALAS["lorthemar_theron_midnight"].aliases = {"Lor'themar", "로르테마르"}
+IMAGOdb.npcs.CAT_QUELTHALAS["lorthemar_theron_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["lorthemar_theron_midnight"].lore =
+[[
+마음은 순찰자인 로르테마르 테론은 블러드 엘프를 이끌기로 선택한 적이 없다. 3차 대전쟁 때 스컬지에게 쿠엘탈라스가 함락하자 살아남은 다른 후보가 없어 캘타스 왕자가 몰락한 왕국의 섭정으로 임명했다.
 
--- === CAT_LIGHT ===
+호드와 블러드 엘프의 동맹, 소요 진압을 위한 하이 엘프 추방, 왕자의 배신 뒤 캘타스에 맞선 전투 지휘 등 어려운 결정을 내려야 했다. 그래도 로르테마르의 실용주의와 전략적 기지는 감탄할 만한 지도자로 만들어 친구와 적 모두에게 존경을 받는다.
 
--- === CAT_AMANI ===
+평화의 확고한 옹호자인 로르테마르는 이제 쿠엘탈라스의 섭정 군주이자 호드 통치 평의회 일원으로 일한다. 충성은 무엇보다 백성에게 있다.
 
--- === CAT_HARATI ===
+다시 위기에 빠진 쿠엘탈라스를 위해 다가오는 공허의 세력에게서 백성과 도시를 지키고자 어떤 것도 마다하지 않으리라.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["lorthemar_theron_midnight"].zones = {"아미드랏실", "하란다르", "영원노래 숲", "쿠엘다나스 섬", "실버문"}
 
--- === CAT_VOID ===
+-- FIRST ARCANIST THALYSSRA --
+IMAGOdb.npcs.CAT_QUELTHALAS["first_arcanist_thalyssra_midnight"].name = "수석 비전술사 탈리스라"
+IMAGOdb.npcs.CAT_QUELTHALAS["first_arcanist_thalyssra_midnight"].aliases = {"Thalyssra", "Arcanist Thalyssra", "Dusk Lily", "탈리스라"}
+IMAGOdb.npcs.CAT_QUELTHALAS["first_arcanist_thalyssra_midnight"].race = "나이트본"
+IMAGOdb.npcs.CAT_QUELTHALAS["first_arcanist_thalyssra_midnight"].lore = "수석 비전술사 탈리스라는 나이트본 엘프의 지도자다. 타락한 통치자에게 고향 수라마르에서 추방된 뒤, 밤샘의 힘에 대한 샬도레이 백성의 중독을 끊고 수라마르 약탈 뒤 지도자로 나섰다. 이제 로르테마르 테론의 블러드 엘프와 어깨를 나란히 하며 호드의 단합과 결혼의 단합으로 두 문화를 하나로 묶어 다스린다."
+IMAGOdb.npcs.CAT_QUELTHALAS["first_arcanist_thalyssra_midnight"].zones = {"아미드랏실", "영원한 궁전", "쿠엘다나스 섬", "실버문", "수라마르"}
 
--- === CAT_EBON_BLADE ===
+-- LADY LIADRIN --
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_liadrin_midnight"].name = "여군주 리아드린"
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_liadrin_midnight"].aliases = {"Liadrin", "리아드린"}
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_liadrin_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_liadrin_midnight"].lore = [[리아드린은 스컬지가 실버문을 초토화하자 빛에 대한 믿음을 잃었다. 옛 고향 폐허에서 언데드를 사냥하며 유령의 땅을 떠돌았다. 마침내 마법학자가 나루 무루의 에너지를 이용해 성기사로 다시 빛을 휘두르자는 제안을 가져왔다. 그리하여 리아드린이 최초의 블러드 기사가 되었다.
 
--- === CAT_NEUTRAL ===
+태양샘이 되살아나자 신념도 되살아났고 이후 샘을 지키겠다고 맹세했다.
 
--- === CAT_ARCANTINA ===
+무루에게 한 짓 때문에 아직도 자격을 의심할 때가 있으나 백성에 대한 믿음과 헌신은 흔들린 적이 없다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_liadrin_midnight"].zones = {"아탈아만", "도르노갈", "영원노래 숲", "쿠엘다나스 섬", "오그리마", "파르헬리온 광장", "실버문", "스톰윈드", "줄아만"}
+
+-- GRAND MAGISTER ROMMATH --
+IMAGOdb.npcs.CAT_QUELTHALAS["grand_magister_rommath_midnight"].name = "대마법학자 로마트"
+IMAGOdb.npcs.CAT_QUELTHALAS["grand_magister_rommath_midnight"].aliases = {"Magister Rommath", "Rommath", "로마트"}
+IMAGOdb.npcs.CAT_QUELTHALAS["grand_magister_rommath_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["grand_magister_rommath_midnight"].lore = [[타협 없고 호전적인 실버문의 대마법학자는 백성에 대한 충성이 확고한 사내다. 3차 대전쟁 뒤 캘타스의 가장 확고한 지지자로서 블러드 엘프 생존에 필요하다고 여기는 일은 무엇이든 했다. 지옥 마법 사용이나 나루를 성력 때문에 고문하는 일이라도 로마트는 각오되어 있었고 적극적이었다.
+
+캘타스가 불타는 군단과 손잡자 충성이 시험받았고, 마침내 옛 왕자가 아닌 백성을 택했다. 이미 두 번 배신당했다. 옛 친구 다르칸 드라시르에게 처음, 달라란의 키린 토에게 다음. 캘타스의 배신이 엘프의 마음을 더욱 굳게 했다.
+
+국토에 다가오는 공허폭풍과 함께 로마트는 언제나 해온 일을 하리라. 자신과 백성이 겪은 모든 것에도 실버문을 어떤 대가로든 지키는 것이다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["grand_magister_rommath_midnight"].zones = {"영원노래 숲", "오그리마", "황혼고원", "실버문"}
+
+-- HALDURON BRIGHTWING --
+IMAGOdb.npcs.CAT_QUELTHALAS["halduron_brightwing_midnight"].name = "할두론 브라이트윙"
+IMAGOdb.npcs.CAT_QUELTHALAS["halduron_brightwing_midnight"].aliases = {"Halduron", "할두론"}
+
+IMAGOdb.npcs.CAT_QUELTHALAS["halduron_brightwing_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["halduron_brightwing_midnight"].lore =
+[[
+현 실버문 순찰대 총사령관이자 로르테마르 테론의 절친인 할두론 브라이트윙이 고향 국경을 지킨다. 수십 년 백성을 섬기며 아마니 트롤 침공부터 스컬지의 무시무시한 언데드까지 내던져진 모든 위협에 흔들림 없는 용기로 맞섰다.
+    
+전장에서 적에게 보이는 치명적 열정과 달리 친구에게는 관대하고 밝은 영혼에 섬세한 사내로 알려져 있다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["halduron_brightwing_midnight"].zones = {"소굴", "하란다르", "영원노래 숲", "실버문"}
+
+-- VEREESA WINDRUNNER --
+IMAGOdb.npcs.CAT_QUELTHALAS["vereesa_windrunner_midnight"].name = "베리사 윈드러너"
+IMAGOdb.npcs.CAT_QUELTHALAS["vereesa_windrunner_midnight"].aliases = {"Vereesa", "베리사"}
+IMAGOdb.npcs.CAT_QUELTHALAS["vereesa_windrunner_midnight"].race = "하이 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["vereesa_windrunner_midnight"].lore = [[베리사는 윈드러너 자매 중 막내다. 호드가 아제로스에 도착하고 어린 남동생 리라스의 죽음을 막지 못하자 인생이 바뀌었다. 누이 알레리아의 아들 아라토르를 키우고 마법사 로닌이 용 알렉스트라자를 구하는 임무를 도왔다. 그러나 아서스와 함께 아는 모든 것의 죽음, 테라모어 파괴 뒤 남편 로닌의 죽음으로 완전히 홀로 남자 인생이 비극으로 점철되었다. 블러드 엘프 사이에서 평판에 영원히 영향을 줄 행위에 나서게 되었다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["vereesa_windrunner_midnight"].zones = {"영원노래 숲", "쿠엘다나스 섬", "실버문"}
+
+-- SHADRIS FEATHERMOON --
+IMAGOdb.npcs.CAT_QUELTHALAS["shandris_feathermoon_midnight"].name = "샨드리스 페더문"
+IMAGOdb.npcs.CAT_QUELTHALAS["shandris_feathermoon_midnight"].aliases = {"Shandris", "샨드리스"}
+IMAGOdb.npcs.CAT_QUELTHALAS["shandris_feathermoon_midnight"].race = "나이트 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["shandris_feathermoon_midnight"].lore = [[고대 전쟁 때 고아가 된 샨드리스는 살아온 만큼이나 오래 전투를 알았다. 티란데 위스퍼윈드와 말퓨리온 스톰레이지에게 입양되어 여사냥꾼으로 훈련했고 이후 아제로스에서 가장 두려운 궁수 중 하나가 되었다.
+
+샨드리스는 한 번 이상 파수대 군세의 최고 장군으로 나이트 엘프·얼라이언스 군세를 이끌었고, 새 세계수 아미드랏실 수호 최전선에 선 뒤 이제 나이트 엘프의 통치자로 이끈다.
+
+소중한 사람을 지극히 보호한다. 어머니를 구하고자 죽음의 영역에 들어가기까지 했다. 요즘 샨드리스가 가장 바라는 것은 평화다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["shandris_feathermoon_midnight"].zones = {"아미드랏실", "하란다르", "실버문", "쿠엘다나스 섬"}
+
+-- AETHAS SUNREAVER --
+IMAGOdb.npcs.CAT_QUELTHALAS["aethas_sunreaver_midnight"].name = "대마법사 애타스 선리버"
+IMAGOdb.npcs.CAT_QUELTHALAS["aethas_sunreaver_midnight"].aliases = {"Aethas", "Aethas Sunreaver", "애타스"}
+IMAGOdb.npcs.CAT_QUELTHALAS["aethas_sunreaver_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["aethas_sunreaver_midnight"].lore = "대마법사 애타스 선리버는 젊은 나이에도 키린 토 6인회에 빠르게 오른 뛰어난 신도레이 마법사다. 영원한 낙관주의자이자 중립의 확고한 주창자로 실버문과 달라란의 수천 년 동맹 복원에 인생의 상당 부분을 바쳤다. 진영 전쟁에 충성과 이상이 가혹하게 시험받아 어려운 선택, 배신, 백성을 지키려다 투옥까지 겪었다. 엄청난 고난과 사랑하는 도시의 거듭된 파괴에도 애타스는 지식 추구, 협력, 블러드 엘프의 영속 생존에 깊이 헌신한다."
+IMAGOdb.npcs.CAT_QUELTHALAS["aethas_sunreaver_midnight"].zones = {"영원노래 숲", "실버문"}
+
+-- SALANDRIA --
+IMAGOdb.npcs.CAT_QUELTHALAS["salandria_midnight"].name = "살란드리아"
+IMAGOdb.npcs.CAT_QUELTHALAS["salandria_midnight"].aliases = {"살란드리아"}
+IMAGOdb.npcs.CAT_QUELTHALAS["salandria_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["salandria_midnight"].lore = [[살란드리아는 그저 작은 아기 때 고아가 되었다. 어린 시절 대부분을 아웃랜드 샤트라스 고아원에서 보내다 마침내 입양아였던 리아드린에게 입양되었다. 이제 살란드리아는 블러드 기사가 되어 결연함과 꺾이지 않는 낙관으로 실버문과 성스러운 빛을 위해 싸운다.
+
+살란드리아 위에 어두운 미래를 예고하는 하나가 있다. 어릴 적 미래에 저지를 사악한 짓 때문에 청동 용군단 일원에게 보이는 대로 공격당했다. 이 불길한 예언이 그녀와 아제로스의 미래에 무엇을 의미하는지는 아직 수수께끼다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["salandria_midnight"].zones = {"영원노래 숲", "쿠엘다나스 섬", "실버문"}
+
+IMAGOdb.npcs.CAT_QUELTHALAS["magister_umbric_midnight"].name = "마법학자 움브릭"
+IMAGOdb.npcs.CAT_QUELTHALAS["magister_umbric_midnight"].aliases = {"Umbric", "움브릭"}
+IMAGOdb.npcs.CAT_QUELTHALAS["magister_umbric_midnight"].race = "공허 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["magister_umbric_midnight"].lore = [[제한 없음. 달라란의 비전 예술 학생으로서 움브릭의 바람이었다. 그런데 마법사 학문이 너무 경직되고 구속적으로 느껴졌다. 태양샘과 고향 쿠엘탈라스의 함락을 보고 마법에 다른 접근이 필요함을 깨달았다. 실버문 엘프는 유사시 살아남을 다른 수단이 필요했다. 그리하여 움브릭은 공허의 어둠 에너지로 향했다.
+
+발각되기 전 금지된 예술을 비밀리에 닦는 추종자를 꽤 모았다. 옛 친구 대마법학자 로마트에게 추방당한 움브릭과 추종자는 연구를 계속해 마침내 시공간의 균열, 텔로그러스로 통하는 길을 찾았다. 이곳에서 렌도레이, 즉 공허 그 자체가 깃든 엘프로 변모했다.
+
+얼라이언스에 합류한 뒤 움브릭과 렌도레이는 작으나 정예 전문가 세력이 되어 지금까지 여러 차례 잘아타스에 맞서는 최전선에 섰다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["magister_umbric_midnight"].zones = {"아미드랏실", "공허첨탑", "영원노래 숲", "쿠엘다나스 섬", "공허폭풍", "황혼고원", "실버문", "스톰윈드", "마법학자의 정원"}
+
+-- LADY DARKGLEN --
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_darkglen_midnight"].name = "여군주 다크글렌"
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_darkglen_midnight"].aliases = {"Darkglen", "다크글렌"}
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_darkglen_midnight"].race = "공허 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_darkglen_midnight"].lore = [[다크글렌 여군주는 쿠엘탈라스의 귀부인이자 렌도레이의 가장 뛰어난 연금술사·의식술사 중 하나다. 자유분방하고 때로 무모한 공허 마법 사용은 동료마저 불안하게 하지만 본인은 개의치 않는다. 흑마법사로 이미 이성을 걸었고 공허에 물들며 한 번 더 걸었다. 그렇다면 마음껏 나설 이유는 충분하지 않은가?
+
+그녀와 애완 공허방랑자 블로키니우스가 공허폭풍 돌파를 노리는 마법학자 움브릭에 합류함은 놀랍지 않다. 순수한 혼돈의 장소보다 더 매혹적일 것이 무엇이랴.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["lady_darkglen_midnight"].zones = {"실버문", "공허폭풍", "쿠엘다나스 섬"}
+
+-- RIFTBLADE MAELLA --
+IMAGOdb.npcs.CAT_QUELTHALAS["riftblade_maella_midnight"].name = "균열날 마엘라"
+IMAGOdb.npcs.CAT_QUELTHALAS["riftblade_maella_midnight"].aliases = {"Maella", "마엘라"}
+IMAGOdb.npcs.CAT_QUELTHALAS["riftblade_maella_midnight"].race = "공허 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["riftblade_maella_midnight"].lore = [[마엘라는 실버문에 살 때 주문파괴자, 즉 마법사와 싸우도록 훈련된 전사였다. 마법학자 움브릭에게서 비밀리에 공허를 배웠고, 고전하는 블러드 엘프를 도울 답이 금지된 마법에 있다고 믿었다. 그러나 발각되었고, 움브릭은 그녀를 버리는 대신 책임을 떠안아 마법학자와 추종자가 고향에서 추방되었다.
+
+이제 그에게 깊이 충성하는 마엘라는 움브릭을 따라 텔로그러스 균열에 들어가 뜻에 반해 공허에 물들었다. 뚫고 나갈 길밖에 없자 균열날이 되어 렌도레이의 대의가 이끄는 곳마다 헌신한다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["riftblade_maella_midnight"].zones = {"쿠엘다나스 섬", "실버문", "선킬러 성소", "공허첨탑", "공허폭풍"}
+
+-- ASTALOR BLOODSWORN --
+IMAGOdb.npcs.CAT_QUELTHALAS["astalor_bloodsworn_midnight"].name = "아스탈로 블러드스원"
+IMAGOdb.npcs.CAT_QUELTHALAS["astalor_bloodsworn_midnight"].aliases = {"아스탈로"}
+IMAGOdb.npcs.CAT_QUELTHALAS["astalor_bloodsworn_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["astalor_bloodsworn_midnight"].lore =
+[[
+실버문 블러드 기사의 공동 설립자인 마법사 아스탈로 블러드스원은 백성을 도울 창의적 수단을 언제나 찾았다. 캘타스가 붙잡힌 나루 무루를 실버문에 보내자, 성스러운 존재를 그저 취하는 데 그치지 말고 에너지를 뽑아 휘둘러 블러드 엘프를 성기사로 만들자고 조언한 것이 아스탈로였다.
+
+실버문 위에 다가오는 공허폭풍 위협과 함께 아스탈로는 다시 기상천외한 수단을 생각한다. 위험 인물을 사냥해 고뇌를 거두어 강력한 에너지로 변환하는 것이다. 어떤 결과를 낼지는 지켜봐야 하리라.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["astalor_bloodsworn_midnight"].zones = {"영원노래 숲", "하란다르", "공허폭풍", "아탈아만", "실버문"}
+
+-- LORD SALTHERIL --
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_saltheril_midnight"].name = "군주 살데릴"
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_saltheril_midnight"].aliases = {"Saltheril", "살데릴"}
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_saltheril_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_saltheril_midnight"].lore = [[하급 쿠엘도레이 귀족인 살데릴 군주는 마법 포도주와 사치스러운 음식이 하객에게 제공되는 호화 연회로 쿠엘탈라스에 유명하다. 살데릴은 리라스 윈드러너의 후원자로 캘타스 선스트라이더 왕자와 로르테마르 테론을 비롯해 여러 실버문 귀족·왕족을 위한 음악 공연을 주선했다.
+
+2차 대전쟁과 스컬지 침공을 비롯해 숱한 재난의 생존자인 살데릴은 연회를 멈춘 적이 없다. 섭정 군주 로르테마르는 아서스 메네실조차 그를 오래 막지 못했다고 평했다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_saltheril_midnight"].zones = {"영원노래 숲"}
+
+-- LORD ANTENORIAN --
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_antenorian_midnight"].name = "군주 안테노리안"
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_antenorian_midnight"].aliases = {"Antenorian", "안테노리안"}
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_antenorian_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_antenorian_midnight"].lore = [[원래 실버문의 마법학자인 안테노리안은 이름 그대로 고요한 트랭퀼리엔의 정적을 언제나 좋아했다. 마법학자 움브릭의 공허폭풍 위협 연구를 알자 렌도레이를 마을에 초대했다.
+
+트랭퀼리엔의 통치자로서 시민을 깊이 보호한다. 공허가 하늘을 어둡게 하며 모두 집어삼키려 기다리는 가운데, 안테노리안은 시민을 안전하게 지키고자 어떤 대가라도 치를 준비가 되어 있다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["lord_antenorian_midnight"].zones = {"영원노래 숲", "그림자 거주지"}
+
+-- LEONA DARKSTRIDER --
+IMAGOdb.npcs.CAT_QUELTHALAS["leona_darkstrider_midnight"].name = "레오나 다크스트라이더"
+IMAGOdb.npcs.CAT_QUELTHALAS["leona_darkstrider_midnight"].aliases = {"레오나"}
+IMAGOdb.npcs.CAT_QUELTHALAS["leona_darkstrider_midnight"].race = "공허 엘프"
+IMAGOdb.npcs.CAT_QUELTHALAS["leona_darkstrider_midnight"].lore = [[렌도레이라는 것은 공허의 속삭임이라는 끊임없는 위험 속에 산다는 것, 큰 힘의 대가다. 젊은 레오나에게는 그것으로 충분하지 않았다. 백성에 맹렬히 충성하고 보호하는 그녀는 어둠 재능과 악마사냥꾼의 길을 결합하고자 일리다리를 찾았다.
+
+카레쉬의 차질 뒤 이제 영혼 포식자 알라리라는 기꺼이 가르치는 스승을 찾았다. 그녀처럼 레오나는 적에 맞서는 완벽한 무기가 되기 위해 모든 것을 희생할 준비가 되어 있다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["leona_darkstrider_midnight"].zones = {"실버문", "공허폭풍", "나이그탈", "에레다스"}
+
+-- CHIEF TELEMANCER OCULETH --
+IMAGOdb.npcs.CAT_QUELTHALAS["chief_telemancer_oculeth_midnight"].name = "수석 텔레맨서 오큘레스"
+IMAGOdb.npcs.CAT_QUELTHALAS["chief_telemancer_oculeth_midnight"].aliases = {"Oculeth", "오큘레스"}
+IMAGOdb.npcs.CAT_QUELTHALAS["chief_telemancer_oculeth_midnight"].race = "나이트본"
+IMAGOdb.npcs.CAT_QUELTHALAS["chief_telemancer_oculeth_midnight"].lore = [[호드 시민이라면 오큘레스의 차원문 하나쯤 이용해 보았으리라. 수라마르 마법사는 전문 텔레맨서로 오그리마와 다자알로 같은 수도의 순간이동 연결망을 세웠다. 대마법학자 엘리산드에 맞선 탈리스라의 반란 때 백성에게, 4차 대전쟁 때 호드에게 큰 도움이 되었다.
+
+때로 심술궂거나 건망증 있어 보일 수 있으나 괴짜스러움을 경솔하다 일축하면 어리석다. 전사보다 학자에 가까워도 틀 밖 사고와 주문을 유리하게 비트는 창의적 수단으로 전투에 능한 마법사를 상대로 승리했다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["chief_telemancer_oculeth_midnight"].zones = {"실버문", "수라마르", "아미드랏실", "쿠엘다나스 섬"}
+
+-- ARCANIST VALTROIS --
+IMAGOdb.npcs.CAT_QUELTHALAS["arcanist_valtrois_midnight"].name = "비전술사 발트로이스"
+IMAGOdb.npcs.CAT_QUELTHALAS["arcanist_valtrois_midnight"].aliases = {"Valtrois", "발트로이스"}
+IMAGOdb.npcs.CAT_QUELTHALAS["arcanist_valtrois_midnight"].race = "나이트본"
+IMAGOdb.npcs.CAT_QUELTHALAS["arcanist_valtrois_midnight"].lore = [[지맥 연구 전문가이자 전략적 사고의 강력한 마법사인 비전술사 발트로이스는 대마법학자 엘리산드에 맞선 탈리스라의 반란 때 주요 지지자 중 하나였다. 이제 나이트본 지도자 중 하나로 일한다.
+
+발트로이스는 무뚝뚝하고 노골적으로 무례해 보일 수 있다. 특히 처음 만난 자에게는. 그러나 신뢰를 얻으면 여러 번 귀중한 동맹임이 입증되었다. 불타는 군단과의 전쟁 승리와 함께 이제 연인 푸른 용 스텔라고사와 함께 고향 수라마르 너머 세계를 탐험 연구하며 시간을 보낸다.]]
+IMAGOdb.npcs.CAT_QUELTHALAS["arcanist_valtrois_midnight"].zones = {"쿠엘다나스 섬", "소굴"}
+
+-- CAT_LIGHT
+-- THE GREAT KYRON --
+IMAGOdb.npcs.CAT_LIGHT["great_kyron_midnight"].name = "위대한 카이런"
+IMAGOdb.npcs.CAT_LIGHT["great_kyron_midnight"].aliases = {"Kyron", "카이런"}
+IMAGOdb.npcs.CAT_LIGHT["great_kyron_midnight"].race = "아라시"
+IMAGOdb.npcs.CAT_LIGHT["great_kyron_midnight"].lore = [[위대한 카이런은 할로우폴 아라시 등불지기의 지도자다. 할로우폴로 향한 아라시 원정 이전에 카이런은 아라시 군대의 감독관으로 일했다. 카헤티 네루비안의 점점 잦아지는 공격을 막지 않을 때는 메렐다르에서 흔히 볼 수 있다.]]
+IMAGOdb.npcs.CAT_LIGHT["great_kyron_midnight"].zones = {"파르헬리온 광장"}
+
+-- HIGH PRELATE RATA --
+IMAGOdb.npcs.CAT_LIGHT["high_prelate_rata_midnight"].name = "고위 성직자 라타"
+IMAGOdb.npcs.CAT_LIGHT["high_prelate_rata_midnight"].aliases = {"Prelate Rata", "Rata", "라타"}
+IMAGOdb.npcs.CAT_LIGHT["high_prelate_rata_midnight"].race = "잔달라 트롤"
+IMAGOdb.npcs.CAT_LIGHT["high_prelate_rata_midnight"].lore = [[잔달라는 다른 문화처럼 성스러운 빛을 숭배하지 않지만, 성직자는 로아가 내린 힘으로 빛을 이끈다. 고위 성직자이자 교단 지도자인 라타는 언제나 가장 신실한 일원 중 하나였다.
+
+배신자 예언자 줄이 왕들의 로아 레잔을 살해하자 대부분 성직자가 빛과 연결을 잃고 교단을 떠나야 했다. 라타는 능력을 유지하고 굳건히 싸웠다. 먼저 라스타칸 왕명, 다음 탈란지 여왕명을 받들었다.
+
+파괴 직전의 태양샘과 함께 잔달라의 가장 저명한 성기사가 도움 요청에 응답한다.]]
+IMAGOdb.npcs.CAT_LIGHT["high_prelate_rata_midnight"].zones = {"실버문", "쿠엘다나스 섬"}
+
+-- GIDWIN GOLBRAIDS --
+IMAGOdb.npcs.CAT_LIGHT["gidwin_goldbraids_midnight"].name = "기드윈 골드브레이즈"
+IMAGOdb.npcs.CAT_LIGHT["gidwin_goldbraids_midnight"].aliases = {"Gidwin", "기드윈"}
+IMAGOdb.npcs.CAT_LIGHT["gidwin_goldbraids_midnight"].race = "드워프"
+IMAGOdb.npcs.CAT_LIGHT["gidwin_goldbraids_midnight"].lore = [[어릴 적부터 성기사가 되고 싶었던 기드윈은 절친 타레나르 선스트라이크와 어린 시절 내내 영웅 흉내를 냈다. 희망의 빛 예배당에서 꿈을 현실로 만들어 은빛십자군에 합류했다.
+
+타레나르와 달리 기드윈은, 친구에게는 "기디"이지만, 훈련에는 꼼꼼하다. 갑옷과 무기를 항상 최상의 상태로 유지하고 성스러운 빛 문헌을 부지런히 공부하며 의무를 진지하게 여긴다. 그러나 전투 밖에서는 절친 못지않게 제멋대로다. 특히 술이 들어가면.]]
+IMAGOdb.npcs.CAT_LIGHT["gidwin_goldbraids_midnight"].zones = {"실버문", "파르헬리온 광장", "쿠엘다나스 섬", "아칸티나"}
+
+-- MEHLAR DAWNBLADE --
+IMAGOdb.npcs.CAT_LIGHT["mehlar_dawnblade_midnight"].name = "멜라 돈블레이드"
+IMAGOdb.npcs.CAT_LIGHT["mehlar_dawnblade_midnight"].aliases = {"Mehlar", "멜라"}
+IMAGOdb.npcs.CAT_LIGHT["mehlar_dawnblade_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_LIGHT["mehlar_dawnblade_midnight"].lore = [[빛의 인도자 우서의 제자였던 멜라 돈블레이드는 3차 대전쟁 이전 실버 핸드 성기사였다. 엄격한 도덕률을 따르고 교단 명령을 글자 그대로 들은 것으로 알려졌다. 우서의 가장 저명한 제자 아서스 메네실이 빛의 길에서 벗어나 멜라의 고향 쿠엘탈라스를 초토화하자 블러드 엘프의 자비가 분노와 복수심으로 바뀌었다.
+
+리아드린 휘하 블러드 기사에 합류해 동료 성기사와 모범적인 단합으로 스컬지에 맞서 싸웠다. 분노에 우서의 무덤을 더럽혔다가 옛 스승의 영혼과 마주했다. 쓰러진 성기사에게 용서만 받자 멜라는 관점을 다시 생각하기로 맹세했고 이제 증오에 쉽게 휘둘리지 않으려 한다.]]
+IMAGOdb.npcs.CAT_LIGHT["mehlar_dawnblade_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장"}
+
+-- DANATH TROLLBANE --
+IMAGOdb.npcs.CAT_LIGHT["danath_trollbane_midnight"].name = "다나스 트롤베인"
+IMAGOdb.npcs.CAT_LIGHT["danath_trollbane_midnight"].aliases = {"Danath", "다나스"}
+IMAGOdb.npcs.CAT_LIGHT["danath_trollbane_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_LIGHT["danath_trollbane_midnight"].lore = "스트롬가드 왕국의 정통 통치자이자 오랜 얼라이언스 영웅. 다나스 트롤베인은 2차 대전쟁 시절부터 인류를 위해 싸우고 피를 흘렸다. 로서의 아들들의 일원으로 어둠의 문 너머 시절 전우와 깊은 유대를 쌓았다. 스트롬가드 왕의 외투를 이어받고자 아제로스에 돌아온 다나스는 백성을 옛 영광으로 이끌려 한다."
+IMAGOdb.npcs.CAT_LIGHT["danath_trollbane_midnight"].zones = {"아칸티나", "불타는 평원", "실버문"}
+
+-- ANDUIN WRYNN --
+IMAGOdb.npcs.CAT_LIGHT["anduin_wrynn_midnight"].name = "안두인 린"
+IMAGOdb.npcs.CAT_LIGHT["anduin_wrynn_midnight"].aliases = {"Anduin Llane Wrynn", "King Anduin", "Little Lion", "안두인"}
+IMAGOdb.npcs.CAT_LIGHT["anduin_wrynn_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_LIGHT["anduin_wrynn_midnight"].lore = [[부재 중인 얼라이언스의 상왕 안두인 레인 린은 옛 빛나던 자신의 그림자에 불과해진 느낌이다.
+
+한때 남다른 이들처럼 빛을 휘둘러 전장 전체를 치유하고 백성이 정의, 관용, 평화를 확고히 수호하며 싸우도록 고무했다. 간수에게 지배당해 지키기로 맹세한 세상을 풀어헤치는 데 완전히 알면서 행동을 제어하지 못하고 돕도록 강요당하자 바뀌었다. 풀려난 뒤에도 그런 사악한 행위가 가능한 존재라는 공포에서 벗어나지 못했고 안두인 안의 무언가가 깨어졌다. 수년 사라져 백성과 왕국을 뒤에 남겼다.
+
+이제 소중한 모든 것을 위협하는 잘아타스와 함께 안두인이 마침내 전장에 돌아왔다. 자신감과 빛에 대한 믿음을 천천히 되찾기 시작했다.]]
+IMAGOdb.npcs.CAT_LIGHT["anduin_wrynn_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장", "실버문"}
+
+-- HIGH EXARCH TURALYON --
+IMAGOdb.npcs.CAT_LIGHT["turalyon_midnight"].name = "고위집정관 투랄리온"
+IMAGOdb.npcs.CAT_LIGHT["turalyon_midnight"].aliases = {"Turalyon", "투랄리온"}
+IMAGOdb.npcs.CAT_LIGHT["turalyon_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_LIGHT["turalyon_midnight"].lore = [[실버 핸드 기사단의 최초 성기사 중 하나인 투랄리온은 얼라이언스 가장 유명한 전쟁 영웅이자 가장 존경받는 이 중 하나가 되었다. 안두인 로서 본인의 부관으로 싸웠고 지휘관이 쓰러지자 오크 호드와의 최후 전투를 얼라이언스와 성스러운 빛에 유리하게 결정한 것이 투랄리온이었다.
+
+2차 대전쟁 때 인생을 함께할 여인 알레리아 윈드러너를 만났다. 싸움 한복판에 둘은 셋이 되었다. 그런데 투랄리온과 알레리아가 호드를 영원히 막고자 오크 고향 세계에 들어가자 아들 아라토르를 아제로스에 남기는 어려운 선택을 했다. 자라나는 모습을 어쩌면 보지 못함을 알면서도.
+
+마침내 드레노어가 산산조각났고 부부는 불타는 군단과의 천 년 전쟁에 빛의 군대로 끌려갔다. 그리하여 투랄리온은 불사가 되어 정의와 정도의 빛벼림 보루가 되었다. 그러나 알레리아는 투랄리온 눈에 순수한 악의 힘인 공허 마법을 받아들였다.
+
+이제 불타는 군단이 패하자 투랄리온과 알레리아는 변한 세계 아제로스에 돌아왔다. 모르는 아들과 다시 이어지려 하고 연인으로 얼마나 멀어졌는지 받아들이려 하며, 무엇보다 세상을 다시 구하려 한다.]]
+IMAGOdb.npcs.CAT_LIGHT["turalyon_midnight"].zones = {"공허첨탑", "영원노래 숲", "쿠엘다나스 섬", "공허폭풍", "파르헬리온 광장", "실버문"}
+
+IMAGOdb.npcs.CAT_LIGHT["prophet_velen_midnight"].name = "예언자 벨렌"
+IMAGOdb.npcs.CAT_LIGHT["prophet_velen_midnight"].aliases = {"Velen", "벨렌"}
+IMAGOdb.npcs.CAT_LIGHT["prophet_velen_midnight"].race = "드레나이"
+IMAGOdb.npcs.CAT_LIGHT["prophet_velen_midnight"].lore = [[아제로스 백성의 존경과 신뢰를 받는 늙은 예언자 벨렌이 만 삼천 년 넘게 드레나이를 이끌었다. 나루의 선택받은 자로서 빛 자체의 환영으로 예지의 은총를 받았다. 이 환영은 한 번 이상 백성의 목숨을 구했을 뿐 아니라 사악함이 마침내 우주에서 사라질 미래를 믿는 자신감을 주었다.
+
+벨렌의 빛에 대한 믿음은 꺾이지 않고 진지함과 선한 천성이 친구는 물론 상대, 특히 안두인 린과 리아드린 각각에게 신념을 고무했다.
+
+그렇다면 태양샘이 도움을 청한 것은 놀랍지 않다. 벨렌이 한 번 타락에서 되돌렸으니... 다시 어둡게 두지 않으리라.]]
+IMAGOdb.npcs.CAT_LIGHT["prophet_velen_midnight"].zones = {"쿠엘다나스 섬", "실버문"}
+
+-- CALIA MENETHIL --
+IMAGOdb.npcs.CAT_LIGHT["calia_menethil_midnight"].name = "칼리아 메네실"
+IMAGOdb.npcs.CAT_LIGHT["calia_menethil_midnight"].aliases = {"the Pallid Lady", "칼리아"}
+IMAGOdb.npcs.CAT_LIGHT["calia_menethil_midnight"].race = "언데드 인간"
+IMAGOdb.npcs.CAT_LIGHT["calia_menethil_midnight"].lore = [[창백한 여인을 정치적 논란 인물이라 부르면 표현이 부족하다. 악명 높은 아서스 메네실의 누이이자 로데론 왕좌의 유일 남은 계승자로, 지금은 포세이큰 손에 있다. 아서스 주요 희생자의 바로 그 언데드 손에. 얼라이언스 일원이자 빛의 사제로서 칼리아는 백성을 다스리길 바란 적 없다고 부인했다.
+
+그러나 나루 사아라에게 살해되어 언데드로 되살아나자 바뀌었다. 호드에 합류해 포세이큰 황폐한 의회의 통치 일원이 되었다. 이후 백성을 돕고자 몸을 위험에 빠뜨리기까지 했으나 포세이큰의 완전한 신뢰를 아직 얻지 못한 듯하다.
+
+일단 정치적 야망이 무엇이든 기다려야 한다. 빛이 실버문으로 불렀고 칼리아가 응답했다.]]
+IMAGOdb.npcs.CAT_LIGHT["calia_menethil_midnight"].zones = {"쿠엘다나스 섬", "실버문"}
+
+-- TAELIA FORDRAGON --
+IMAGOdb.npcs.CAT_LIGHT["taelia_fordragon_midnight"].name = "탤리아 포드라곤"
+IMAGOdb.npcs.CAT_LIGHT["taelia_fordragon_midnight"].aliases = {"Taelia", "탤리아"}
+IMAGOdb.npcs.CAT_LIGHT["taelia_fordragon_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_LIGHT["taelia_fordragon_midnight"].lore = [[친근하고 고집 센 젊은 여성인 탤리아는 호드와의 전쟁 발발 직전 로데론에서 태어났다. 분쟁에 어머니를 잃자 아버지 볼바르가 안전을 위해 쿨 티라스 왕국에 보냈다.
+
+성기사가 되어 프라우드무어 가문, 새 고향, 이후 얼라이언스를 위해 충성스레 싸웠다.
+
+탤리아는 열린 사고의 소유자로 전 해적 플린 페어윈드와 절친이고, 아버지 볼바르가 리치 왕이 되었음을 알고도 기쁘게 재회했다.
+
+이제 태양샘이 탤리아를 불러 실버문 수호에 힘을 보태게 했다.]]
+IMAGOdb.npcs.CAT_LIGHT["taelia_fordragon_midnight"].zones = {"영원노래 숲", "쿠엘다나스 섬", "실버문"}
+
+-- MOIRA THAURISSAN --
+IMAGOdb.npcs.CAT_LIGHT["moira_thaurissan_midnight"].name = "모이라 타우릿산"
+IMAGOdb.npcs.CAT_LIGHT["moira_thaurissan_midnight"].aliases = {"Moira Bronzebeard", "Dark Iron Queen", "모이라"}
+IMAGOdb.npcs.CAT_LIGHT["moira_thaurissan_midnight"].race = "드워프"
+IMAGOdb.npcs.CAT_LIGHT["moira_thaurissan_midnight"].lore = [[브론즈비어드와 검은무쇠 씨족의 오랜 존경받는 지도자인 모이라 여왕이 얼라이언스에서 언제나 우호적 지위를 누린 것은 아니다. 내전 개입 시절은 이제 과거일 뿐이다.
+
+전 마그니 왕의 유일한 계승자이자 고 검은바위 산 다그란 타우릿산 황제의 미망인으로 태어나 드워프 세 통치 씨족 중 둘의 일원이다. 아들 다그란 2세는 성년이 되면 모든 씨족의 다음 왕이 될 태세다.
+
+아버지와 의견을 같이한 적 없으나 최근 화해 첫걸음을 내디뎠다. 가족 시간은 잘아타스의 공격에 곧바로 방해받았다. 달라란에 먼저 지금은 실버문에.]]
