@@ -530,3 +530,295 @@ IMAGOdb.npcs.CAT_LIGHT["grand_artificer_romuul_midnight"].lore = [[기술자, �
 
 티샤마트 때 벨렌과 로무울이 아제로스의 새 도시 건설 계획을 발표해 드레나이가 다시 고향이라 부를 세계에 마침내 정착할 기회를 주었다. 그러나 대기술자가 태양샘에 불려 공허와 싸우느라 작업이 중단되었다. 봉사할 준비가 되어 끌 대신 성스러운 망치를 들고 빛을 위해, 백성의 새 새벽을 위해, 아제로스 전체를 위해 싸운다.]]
 IMAGOdb.npcs.CAT_LIGHT["grand_artificer_romuul_midnight"].zones = {"쿠엘다나스 섬", "파르헬리온 광장", "공허폭풍"}
+
+-- CAT_NEUTRAL
+IMAGOdb.npcs.CAT_NEUTRAL["allari_the_souleater_midnight"].name = "영혼 포식자 알라리"
+IMAGOdb.npcs.CAT_NEUTRAL["allari_the_souleater_midnight"].aliases = {"Allari", "알라리"}
+IMAGOdb.npcs.CAT_NEUTRAL["allari_the_souleater_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_NEUTRAL["allari_the_souleater_midnight"].lore = [[불타는 군단에 거의 비할 데 없는 증오를 품은 영혼 포식자 알라리는 강력한 영혼의 낫으로 악마의 영혼을 가두어 별명을 얻었다. 이 위험한 무기가 그녀와 교감하며 적에게 더 큰 해를 저지르도록 밀어붙이고 자주 고문 도구로 쓴다.
+
+그러나 수단이 극단적이어도 알라리는 아제로스의 선을 위해 싸운다. 군단 최후 패망과 함께 이제 기꺼이 나서는 렌도레이에게 악마사냥꾼의 길을 가르치고 공허와의 전투를 돕는 것을 사명으로 삼았다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["allari_the_souleater_midnight"].zones = {"공허폭풍", "카레쉬"}
+
+-- ALLERIA WINDRUNNER --
+IMAGOdb.npcs.CAT_NEUTRAL["alleria_windrunner_midnight"].name = "알레리아 윈드러너"
+IMAGOdb.npcs.CAT_NEUTRAL["alleria_windrunner_midnight"].aliases = {"Alleria", "알레리아"}
+IMAGOdb.npcs.CAT_NEUTRAL["alleria_windrunner_midnight"].race = "공허 엘프 (전 하이 엘프)"
+IMAGOdb.npcs.CAT_NEUTRAL["alleria_windrunner_midnight"].lore = [[아제로스 백성에게 얼라이언스 가장 위대한 전쟁 영웅 중 하나로 알려진 알레리아는 2차 대전쟁과 불타는 군단에 맞선 수천 년 성전에 싸웠다. 그녀는 많은 것, 어머니이자동반자이며 영웅이자 누나지만 무엇보다 사냥꾼이다. 눈앞 사명보다 앞서는 것은 없고 세상 안전에 어떤 대가도 크지 않다.
+
+전쟁은 그녀가 아는 유일한 인생으로 평화 시기보다 전장에서 더 안식과 친근을 느낀다. 호드와의 전쟁에 어린 남동생과 부모를 잃자 알레리아는 자책하며 무모히 전투에 뛰어들어 폭력으로 목적을 쫓았다. 상실의 상처에서 진정으로 회복하지 못했다. 투랄리온과 아들 아라토르라는 가족이 있어도 두 사내가 낯설어지는 것을 보며 마음이 아파도 다시 마음을 열지 못한다.
+
+불타는 군단과 싸우며 알레리아는 공허에서 무기를 찾았다. 쓰러진 나루 루라가 깃들어 이제 아제로스의 선을 위해 어둠 힘을 휘두른다. 언제나 광기에 빠질 직전, 끊임없는 속삭임이 마음을 습격하는 가운데 알레리아는 이제 잘아타스 사냥에 마음을 정했다. 모든 사냥처럼 추적이 집착이 되었고 적이 패할 때까지 쉬지 않으리라.]]
+IMAGOdb.npcs.CAT_NEUTRAL["alleria_windrunner_midnight"].zones = {"공허첨탑", "공허폭풍"}
+
+
+IMAGOdb.npcs.CAT_NEUTRAL["decimus_midnight"].name = "데시무스"
+IMAGOdb.npcs.CAT_NEUTRAL["decimus_midnight"].aliases = {"데시무스"}
+IMAGOdb.npcs.CAT_NEUTRAL["decimus_midnight"].race = "도마나르"
+IMAGOdb.npcs.CAT_NEUTRAL["decimus_midnight"].lore = [[카리스마 있고 위험하며 악의적. 모두 데시무스를형용할 수 있는 형용사다.
+
+공허폭풍의 모든 도마나르처럼 잘아타스에 복종해 더 강한 존재로 인정했다. 그러나 남 밑에 있는 것은 데시무스가 오래 할 계획이 아니었고, 그리하여 이제 위험한 노름에 나선다. 아제로스 용사를 말로 삼아서.]]
+IMAGOdb.npcs.CAT_NEUTRAL["decimus_midnight"].zones = {"공허폭풍"}
+
+IMAGOdb.npcs.CAT_NEUTRAL["king_mrgl-mrgl_midnight"].name = "므글므글 왕"
+IMAGOdb.npcs.CAT_NEUTRAL["king_mrgl-mrgl_midnight"].aliases = {"므글므글"}
+IMAGOdb.npcs.CAT_NEUTRAL["king_mrgl-mrgl_midnight"].race = "멀록"
+IMAGOdb.npcs.CAT_NEUTRAL["king_mrgl-mrgl_midnight"].lore = "므글므글 왕의 거창한 멀록 외면 뒤에는 소박한 나이트 엘프 연구자가 있다. 원래 드루이드 연구 모임 일원이던 므글므글 왕은 소박한 시작을 훨씬 넘어섰다. 노스렌드의 개체군을 관찰하고자 멀록으로 변장한 뒤 멀록이 받들어 왕으로 추대했다. 원래 마지못했으나 역할을 받아들이고 뒤돌아보지 않았다. 이후 므글므글 왕은 아제로스의 멀록을 돕고 외부 위협에서 지키며 발견된다."
+IMAGOdb.npcs.CAT_NEUTRAL["king_mrgl-mrgl_midnight"].zones = {"줄아만"}
+
+-- MONTE GAZLOWE --
+IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].name = "몬테 가즐로"
+IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].aliases = {"Monte", "가즐로"}
+IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].race = "고블린"
+IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].lore = [[오그리마의 설계자이자 빌지워터 카르텔의 무역왕은 영향력이 주로 배경에 느껴져도 호드에서 가장 중요한 일원 중 하나다. 싸움꾼이 아니고 스스로 영웅이라 여기지 않으며 대부분 그저 또 다른 탐욕 고블린으로 본다.
+
+그러나 표면 아래 있는 것은 그렇지 않고, 얕은 겉모습 너머 그를 아는 사람은 이 고블린의 빈정거림 아래 큰 마음이 있음을 안다.
+
+개혁이 카르텔의 착취 노동자에게 고블린 문화 사상 처음 안정과 권리를 주었다. 충성으로 많은 호드 동맹에 금전 지원을 아끼지 않고 대가로 많이 흥정하지 않았다. 처음에는 관여하지 않으려 했어도 언더마인에 혁명적 변화를 가져오는 데 한몫했다.
+
+오르웨이나와 우정을 쌓았고 둘이 서로 문화를 보이기 시작했다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].zones = {"하란다르", "소굴"}
+
+-- VALEERA SANGUINAR --
+IMAGOdb.npcs.CAT_NEUTRAL["valeera_sanguinar_midnight"].name = "베일리스 산귀나르"
+IMAGOdb.npcs.CAT_NEUTRAL["valeera_sanguinar_midnight"].aliases = {"Valeera", "베일리스"}
+IMAGOdb.npcs.CAT_NEUTRAL["valeera_sanguinar_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_NEUTRAL["valeera_sanguinar_midnight"].lore = [[베일리스 산귀나르는 어떤 진영에도 어떤 지도자에게도 충성하지 않는다. 어린 블러드 엘프 여인은 어린 나이에 고아가 되어 거리에서 살며 도둑질로 연명했다. 스컬지든 마나 중독이든 노예살이든 어떻게든 베일리스는 견뎠다. 누구를 믿는 데 느려졌고 세상에 배신당했다 느끼며 무모한 암살자가 되었다.
+
+바리안 린과 브롤 베어맨틀이라는 참친구를 마침내 사귀자 더 건강한 삶으로 첫걸음을 내디뎠다. 바리안에게 목숨을 빚져 얼라이언스에 의무 없이 보디가드로 일했다. 사후 아들 안두인을 계속 섬겼고 스톰윈드가 두 번째 고향이 되었다.
+
+이제 양 진영의 중립 친구로서 쿠엘탈라스의 가장 어두운 심연과 그 너머에서 실버문을 노리는 적을 무찌르는 데 아제로스 용사를 돕는다.]]
+
+IMAGOdb.npcs.CAT_NEUTRAL["valeera_sanguinar_midnight"].zones = {"영원노래 숲", "파르헬리온 광장", "실버문", "줄아만", "선킬러 성소", "아탈아만", "대학 재앙", "그림자수호단 거점", "어둠길", "원한의 구덩이", "기억의 만", "그림자 거주지", "황혼 납골당"}
+
+-- FREYA --
+IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].name = "프레이야"
+IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].aliases = {"프레이야"}
+IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].race = "티탄 감시자"
+IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].lore = [[프레이야는 창조된 이래 강력한 티탄 이오나의 명을 아제로스의 관리자로서 충실히 수행했다. 티탄 기록에 행성의 대부분 생명, 야생의 신과 로아를 창조하고 에메랄드의 꿈을 만든 것으로 올라 있다. 다른 출처는 다르게 말할 수 있다. 꿈은 언제나 존재했고 티탄이 오기 훨씬 전부터 세상에 생명의 자리가 있었다고. 그러나 자연이 싹트는 아제로스 어디서나 프레이야의 영향이 느껴짐은 부정할 수 없다.
+
+살게라스의 손에 티탄이 패하자 프레이야는 다른 관리자와 같이 다소 정체되었다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].zones = {"하란다르"}
+
+IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].name = "에이트리그"
+IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].aliases = {"에이트리그"}
+IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].race = "오크"
+IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].lore = "무수한 전투의 노장으로 호드 역사 가장 중요한 오크 중 하나이며, 무고한 자에게 무수한 공포가 저질러진 과거 암흑 시대를 기억하는 몇 안 되는 이 중 하나다. 드레노어의 옛 호드를 위해 싸웠고 오늘날 아제로스의 새 호드를 위해 싸우며, 두 종족의 수년 전쟁 뒤 인간 티리온 폴드링과 유대를 맺었다. 대족장 시절 스랄과 가로쉬의 조언자로 일했고 필요할 때 후자와 실바나스 윈드러너에 맞서 일어났다. 마침내 명예가 누구에게서나 올 수 있음의 상징으로 로서의 아들에 받아들여졌다."
+IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].zones = {"불타는 평원", "아칸티나",  "아라시 고원", "실버문"}
+
+-- KURDRAN WILDHAMMER --
+IMAGOdb.npcs.CAT_NEUTRAL["kurdran_wildhammer_midnight"].name = "쿠르드란 와일드해머"
+IMAGOdb.npcs.CAT_NEUTRAL["kurdran_wildhammer_midnight"].aliases = {"Kurdran", "쿠르드란"}
+IMAGOdb.npcs.CAT_NEUTRAL["kurdran_wildhammer_midnight"].race = "드워프"
+IMAGOdb.npcs.CAT_NEUTRAL["kurdran_wildhammer_midnight"].lore = [[와일드해머 씨족의 족장이자 능숙한 그리폰 기수인 쿠르드란은 2차 대전쟁 때 침공 오크에 맞서 가장 먼저 무기를 든 드워프 중 하나였다. 로데론 동맹에 합류해 마침내 투랄리온 장군을 따라 어둠의 문 너머 아웃랜드에 들어갔다. 로서의 아들들과 참우정의 유대를 맺었다.
+
+부서진 오크 세계에서 20년을 살아남아 아제로스에 돌아왔다. 쿠르드란은 잠시 정치에 손을 댔다. 아이언포지의 와일드해머 씨족 대표로 잠시 활동하다가 정착했다.
+
+이제 옛 친구와 재회한 쿠르드란은 다시 아제로스의 선을 위해 싸울 준비가 되었다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["kurdran_wildhammer_midnight"].zones = {"불타는 평원", "아칸티나", "실버문"}
+
+-- LIRATH WINDRUNNER --
+IMAGOdb.npcs.CAT_NEUTRAL["lirath_windrunner_midnight"].name = "리라스 윈드러너"
+IMAGOdb.npcs.CAT_NEUTRAL["lirath_windrunner_midnight"].aliases = {"Lirath", "리라스"}
+IMAGOdb.npcs.CAT_NEUTRAL["lirath_windrunner_midnight"].race = "하이 엘프"
+IMAGOdb.npcs.CAT_NEUTRAL["lirath_windrunner_midnight"].lore = [[넷 중 막내이자 윈드러너 남매 중 유일한 남동생. 리라스는 살데릴 군주의 궁정 공연으로 이름을 알린 뛰어난 가수였고 마침내 캘타스 선스트라이더에게 왕실 음악가로 임명되었다.
+
+부모가 죽자 리라스는 누이들에게 순찰자 훈련을 요구했다. 리라스는 쿠엘탈라스 방화 때 오크에게서 윈드러너 마을을 지키다 살해되었다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["lirath_windrunner_midnight"].zones = {"윈드러너 첨탑"}
+
+-- LORD MAXWELL TYROSUS --
+IMAGOdb.npcs.CAT_NEUTRAL["lord_maxwell_tyrosus_midnight"].name = "군주 맥스웰 타이로수스"
+IMAGOdb.npcs.CAT_NEUTRAL["lord_maxwell_tyrosus_midnight"].aliases = {"Maxwell Tyrosus", "Lord Tyrosus", "맥스웰"}
+IMAGOdb.npcs.CAT_NEUTRAL["lord_maxwell_tyrosus_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_NEUTRAL["lord_maxwell_tyrosus_midnight"].lore = [[스컬지가 동부 왕국을 황폐화한 이래 맥스웰 타이로수스는 언데드와 싸우고 무고한 자를 지키는 것을 소명으로 삼았다. 은빛 여명회의 지도자가 되었을 뿐 아니라 실버 핸드 기사단 대영주의 오른팔이 되었다. 투랄리온이나 빛의 인도자 우서 같은 동료 성기사처럼 화려한 칭호나 전쟁 승리 영웅담은 없을지라도, 타이로수스는 성기사 교단의 기강과 전투 준비를 지키는 귀중한 자산이 되었다.
+
+수십 년 빛에 봉사했어도 타이로수스는 태양샘에 소환되지 않았다. 상한 자존심과 의심에 주저앉지 않고 이제 실버문 밖 새 위협에 주저 없이 맞선다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["lord_maxwell_tyrosus_midnight"].zones = {"동부 역병지대"}
+
+-- MAIEV SHADOWSONG --
+IMAGOdb.npcs.CAT_NEUTRAL["maiev_shadowsong_midnight"].name = "마이에브 섀도송"
+IMAGOdb.npcs.CAT_NEUTRAL["maiev_shadowsong_midnight"].aliases = {"Maiev", "마이에브"}
+IMAGOdb.npcs.CAT_NEUTRAL["maiev_shadowsong_midnight"].race = "나이트 엘프"
+IMAGOdb.npcs.CAT_NEUTRAL["maiev_shadowsong_midnight"].lore = [[일리단 스톰레이지는 인생 대부분 마이에브 분노의 중심이었다. 감시자 지도자로서 배신자가 감옥을 떠나지 못하게 맡았고 만 년간 성공했다. 긴 경계에 스스로 고립되어 포로에 집착하게 되었고 불타는 군단과 싸우고자 풀려나자 마이에브는 안절부절했다.
+
+세상에서 새 목적을 벼릴 시간이 필요했고 급한 성미와 때로 급진적 기질 탓에 동료 나이트 엘프와 자주 충돌했다. 수년 적응과 쌍방 묵은 감정 청산 뒤 마이에브는 다시 샨드리스 페더문 지휘 아래 백성을 섬긴다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["maiev_shadowsong_midnight"].zones = {"아미드랏실"}
+
+-- BRANN BRONZEBEARD --
+IMAGOdb.npcs.CAT_NEUTRAL["brann_bronzebeard_midnight"].name = "브란 브론즈비어드"
+IMAGOdb.npcs.CAT_NEUTRAL["brann_bronzebeard_midnight"].aliases = {"Brann", "브란"}
+IMAGOdb.npcs.CAT_NEUTRAL["brann_bronzebeard_midnight"].race = "드워프"
+IMAGOdb.npcs.CAT_NEUTRAL["brann_bronzebeard_midnight"].lore = [[고고학자나 역사가라 자부하는 자는 브란 브론즈비어드를 안다. 브론즈비어드 삼형제 중 막내는 아이언포지 대왕좌에 권리도 흥미도 없고 대신 아제로스 가장 유명한 탐험가 중 하나로 명성을 쌓았다. 칼림도어와 동부 왕국의 최초 완전 지도가 그의 손에 만들어졌고, 최대한 정밀히 만들고자 적 영토 깊이 들어갔음을 보여준다.
+
+새 대륙이나 유적이 발견되면, 특히 티탄 기원이면, 브란이 최전선 행동 한복판에 있다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["brann_bronzebeard_midnight"].zones = {"실버문"}
+
+-- SORIDORMI --
+IMAGOdb.npcs.CAT_NEUTRAL["soridormi_midnight"].name = "소리도르미"
+IMAGOdb.npcs.CAT_NEUTRAL["soridormi_midnight"].aliases = {"소리도르미"}
+IMAGOdb.npcs.CAT_NEUTRAL["soridormi_midnight"].race = "청동 용"
+IMAGOdb.npcs.CAT_NEUTRAL["soridormi_midnight"].lore = [[청동 용으로서 소리도르미의 으뜸 지령은 티탄의 유일한 참시간선을 지키고 유지하는 것이다. 그녀는 시간 밖의 자 노즈도르무의 으뜸 배우자로 청동 용군단 전체의 많은 일을 맡는다. 역사가 풀리기 직전에 비틀거리거나 용이 보호를 필요로 하는 곳에 소리도르미가 멀리 있지 않다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["soridormi_midnight"].zones = {"실버문"}
+
+-- QUEEN TALANJI --
+IMAGOdb.npcs.CAT_NEUTRAL["queen_talanji_midnight"].name = "탈란지 여왕"
+IMAGOdb.npcs.CAT_NEUTRAL["queen_talanji_midnight"].aliases = {"Talanji", "탈란지"}
+IMAGOdb.npcs.CAT_NEUTRAL["queen_talanji_midnight"].race = "잔달라 트롤"
+IMAGOdb.npcs.CAT_NEUTRAL["queen_talanji_midnight"].lore = [[수천 년 전 트롤이 아제로스를 다스렸다. 이제 위대한 제국 중 하나만 남았다. 다른 모든 트롤 부족이 존경하는 잔달라다. 탈란지가 잔달라의 여왕으로 군림하고 젊어도 권위와 왕실 혈통은 논외다. 까다롭고 고집 세며 죽음의 로아 힘을 등에 업어 만만히 볼 상대가 아니다.
+
+얼라이언스 모험가가 아버지 라스타칸 왕을 살해한 뒤 권력에 오른 탈란지는 복수를 맹세하며 호드와 동맹했다. 진영 휴전을 존중하면서도 얼라이언스에 남은 경멸을 숨기지 않고 전쟁이 다시 발발하면 평화를 오래 주장하지 않으리라 분명히 한다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["queen_talanji_midnight"].zones = {"소굴"}
+
+-- ROKHAN --
+IMAGOdb.npcs.CAT_NEUTRAL["rokhan_midnight"].name = "로칸"
+IMAGOdb.npcs.CAT_NEUTRAL["rokhan_midnight"].aliases = {"로칸"}
+IMAGOdb.npcs.CAT_NEUTRAL["rokhan_midnight"].race = "정글 트롤"
+IMAGOdb.npcs.CAT_NEUTRAL["rokhan_midnight"].lore = [[로칸은 3차 대전쟁 이래 검은창 부족과 호드의 자랑스럽고 충성스러운 일원이었다. 암살자 겸 추적자로 뛰어난 기량에 계급을 올렸고, 볼진이 불타는 군단에 쓰러지자 로칸이 선출되어 검은창 족장을 이었다.
+
+이후 잔달라를 호드 대열에 들이는 데 한몫했고 오늘날 탈란지 여왕과 친구로 남아 있으며 잃었던 검은창의 로아를 사회에 되돌리는 데 한몫했다. 로칸은 백성에 최선을 위해 싸웠고 언제나 싸우리라.]]
+IMAGOdb.npcs.CAT_NEUTRAL["rokhan_midnight"].zones = {"소굴"}
+
+-- ZEKHAN --
+IMAGOdb.npcs.CAT_NEUTRAL["zekhan_midnight"].name = "제칸"
+IMAGOdb.npcs.CAT_NEUTRAL["zekhan_midnight"].aliases = {"제칸"}
+IMAGOdb.npcs.CAT_NEUTRAL["zekhan_midnight"].race = "정글 트롤"
+IMAGOdb.npcs.CAT_NEUTRAL["zekhan_midnight"].lore = [[이 젊고 정직하며 이상주의적인 정글 트롤은 4차 대전쟁 때 바로크 사울팽의 첫 지지자이자 가장 가까운 복심으로 핵심 인물이 되었다. 사울팽의 희생 뒤 제칸은 아버지 같은 친구가 남긴 명예 유산을 잇겠다고 맹세했다. 영웅적 행동에 호드 대사로 임명되었고 탈란지 여왕, 로칸, 스랄을필두로 여러 호드 지도자의 무조건 신뢰를 얻었다.
+
+이제 젊은 주술사가 하란다르에 초대되었고 하가르의 계시가 미래에 가져올 것에 낙관한다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["zekhan_midnight"].zones = {"소굴"}
+
+IMAGOdb.npcs.CAT_NEUTRAL["commander_jarod_shadowsong_midnight"].name = "사령관 자로드 섀도송"
+IMAGOdb.npcs.CAT_NEUTRAL["commander_jarod_shadowsong_midnight"].aliases = {"Jarod Shadowsong", "자로드"}
+IMAGOdb.npcs.CAT_NEUTRAL["commander_jarod_shadowsong_midnight"].race = "나이트 엘프"
+IMAGOdb.npcs.CAT_NEUTRAL["commander_jarod_shadowsong_midnight"].lore = [[자로드 섀도송은 고대 전쟁 때 "엘프의 희망"이라 불렸다. 상급자가 차례로 전장에서 쓰러지자 순전한 기량과 결의에 전쟁 승리 뒤 칼도레이의 지도자가 될 수 있었다.권력을 갈망하거나 그런 책임을 추구한 적 없어 백성을 떠나 아내 샬라시르와 만 년 자처하며 살았다.
+
+샬라시르가 세상을 떠나자 나이트 엘프 사회에 복귀해 누이 마이에브와 관계를 회복했다. 이후 4차 대전쟁과 에메랄드의 꿈에서 피락과의 전쟁 때 다시 군 지휘관으로 일했다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["commander_jarod_shadowsong_midnight"].zones = {"아미드랏실", "쿠엘다나스 섬"}
+
+-- BELATH_DAWNBLADE --
+IMAGOdb.npcs.CAT_NEUTRAL["belath_dawnblade_midnight"].name = "벨라스 돈블레이드"
+IMAGOdb.npcs.CAT_NEUTRAL["belath_dawnblade_midnight"].aliases = {"Belath", "벨라스"}
+IMAGOdb.npcs.CAT_NEUTRAL["belath_dawnblade_midnight"].race = "블러드 엘프"
+IMAGOdb.npcs.CAT_NEUTRAL["belath_dawnblade_midnight"].lore = [[일리다리는 대개 무모하나 효율적인 악마 사냥꾼으로 알려져 있다. 벨라스는 끈기를 공유하나 강점은 은밀하고 창의적인 전투 접근에 있다. 직업상 블러드 엘프 정찰병인 그는 결과만으로 계급을 오른 냉정하고 유능한 두뇌로 두드러진다.
+
+군단이 패했다고 벨라스가 월계관에 안주하는 것은 아니다. 실버문으로 돌아와 포위하는 공허를 근절하고 지옥 마법 흔적을 근절하고자 한다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["belath_dawnblade_midnight"].zones = {"실버문", "머더 로우", "발", "나이그탈"}
+
+-- WARDRUID LOTI --
+IMAGOdb.npcs.CAT_NEUTRAL["wardruid_loti_midnight"].name = "감시 드루이드 로티"
+IMAGOdb.npcs.CAT_NEUTRAL["wardruid_loti_midnight"].aliases = {"Loti", "로티"}
+IMAGOdb.npcs.CAT_NEUTRAL["wardruid_loti_midnight"].race = "잔달라 트롤"
+IMAGOdb.npcs.CAT_NEUTRAL["wardruid_loti_midnight"].lore = [[라스타칸 왕 치하 잔추리 평의회 6인 중 4인이 배신했다. 로티는 그중 없었고 왕이 죽을 때까지 충실히 일했다. 이제 딸 탈란지 여왕을 같은 충성으로 보좌한다.
+
+로티는 잔달라에 드루이드교 부흥의 책임이 있고, 위대한 사냥꾼 공크의 고위 사제로서 고향의 젊은 전사 사냥꾼 드루이드세대를 고무했다. 전투 집념은 로아 본인에 버금간다.]]
+IMAGOdb.npcs.CAT_NEUTRAL["wardruid_loti_midnight"].zones = {"소굴"}
+
+-- CAT_EBON_BLADE
+IMAGOdb.npcs.CAT_EBON_BLADE["high_inquisitor_whitemane_midnight"].name = "고위 심문관 화이트메인"
+IMAGOdb.npcs.CAT_EBON_BLADE["high_inquisitor_whitemane_midnight"].aliases = {"Sally Whitemane", "Whitemane", "화이트메인"}
+IMAGOdb.npcs.CAT_EBON_BLADE["high_inquisitor_whitemane_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_EBON_BLADE["high_inquisitor_whitemane_midnight"].lore = [[로데론에서 스컬지 손에 가족을 잃은 뒤 샐리 화이트메인의 focus는 하나, 언데드를 전멸시키는 것이었다. 언데드에 대한 죄책감과 분노에 불타는 빛의 광신적 사제로서 붉은십자군에 환영받아 단숨에 고위 심문관 자리에 올랐다. 수년 전 붉은십자군 수도원에서의 죽음으로 믿어진 뒤 조직을 장악한 뒤, 마침내 포세이큰 암살자 릴리안 보스와 모험가 일행에게 살해되었다.
+
+이제 4인의 기사 일원으로 되살아난 샐리는 엄청난 증오에서 회복했으나 여전히 열정적이고 헌신적이다. 이제 검은칼의 죽음의 기사 동료와 아제로스 수호에.]]
+IMAGOdb.npcs.CAT_EBON_BLADE["high_inquisitor_whitemane_midnight"].zones = {"동부 역병지대"}
+
+IMAGOdb.npcs.CAT_EBON_BLADE["darion_mograine_midnight"].name = "대영주 다리온 모그레인"
+IMAGOdb.npcs.CAT_EBON_BLADE["darion_mograine_midnight"].aliases = {"Darion Mograine", "Darion", "다리온"}
+IMAGOdb.npcs.CAT_EBON_BLADE["darion_mograine_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_EBON_BLADE["darion_mograine_midnight"].lore =
+[[다리온 모그레인은 은빛 여명회의 성기사로 아버지의 영혼을 구하고자 목숨을 바친 뒤 리치 왕의 가장 강력한 지휘관 중 하나인 죽음의 기사로 되살아나 일했다. 희망의 빛 예배당 전투에서 리치 왕의 지배를 벗어나 검은칼을 세웠다. 다가오는 어떤 위협에서든 아제로스를 지키기로 한 죽음의 기사 무리다.
+
+이제 4인의 기사를 이끄는 다리온이 스컬지에게서 은빛십자군의 고향을 지킨다. 아제로스 용사의 포식의 군단 파괴를 돕는 동안.]]
+IMAGOdb.npcs.CAT_EBON_BLADE["darion_mograine_midnight"].zones = {"동부 역병지대"}
+
+IMAGOdb.npcs.CAT_EBON_BLADE["thassarian_midnight"].name = "타사리안"
+IMAGOdb.npcs.CAT_EBON_BLADE["thassarian_midnight"].aliases = {"타사리안"}
+IMAGOdb.npcs.CAT_EBON_BLADE["thassarian_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_EBON_BLADE["thassarian_midnight"].lore =
+[[젊은 시절 타사리안은 아버지의 발자취를 따고자 로데론 군대에 합류해 아서스 왕자와 노스렌드 원정에 동행했다. 그곳에서 살해되어 죽음의 기사로 되살아났다. 리치 왕 지배 시절 많은 잔학 행위를 저질렀고 어머니까지 죽였다. 리치 왕의 지배를 벗어난 뒤 검은칼 기사단에 합류해 얼라이언스에 봉사하는 최초의 죽음의 기사가 되어 인류에 흔들림 없는 충성을 다시 보였다.
+
+진영 분열에도 타사리안은 호드 죽음의 기사 콜티라 데스위버와 강력하고 복잡한 형제애를 유지한다. 죽음에 벼려진 유대로 진로에 크게 영향을 준다.]]
+IMAGOdb.npcs.CAT_EBON_BLADE["thassarian_midnight"].zones = {"동부 역병지대"}
+
+IMAGOdb.npcs.CAT_EBON_BLADE["nazgrim_midnight"].name = "나즈그림"
+IMAGOdb.npcs.CAT_EBON_BLADE["nazgrim_midnight"].aliases = {"나즈그림"}
+IMAGOdb.npcs.CAT_EBON_BLADE["nazgrim_midnight"].race = "오크"
+IMAGOdb.npcs.CAT_EBON_BLADE["nazgrim_midnight"].lore = [[명예, 충성, 용기. 오크에게 더 중요한 것은 없다. 나즈그림에게 이는 단순한 표어가 아니라 인생의 의미 그 자체였다.
+
+가로쉬 헬스크림 군대의 낮은 군조로 시작해 아제로스 곳곳 공적으로 단숨에 장군 계급에 올라 헬스크림 대족장의 가장 가까운 동맹 중 하나가 되었다.
+
+호드가 헬스크림에 반기를 들고 의무와 도의 사이 선택 순간이 오자 나즈그림은 비장한 결의로 전자를 택해 침공자에 굳건히 맞서 마침내 대족장을 섬기며 목숨을 바쳤다.
+
+그러나 이야기가 끝나지 않았다. 검은칼 기사단이 새 4인의 기사 첫째로 일으켰기 때문이다. 불타는 군단의 세 번째 침공을 알고 새 역할을 주저 없이 받아들여 백성을 섬기며 굳건했다.]]
+IMAGOdb.npcs.CAT_EBON_BLADE["nazgrim_midnight"].zones = {"동부 역병지대", "꿈의 균열", "공허첨탑"}
+
+IMAGOdb.npcs.CAT_EBON_BLADE["koltira_deathweaver_midnight"].name = "콜티라 데스위버"
+IMAGOdb.npcs.CAT_EBON_BLADE["koltira_deathweaver_midnight"].aliases = {"Koltira", "콜티라"}
+IMAGOdb.npcs.CAT_EBON_BLADE["koltira_deathweaver_midnight"].race = "다크폴른 블러드 엘프"
+IMAGOdb.npcs.CAT_EBON_BLADE["koltira_deathweaver_midnight"].lore = [[아서스와 스컬지가 문을 지나 행진할 때 콜티라는 실버문을 위해 싸우다 죽었다. 그러나 죽음이 끝이 아니었고 곧 죽음의 기사로 되살아났다.
+
+아서스 지배 아래 한때 알고 사랑하던 모든 것을 멸망시킨 바로 그 군대를 위해 죽이라고 강요당했다. 끔찍한 경우에도 자신을 죽인남자 타사리안과 참우정의 유대를 맺었다. 둘 다 리치 왕의 정신 지배를 벗어나 새로 생긴 검은칼을 위해 싸우기로 하고 언데드에게서 아제로스 전체를 안전하게 지키겠다고 맹세했다. 콜티라는 호드에 합류해 동료 죽음의 기사의 사절로 행동했다.
+
+진영 전쟁에 때로 대립 편에 섰어도 콜티라 데스위버와 타사리안은 가까운 친구로 남는다.]]
+IMAGOdb.npcs.CAT_EBON_BLADE["koltira_deathweaver_midnight"].zones = {"동부 역병지대"}
+
+-- THORAS TROLLBANE --
+IMAGOdb.npcs.CAT_EBON_BLADE["thoras_trollbane_midnight"].name = "소라스 트롤베인"
+IMAGOdb.npcs.CAT_EBON_BLADE["thoras_trollbane_midnight"].aliases = {"Thoras", "소라스"}
+IMAGOdb.npcs.CAT_EBON_BLADE["thoras_trollbane_midnight"].race = "인간"
+IMAGOdb.npcs.CAT_EBON_BLADE["thoras_trollbane_midnight"].lore = [[백성의 사랑과 적의 두려움을 받은 소라스 트롤베인은 스트롬가드의 전사 왕이자 로데론 동맹 창립 일원이었다.
+
+2차 대전쟁에 오크 패망 뒤 소라스는 살아남은 오크를 수용소에 두는 정책에 반대해 공개적으로 처형을 주장했다. 로데론이 거부하자 트롤베인은 쓰라리게 동맹 지지를 철회했다.
+
+테레나스 메네실 왕 사후 어느 시점에 소라스는 아들 갈렌에게 살해되었다.
+
+불타는 군단의 세 번째 침공 때 검은칼 기사단이 소라스를 4인의 기사 일원으로 일으켰다. 아버지로서 왕으로서 실패했다 믿어 소라스는 아제로스 평화 보존을 위해 합류했다.]]
+IMAGOdb.npcs.CAT_EBON_BLADE["thoras_trollbane_midnight"].zones = {"꿈의 균열", "공허첨탑", "동부 역병지대"}
+
+-- CAT_VOID
+IMAGOdb.npcs.CAT_VOID["nexus_king_salhadaar_midnight"].name = "넥서스 왕 살하다르"
+IMAGOdb.npcs.CAT_VOID["nexus_king_salhadaar_midnight"].aliases = {"Salhadaar", "살하다르"}
+IMAGOdb.npcs.CAT_VOID["nexus_king_salhadaar_midnight"].race = "공허 비술사"
+IMAGOdb.npcs.CAT_VOID["nexus_king_salhadaar_midnight"].lore = [[오랫동안 넥서스 왕 살하다르는 절망과 고통만 알았다. 수천 년 전 공허에 집어삼켜지기 전 카레쉬 행성 백성을 다스렸다.
+
+세계와 육신을 잃는 것은 가장 강한 영혼도 광기에 빠뜨리기에 충분하다. 살하다르도 예외가 아니었다. 백성, 이제 비술사라 불리는 이들을 데리고 모든 것을 앗아간 바로 그 공허 군주 모든 것을 집어삼키는 디멘시우스를 섬겼다.
+
+아제로스 용사에게 패한 뒤 살하다르는 잘아타스에 징집되어 또 다른 공허 존재에 복종하도록 강요당했다. 마지못하나 이 거래에서 벗어날 희망 없이 넥서스 왕과 그림자수호단 비술사가 다시 뭉친 아제로스 세력에 맞선다.]]
+IMAGOdb.npcs.CAT_VOID["nexus_king_salhadaar_midnight"].zones = {"공허첨탑", "공허폭풍"}
+
+-- L'URA --
+IMAGOdb.npcs.CAT_VOID["l_ura_midnight"].name = "루라"
+IMAGOdb.npcs.CAT_VOID["l_ura_midnight"].aliases = {"루라"}
+IMAGOdb.npcs.CAT_VOID["l_ura_midnight"].race = "나루"
+IMAGOdb.npcs.CAT_VOID["l_ura_midnight"].lore = [[나루는 거대한 어둠 저편에 빛의 가장 순수한 표현일지도 모른다.
+
+루라는 한때 이런 성스러운 에너지의 빛나는 등대 중 하나였다. 벨렌과 드레나이 피난민이 킬제덴의 분노를 피하도록 아르고스에 남았고,무수한 악마를 상대로 버티다 불타는 군단에 압도당했다.
+
+수천 년 갇혀 한때 밝던 존재가 공허 상태에 빠졌다. 광기와 혼돈과 분노에 이끌려 대부분에 위험한 존재가 되었고 일부에 강력한 무기가 되었다.
+
+3인자 회의장에서 알레리아 윈드러너가 마침내 타락한 나루와 마주해 제압하고 그 정수를 안에 묶었다. 이제 공허에 닿은 순찰자가 루라의 힘을 자신의 것으로 휘두르나 어두워진 나루는 안에 여전히 견디며 다시 풀릴 순간을 기다린다.]]
+IMAGOdb.npcs.CAT_VOID["l_ura_midnight"].zones = {"쿠엘다나스 섬"}
+
+-- MOR_DUUN --
+IMAGOdb.npcs.CAT_VOID["mor_duun_midnight"].name = "모르둔"
+IMAGOdb.npcs.CAT_VOID["mor_duun_midnight"].aliases = {"모르둔"}
+IMAGOdb.npcs.CAT_VOID["mor_duun_midnight"].race = "오우거"
+IMAGOdb.npcs.CAT_VOID["mor_duun_midnight"].lore = [[강력한 오우거 마법사로서 모르둔은 잘아타스에 헌신하는 교단 황혼의 칼날을 이끌었다. 헌신이 그녀의 눈에 띄자 공허의 힘을 내려 교단의 열의를 새롭게 했다.
+
+모르둔은 황혼의 칼날의 줄아만 침공을 직접 이끌어 아탈아만을 폐허로 남기고 부서진 왕좌에서 병력을 지휘했다.]]
+IMAGOdb.npcs.CAT_VOID["mor_duun_midnight"].zones = {"줄아만"}
+
+-- XAL'ATATH --
+IMAGOdb.npcs.CAT_VOID["xal_atath_midnight"].name = "잘아타스"
+IMAGOdb.npcs.CAT_VOID["xal_atath_midnight"].aliases = {"잘아타스"}
+IMAGOdb.npcs.CAT_VOID["xal_atath_midnight"].race = "알 수 없음"
+IMAGOdb.npcs.CAT_VOID["xal_atath_midnight"].lore = [[그녀의 미소는 위협이고 속삭임은 경고이며 약속은 거짓말이다. 공허의 전령은 수천 년 아제로스 백성을 조종했고, 동맹을 큰 힘에 올리기만큼 쉽게 파멸에 버렸다.
+
+가장 오래 그녀는 검은 제국의 검에 갇혀 있었다. 그녀에 맞선 뒤 고대 신이 내린 벌이다.
+
+아제로스 용사의 도움으로 이제 다시 자유다.
+
+잘아타스가 세계혼을 노리고 검은 심장이 충전되자 태양샘을 공격해 닿고자 한다. 왜 쫓는지 여전히 수수께끼고 기원조차 모호함에 싸였다. 확실한 것은 어떤 대가로든 막아야 한다는 것뿐이다.
+
+우주의 운명이 아제로스 용사에 달렸을지도 모른다.]]
+IMAGOdb.npcs.CAT_VOID["xal_atath_midnight"].zones = {"공허첨탑", "쿠엘다나스 섬"}
