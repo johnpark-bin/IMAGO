@@ -19,10 +19,10 @@ IMAGOdb.timelines.ANDUIN_WRYNN = {
     {era = "Pre-WC3", text = "Lost his mother when he was just a baby to the Stonemasons' riot."},
     {era = "Classic",  text = "Made King of Stormwind briefly during his father's disappearance. Captured by Onyxia but was rescued by his father, King Varian, after his return."},
     {era = "WotLK",    text = "Saved his father's life during the Scourge invasion of Stormwind."},
-    {era = "Pre-Cata", text = "Witnessed Magni's transformation into crystal and later resolved the Ironforge succesion crisis, preventing Moira's death at King Varian's hands. After yet another fight with his father later on, Anduin went to live with Velen, studying to become a priest of the Light."},
+    {era = "Pre-Cata", text = "Witnessed Magni's transformation into crystal and later resolved the Ironforge succession crisis, preventing Moira's death at King Varian's hands. After yet another fight with his father later on, Anduin went to live with Velen, studying to become a priest of the Light."},
     {era = "Cata",     text = "Uncovered a plot of the Twilight's Hammer after his return to Stormwind."},
     {era = "MoP",      text = "Explored the newly-discovered continent of Pandaria, and got inspired by Pandaren philosophy. Personally tried to stop Garrosh Hellscream's warmongering but failed and got injured gravely in the process. Later met and befriended the dragon Wrathion."},
-    {era = "Pre-WoD",  text = "Attended Garrosh's trial and prevented the poisoning of the former Warchief, risking his own life while doing so. Unsuccesfully tried to stop Wrathion from freeing Garrosh."},
+    {era = "Pre-WoD",  text = "Attended Garrosh's trial and prevented the poisoning of the former Warchief, risking his own life while doing so. Unsuccessfully tried to stop Wrathion from freeing Garrosh."},
     {era = "Legion",   text = "Crowned High King of the Alliance after Varian's death."},
     {era = "Pre-BfA",  text = "Welcomed the Lightforged Draenei and the Dark Iron Dwarves into the Alliance. Negotiated an event called \"the Gathering\" with Sylvanas Windrunner, to reunite willing Forsaken with their living relatives. To Anduin's dismay, the exchange ended in a massacre."},
     {era = "BfA",      text = "Led the Alliance during the Fourth War against the Horde, personally leading the army in the Battle for Lordaeron. Later formed an alliance with Varok Saurfang and supported his rebellion against Sylvanas, ultimately ending the war and declaring an armistice."},
@@ -58,7 +58,7 @@ IMAGOdb.timelines.ALLERIA_WINDRUNNER = {
     },
     {
         era = "Legion",
-        text = [[Learned more about the Void and how to resist it's whispers. Was infused with the naaru L'ura. Fought in the final battle against the Legion in their stronghold of Antorus and succeeded. With the crusade finally over, her and Turalyon were reunited with their son, Arator. Found and recruited the exiled ren'dorei into the Alliance.]],
+        text = [[Learned more about the Void and how to resist its whispers. Was infused with the naaru L'ura. Fought in the final battle against the Legion in their stronghold of Antorus and succeeded. With the crusade finally over, she and Turalyon were reunited with their son, Arator. Found and recruited the exiled ren'dorei into the Alliance.]],
     },
     {
         era = "Pre-BfA",
@@ -821,7 +821,7 @@ IMAGOdb.timelines.APONI_BRIGHTMANE = {
     },
     {
         era = "Legion",
-        text = [[Joined forces with the Order of the Silver Hand. Unsuccesfully tried to hunt down the demon Balnazzar but was captured in the process and had to be rescued by the Highlord. Helped defend the Netherlight Temple and the Exodar from the Burning Legion.]],
+        text = [[Joined forces with the Order of the Silver Hand. Unsuccessfully tried to hunt down the demon Balnazzar but was captured in the process and had to be rescued by the Highlord. Helped defend the Netherlight Temple and the Exodar from the Burning Legion.]],
     },
     {
         era = "BfA",
@@ -2621,5 +2621,72 @@ IMAGOdb.timelines.KHADGAR = {
 }
 
 IMAGOdb.timelines.MAGNI_BRONZEBEARD = {
-    {era = "TWW", text = [[Worked alongside the earthen of Dornogal to combat Xal'atath's forces. With his grandson Dagran uncovered the High Speaker's treachery in the Ringing Deeps. Was restored to flesh by Azeroth. Tried his hardest to reconnect with his daughter Moira and was accepted back by his family.]]},
+    {
+        era = "Pre-WC2",
+        text = [[Born as the eldest of three sons, prince Magni never wished to become king of Ironforge. He did his duty nonetheless and became respected and admired by his people. Married Eimear and had a daughter with her. Magni had preferred a son as his heir.]],
+    },
+    {
+        era = "WC2",
+        text = [[Successfully led the defense of Ironforge against the Horde and pledged his support to the Alliance of Lordaeron.]],
+    },
+    {
+        era = "Pre-WC3",
+        text = [[After the Second War was won, Magni worked with Gelbin Mekkatorque to construct the Deeprun Train – an underground automatic method of transportation between Ironforge and the allied kingdom of Stormwind.]],
+    },
+    {
+        era = "WC3",
+        text = [[Was struck with grief when he heard of his brother Muradin's demise in Northrend at the hands of Arthas Menethil. Forged the Ashbringer for Alexandros Mograine to use against Arthas and the Scourge. Magni worked the Great Anvil for three days without pause and created one of the mightiest weapons ever seen on Azeroth. Sometime during the Third War he fought and befriended Chen Stormstout.]],
+    },
+    {
+        era = "Pre-Classic",
+        text = [[Grew estranged from his daughter Moira when his wife Eimear was killed by ice trolls and tried to train Moira to be a warrior – against his child's wishes.]],
+    },
+    {
+        era = "Classic",
+        text = [[Granted Gelbin Mekkatorque and his people a portion of Ironforge when the gnomes lost their home of Gnomeregan. Hired Alliance adventurers to kill Emperor Dagran Thaurissan when Moira was kidnapped by the Dark Iron Dwarves. Was stunned when Moira refused to return to Ironforge, having fallen in love and expecting a child by her now-late husband, Dagran.]],
+    },
+    {
+        era = "Pre-WotLK",
+        text = [[Helped King Varian Wrynn retake his throne from Katrana Prestor and fought alongside him against the Dark Iron Clan on the Thandol Span. Sent help to Stormwind later on when the awakened Lich King launched a Scourge invasion on the capital.]],
+    },
+    {
+        era = "WotLK",
+        text = [[Traveled to Northrend when he heard the news that his brother Muradin had survived after all. Alongside his other brother, Brann, he helped Muradin regain his memories and the three reunited happily.]],
+    },
+    {
+        era = "Pre-Cata",
+        text = [[Hosted young Anduin Wrynn in Ironforge and gave him the mace Fearbreaker. During that time mysterious earthquakes and restless elementals wreaked havoc across Azeroth, hitting Khaz Modan especially hard. Magni tried to commune with the earth to understand what tormented it so, but was turned to crystal during this ritual.]],
+    },
+    {
+        era = "Pre-Legion",
+        text = [[Awoke as the Speaker of Azeroth and did not retake the throne he had left behind. Brought a dire warning to the world: The Burning Legion was about to return.]],
+    },
+    {
+        era = "Legion",
+        text = [[Told the Kirin Tor about the Pillars of Creation and was vital in the war against the Legion on the Broken Isles. Traveled to and communed with Argus and gave the Champion and the Army of the Light necessary insight into the secrets of the Titan Pantheon.]],
+    },
+    {
+        era = "Pre-BfA",
+        text = [[Unsuccessfully tried to prevent the Horde and the Alliance from exploiting Azeroth's already dire wounds for Azerite.]],
+    },
+    {
+        era = "BfA",
+        text = [[Set out to heal the wounds left behind by Sargeras' final attack on Azeroth. Entrusted the Champion with the Heart of Azeroth and established the Chamber of the Heart. Allied with the titan watcher MOTHER and helped defeat the Old Gods G'huun and N'Zoth.]],
+    },
+    {
+        era = "SL",
+        text = [[Was nearly driven insane by Azeroth's screams when the Jailer almost succeeded in claiming her soul. After Zovaal's death, Azeroth's screams became a calm song of healing.]],
+    },
+    {
+        era = "Pre-DF",
+        text = [[Went on a lighthearted trip to Northrend with his two brothers to check on their allies.]],
+    },
+    {
+        era = "DF",
+        text = [[Stopped hearing Azeroth's voice.]],
+    },
+    {
+        era = "TWW",
+        text = [[Finally heard Azeroth again and followed her visions towards Khaz Algar. Alongside Moira and his grandson, Dagran II, he aided the earthen against Xal'atath. When the Void nearly corrupted slumbering earthen, Magni sacrificed himself to purify the corruption. Instead of dying, he returned to flesh, free from his duty to Azeroth. Vowing to make amends, he returned to Ironforge with his daughter.]],
+    }
 }

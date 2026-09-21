@@ -161,8 +161,11 @@ L["CREDITS_ROLE_TESTER"]            = "Testers"
 -- Midnight Spoiler Protection
 L["SPOILER_MIDNIGHT_TITLE"]         = "Midnight Event"
 L["SPOILER_MIDNIGHT_HINT"]          = "Click to reveal"
+L["SPOILER_TWW_TITLE"]              = "The War Within Event"
+L["SPOILER_TWW_HINT"]               = "Click to reveal"
 L["SPOILER_TOOLTIP_TITLE"]          = "SPOILER"
 L["SPOILER_TOOLTIP_DESC"]           = "Midnight Expansion"
+L["SPOILER_TOOLTIP_DESC_TWW"]       = "The War Within Expansion"
 
 -- Mode Toggle
 L["MODE_LABEL"]                     = "Mode"

@@ -185,9 +185,9 @@ IMAGOdb.eras["midnight"].campaigns = {
         flavorTeaser = "A goddess vanished",
         logoPath     = "Interface\\AddOns\\IMAGO\\media\\Eras\\Campaigns\\MN_AGoddessVanished.png",
         logo_w       = 1280, logo_h = 720,
-        npcLinks     = {"halduron_brightwing_midnight", "orweyna_tww", "rootwarden_ruia_midnight"},
+        npcLinks     = {"halduron_brightwing_midnight", "orweyna_midnight", "rootwarden_ruia_midnight"},
         text         = "With the Lightbloom still threatening Quel'Thalas, {npc:halduron_brightwing_midnight} and the Champion accompany " ..
-                       "{npc:orweyna_tww} to her homeland of Harandar, where the infection had also begun to spread. They gathered " ..
+                       "{npc:orweyna_midnight} to her homeland of Harandar, where the infection had also begun to spread. They gathered " ..
                        "Alndust, magical remnants from the haranir's missing goddess' dreams, and managed to use it to combat " ..
                        "the Lightbloom. {npc:rootwarden_ruia_midnight} betrayed the Hara'ti by willingly aiding the Light's infection and " ..
                        "was defeated by an alliance of haranir and blood elves. The reclusive haranir took their first steps " ..
@@ -282,10 +282,10 @@ IMAGOdb.eras["midnight"].campaigns = {
         flavorTeaser = "Breaching the Voidstorm",
         logoPath     = "Interface\\AddOns\\IMAGO\\media\\Eras\\Campaigns\\MN_BreachingTheVoidstorm.png",
         logo_w       = 1280, logo_h = 720,
-        npcLinks     = {"magister_umbric_midnight", "arator_midnight", "lothraxion_midnight", "alleria_windrunner_tww", "decimus_midnight"},
+        npcLinks     = {"magister_umbric_midnight", "arator_midnight", "lothraxion_midnight", "alleria_windrunner_midnight", "decimus_midnight"},
         text         = "{npc:magister_umbric_midnight} found a way to infiltrate the Voidstorm and the ren'dorei took the fight to " ..
                        "Xal'atath directly. Accompanied by {npc:arator_midnight} and {npc:lothraxion_midnight}, they reunited with " ..
-                       "{npc:alleria_windrunner_tww} and formed an uneasy alliance with the domanaar {npc:decimus_midnight}. They confronted " ..
+                       "{npc:alleria_windrunner_midnight} and formed an uneasy alliance with the domanaar {npc:decimus_midnight}. They confronted " ..
                        "Xal'atath's minions and struck a heavy blow to her forces, but the oppressive darkness of the Voidstorm " ..
                        "made Lothraxion's zeal shine brighter than ever. When he turned against his own allies, the dreadlord was slain.",
         loreBits     =
@@ -335,9 +335,9 @@ IMAGOdb.eras["midnight"].campaigns = {
         flavorTeaser = "Behold, Midnight falls upon us",
         logoPath     = "Interface\\AddOns\\IMAGO\\media\\Eras\\Campaigns\\MN_BeholdMidnightFallsUponUs.png",
         logo_w       = 1280, logo_h = 720,
-        npcLinks     = {"alleria_windrunner_tww", "turalyon_midnight", "arator_midnight", "lorthemar_theron_midnight"},
+        npcLinks     = {"alleria_windrunner_midnight", "turalyon_midnight", "arator_midnight", "lorthemar_theron_midnight"},
         text         = "The Vanguard of the Light breached the Voidstorm and assaulted Xal'atath in her own stronghold – the " ..
-                       "Voidspire. Catastrophe ensued when {npc:alleria_windrunner_tww} fell to the Harbinger's blade and the dark " ..
+                       "Voidspire. Catastrophe ensued when {npc:alleria_windrunner_midnight} fell to the Harbinger's blade and the dark " ..
                        "naaru L'ura was set free. With the Sunwell corrupted and Alleria and {npc:turalyon_midnight} lost to the darkness, " ..
                        "it fell on {npc:arator_midnight} and {npc:lorthemar_theron_midnight} to unite the elven people and drive back the Void from " ..
                        "Silvermoon. The Sunwell was cleansed and reborn as the Dawnwell – less powerful, but less dangerous as " ..
@@ -388,8 +388,8 @@ IMAGOdb.eras["midnight"].patches = {
         logoPath = "Interface\\AddOns\\IMAGO\\media\\Eras\\Patches\\MN_Patch_12.0.7.png",
         logo_w   = 1280, logo_h = 720,
         newZones = {"Naigtal", "Val"},
-        npcLinks = {"orweyna_tww", "zuljan_midnight", "loa_speaker_kinduru_midnight"},
-        text     = "{npc:orweyna_tww} invited the leaders of Azeroth's elves and trolls to Harandar to reveal a " ..
+        npcLinks = {"orweyna_midnight", "zuljan_midnight", "loa_speaker_kinduru_midnight"},
+        text     = "{npc:orweyna_midnight} invited the leaders of Azeroth's elves and trolls to Harandar to reveal a " ..
                    "controversial truth: elves and trolls used to be one people. Infuriated, {npc:zuljan_midnight} left " ..
                    "the meeting and set out to reclaim a weapon of old for the Amani, a creature called Ula'tek. " ..
                    "Accompanied by his uncle, {npc:loa_speaker_kinduru_midnight}, and a mysterious spirit bound within a " ..
@@ -464,10 +464,10 @@ IMAGOdb.eras["the_war_within"].summary =
     "to seize the artifact before her plans come to fruition."
 
 IMAGOdb.eras["the_war_within"].fastFacts = {
-    bigQuestion  = "Will the Champions seize the Dark Heart before Xal'atath's plan comes to fruition — or will she always remain one step ahead?",
-    cosmicForces = "Void vs. the united forces of Azeroth — earthen, kobolds, and Arathi standing alongside the Champions",
-    casualties   = "Archmage Khadgar — consumed by the Dark Heart when Dalaran fell; Locus-Walker — killed by Xal'atath's betrayal in K'aresh",
-    worldScar    = "The fall of Dalaran and Xal'atath's vanishing with the fully powered Dark Heart — a threat left unresolved above Silvermoon's skies",
+    bigQuestion  = "Can Xal'atath be stopped before her mysterious plan comes to fruition?",
+    cosmicForces = "The Void seeking to topple the cosmic balance",
+    casualties   = "- Renzik \"the Shiv\": Gave his life for a better Undermine\n- Locus-Walker: Betrayed and killed by Xal'atath\n- Jastor Gallywix: Died after the goblins of Undermine rose up against his tyranny",
+    worldScar    = "- With Xal'atath's victory, the threat of the Void promises to devour Azeroth soon.\n- K'aresh might be restored in time.\n- The revelation of the Manifold hints at a great Titan conspiracy.",
 }
 
 -- TAB 2: CAMPAIGNS & REGIONS
@@ -476,39 +476,85 @@ IMAGOdb.eras["the_war_within"].campaigns = {
         heading      = "Farewell, City of Magic",
         zoneName     = "Visions of Azeroth",
         flavorTeaser = "Farewell, City of Magic",
-        npcLinks     = {"alleria_windrunner_tww", "anduin_wrynn_tww", "magni_bronzebeard_tww", "khadgar_tww"},
+        npcLinks     = {"alleria_windrunner_tww", "anduin_wrynn_tww", "magni_bronzebeard_tww"},
         text         = "Veteran heroes of Azeroth, such as {npc:alleria_windrunner_tww}, {npc:anduin_wrynn_tww} and {npc:magni_bronzebeard_tww} " ..
                        "assembled in Dalaran following the radiant visions that they have all been " ..
                        "witnessing. After following the visions to Khaz Algar, the heroes on the flying city were " ..
-                       "quickly besieged by Xal'atath and her nerubian allies. Archmage {npc:khadgar_tww} tried to fight her " ..
+                       "quickly besieged by Xal'atath and her nerubian allies. Archmage Khadgar tried to fight her " ..
                        "off but was consumed by the Dark Heart and the city was obliterated.",
-        loreBits     = "[Placeholder] Lore notes for this campaign will appear here.",
+        loreBits     = [[The mysterious Radiant Song had only grown stronger in intensity, and Thrall needed to take action. He traveled to Silithus, recruiting a still-grieving Anduin Wrynn, and sought out the Speaker of Azeroth: Magni Bronzebeard. When he contacted the world soul directly, hoping to find out the meaning behind the cryptic visions, the strain of Azeroth's tormented outcries proved too much, and Magni fell into a coma.
+
+Alongside Jaina Proudmoore, Thrall and Anduin took Magni to Dalaran, where the mages of the Kirin Tor could see to his recovery. His next of kin, namely his daughter Moira and grandson Dagran, arrived as well after hearing the news. Despite her strained relationship with his father, Moira still wished for his well-being, if only for her son's sake. Her wishes were answered, and Magni woke up, revealing the destination Azeroth had showed him: the distant island of Khaz Algar.
+
+The recently returned Archmage Drenden tasked the Champion with realigning the defensive wards around the floating city before the teleport was performed. When they arrived, everyone but Alleria Windrunner was excited by the new wondrous lands that awaited them. She had received visions different from the Radiant Song, and found out that Drenden had been dead for years. Xal'atath had infiltrated the Kirin Tor and now summoned her nerubian allies through Dalaran's weakened wards.
+
+Alleria, Anduin and the Champion immediately evacuated everybody they could while trying to fight off the endless swarms of nerubians. Meanwhile, Khadgar, leader of the Kirin Tor, confronted Xal'atath directly. He would defend Dalaran and the world with his life, and a fight ensued when he noticed the Void entity absorb the magical city's arcane energies. In a last-ditch effort, Khadgar teleported Alleria to safety and was engulfed in an enormous explosion that turned Dalaran into rubble.]],
     },
     {
         heading      = "New Earthen Allies",
         zoneName     = "The Isle of Dorn",
         flavorTeaser = "New Earthen Allies",
-        npcLinks     = {"moira_thaurissan_midnight"},
+        npcLinks     = {},
         text         = "The survivors washed up on the shores of the Isle of Dorn and made contact with the earthen " ..
                        "of Dornogal. Together, they fended off Xal'atath's invading forces. It became apparent that " ..
                        "the earthen were divided between the still-loyal followers of the Titans and the unbound, " ..
-                       "who didn't wish to follow their assigned edicts anymore. {npc:moira_thaurissan_midnight} was able to unite " ..
+                       "who didn't wish to follow their assigned edicts anymore. Moira Thaurissan was able to unite " ..
                        "the two factions again, earning their trust. Finally, they restored the collapsed Coreway — " ..
                        "a passage leading deep underground.",
-        loreBits     = "[Placeholder] Lore notes for this campaign will appear here.",
+        loreBits     = [[In the fallen ruins of Dalaran, the Champion awakened dazed and buried beneath rubble, just in time to defend themselves from incoming nerubians determined to finish the job. Jaina Proudmoore and Thrall rallied the survivors but were ambushed by Queensguard Zirix. In their battered state, they would have struggled against the new onslaught, but help came unexpectedly in the form of Algarian Stormriders led by Stormward Baelgrim, who drove the nerubians into retreat. When the earthen natives saw Magni, they called him "thraegar" and showed him reverence.
+
+Baelgrim invited the survivors to their capital, Dornogal, but the new allies had to fight side by side again when they saw the nerubians wreak havoc in the city. Although they beat the creatures back underground, the Coreway – a massive passage leading to the earthen settlements underground – collapsed in the attack. Jaina and Thrall knew their forces were outnumbered and left for the Eastern Kingdoms to call on reinforcements from the Horde and the Alliance.
+
+Dagran befriended Machine Speaker Brinthe and was made aware of the slow collapse of the earthen people. Their titan-made machines, which kept them alive, were beginning to break down and with their creators gone for such a long time, many earthen had left the capital and their titan-given edicts behind to live a life of their own choosing. While repairs on the Coreway commenced, Moira Thaurissan declared that she would find the leader of these unbound earthen and bring her back to her people.
+
+Moira, Baelgrim and the Champion found Adelgonn in Freywold Village. They helped her defend her people against the nerubians, who did not relent in the slightest. They evacuated the injured to Dornogal and helped out Alleria Windrunner on the way, who had engaged Queensguard Zirix to find out where Xal'atath had been hiding since the fall of Dalaran.
+
+Adelgonn rejoined the Council of Dornogal and lent her workers to the restoration effort of the Coreway. Meanwhile, Baelgrim and the Champion uncovered treachery in the ranks of the Stormriders and took out the Void collaborators. They needed to take the fight to the nerubians, and together with Alleria, they lured Zirix into a trap at the Cinderbrew Meadery. Baelgrim heroically gave his life to end the threat.
+
+Back in Dornogal, the united earthen people were finishing up repairs on the Coreway – the way forward was clear.
+
+|cFFc8a84bSide Quests|r
+
+|cFFe0c06aMerrix and Steelvein:|r
+The Champion tracked down a smuggler and troublemaker among the earthen calling himself 'Steelvein'. It turned out that Councilward Merrix, leader of the Peacekeepers, was none other than said culprit himself. In order to protect all of his people, including the Unbound, he had to break his edicts in order to fulfill them.
+
+|cFFe0c06aRemember Me, Earthen:|r
+The old caretaker Korgran felt his functions slowly shutting down. His assistant Urtago and the Champion helped him die with dignity and in peace. He looked at the ocean one last time before closing his eyes forever.
+
+|cFFe0c06aHidden Edicts:|r
+Dagran II and Brinthe worked together to uncover ancient earthen history. They learned of the titan keepers Dornic and Galan and that they hid something on Dornogal. They were left with more questions than answers, but Dagran was still enthusiastic about his first archaeological find.]],
     },
     {
         heading      = "The Machine Speaker and the Void",
         zoneName     = "The Ringing Deeps",
         flavorTeaser = "The Machine Speaker and the Void",
-        npcLinks     = {"magni_bronzebeard_tww", "dagran_thaurissan_ii_midnight"},
+        npcLinks     = {"magni_bronzebeard_tww"},
         text         = "Following the nerubians down to the workers' city of Gundargaz, the Champions witnessed the " ..
                        "great underground machines, most of which were now shut down due to neglect and an absent " ..
                        "workforce. They helped the kobolds of the Ringing Deeps rebel against the Candle King. " ..
-                       "{npc:magni_bronzebeard_tww} and {npc:dagran_thaurissan_ii_midnight} uncovered that the High Speaker had been working with Xal'atath all along. " ..
+                       "{npc:magni_bronzebeard_tww} and Dagran uncovered that the High Speaker had been working with Xal'atath all along. " ..
                        "They managed to stop him from corrupting the new earthen in the Awakening Machine and {npc:magni_bronzebeard_tww} " ..
                        "was turned back into flesh by Azeroth. The new earthen joined their kin.",
-        loreBits     = "[Placeholder] Lore notes for this campaign will appear here.",
+        loreBits     = [[Alongside Brinthe, Moira, Magni, and Dagran, the Champion descended into the Ringing Deeps through the Coreway. New trouble awaited them mere minutes after arriving at Ironhaul Station – the transport hub between Dornogal and the miners' city of Gundargaz. The Machine Speakers were suffering from nerubian and kobold attacks and strange, maddened earthen had been spotted as well. High Speaker Eirich dismissed these concerns, as a threat far greater occupied his time: the Awakening Machine, inactive for millennia due to neglect, which could awake the earthen in stasis and put an end to the civilization's decline.
+
+The Champion and their allies split up in Gundargaz to solve the earthen's problems themselves. Together with Brinthe, the Champion evacuated the earthen workers north of town as a goblin incursion was underway. They found and freed Skitter, a kobold who had not been keen on supporting her new ruler, the feared Candle King. They joined forces, started a revolution, and managed to defeat the warmonger. The kobolds and earthen of Gundargaz made peace and even began mutual trade.
+
+Dagran and his grandfather Magni, meanwhile, were investigating the dark rumors coming out of the small mining settlement of Taelloch. They found the town shrouded in an eerie fog and witnessed a distressed worker transform into a skardyn – an earthen corrupted and maddened by the Void. Magni risked his own life to keep Dagran safe in the fighting that ensued. He knew he could never fully mend the rift he had created between himself and his daughter, and he would be damned if he now lost his only grandson as well. With the Champion ensuring their survival, the trio uncovered that High Speaker Eirich was working with Xal'atath. He was indeed going to reawaken the slumbering earthen in the Machine, and he would reawaken them as skardyn.
+
+Moira and Brinthe assembled the united forces of the Ringing Deeps and Dornogal above and all together they pushed through the High Speaker's loyalists. They came too late, however, as Eirich had already begun the tainted process of awakening and escaped through a Void portal. The innocent earthen seemed lost, but Magni, Speaker of Azeroth, reached out to the world soul and erupted into bright light that cleansed the corruption. When the light faded, Magni had turned into stone. Dagran broke out into tears and Moira realized that they had just lost their second chance to become a family again. Then the stone broke, and Magni burst forth as a dwarf of flesh and blood. Azeroth had let him go from her service and the three embraced.
+
+The confused newly-awakened earthen glimmered in Azeroth's magic and decided to follow their own path in life.
+
+|cFFc8a84bSide Quests|r
+
+|cFFe0c06aKobold Culture and Integration:|r
+Several kobolds found shelter in Gundargaz and did their utmost to integrate into the strange, new society of stonefolk. They tried to help with maintenance tasks and crafted wax statues of their heroic saviors.
+
+|cFFe0c06aAbysmal Extraction:|r
+The goblins of Opportunity Point were using tourists as unpaid miners while advertising the operation as a luxury spa and resort. The Champion dutifully helped the goblins by pruning the local wildlife and corrosive slimes of the area.
+
+|cFFe0c06aFearbreaker:|r
+Magni Bronzebeard's legendary hammer, Fearbreaker, had been lost during Dalaran's fall. Moira recovered it, proving that she was a worthy Bronzebeard through and through. Magni, happy that his daughter could see herself as part of his family again, left Fearbreaker to her.]],
     },
     {
         heading      = "A Star of Light and Shadow",
@@ -521,7 +567,26 @@ IMAGOdb.eras["the_war_within"].campaigns = {
                        "periodically. Anduin faced a personal crisis when he couldn't reconnect with the Light but " ..
                        "helped defeat Xal'atath's forces nonetheless. {npc:alleria_windrunner_tww} joined them, having " ..
                        "picked up the Harbinger's trail once more. All three followed it further underground.",
-        loreBits     = "[Placeholder] Lore notes for this campaign will appear here.",
+        loreBits     = [[Anduin Wrynn had followed rumors of another civilization in Khaz Algar's depths, after overhearing the earthen of Dornogal calling him an "Arathi". He met up with the Champion and together, they found a massive, open cave illuminated by a crystal shining with the Light. Cathedrals and airships marked human influence and they discovered that the inhabitants of Hallowfall were from the unheard-of Arathi Empire – a name formerly reserved for the original human kingdom in the Eastern Kingdoms.
+
+The Arathi were wary of outsiders, but a particularly friendly young paladin named Faerin Lothar took the two newcomers under her wing. Anduin and the Champion helped her push back an onslaught of nerubians at the Aegis Wall – the border to Queen Ansurek's kingdom of Azj-Kahet. Alleria Windrunner arrived and killed the nerubian leader, deciding the battle in favor of the Arathi. She was, unsurprisingly, pursuing the spidery creatures to find Xal'atath. Faerin, meanwhile, ignited the dawntower, to shield the settlement with the power of the Light.
+
+It was in this moment, however, that the radiant crystal Beledar shifted into darkness. The whole of Hallowfall became hostile without the Light and creatures of Void and Shadow jumped at them from every corner. They rescued whomever they could as the Arathi civilians were attacked from all sides. Anduin almost broke down during the ordeal. His own Light had left him after what had happened in the Shadowlands, and seeing hope vanish here as well, proved almost too much for him.
+
+Another massive surge of Void energy extinguished the Sacred Flames nearby. Faerin, Anduin and the Champion tracked it to a corrupted dawntower. The Order of the Night revealed itself – Arathi who had become hopeless against the insurmountable odds they had faced here each day, and had joined Xal'atath – and a fight ensued. They won and restored the dawntower. In that moment, Beledar shifted again and with the Light returning, so too did Anduin's hope.
+
+Rejoined by Alleria Windrunner, the four comrades arrived in Mereldar, the Arathi's capital. There, they rallied General Steelstrike and once again came to blows against the combined forces of the Order of the Night, the nerubians, and the kobyss. Alleria managed to break the cult leader's magical shield and after a rousing speech from Faerin, the Arathi defeated their enemies. Deciding to no longer play defensively, the group boarded the Reckoning, and set course for Azj-Kahet.
+
+|cFFc8a84bSide Quests|r
+
+|cFFe0c06aThe Last Mage of Hallowfall:|r
+The Arathi had been isolated, surrounded, and cut off from their homeland for years now. The last surviving mage, Wenren, asked the Champion for aid to create a portal back home. He almost succeeded, but was tragically murdered by the Order of the Night, denying the Arathi any hope of return for now.
+
+|cFFe0c06aThe Priory:|r
+The Champion assisted the paladin brothers Braunpyke and traveled to the Priory of the Sacred Flame after one of them fell to the kobyss. Noticing the bodies of the dead going missing, the Champion investigated the Priory and was confronted by fanatical Arathi performing light-necromancy and wanting to bring Hallowfall back to the stricter virtues of the Arathi Empire.
+
+|cFFe0c06aCrushing Depths:|r
+The Champion found a peculiar fish in a kobyss settlement, who telepathically asked for help and revenge in hushed whispers. Naturally, the Champion did as the suspicious creature asked and after killing the kobyss and hearing ominous prophecies of black blood, the Champion released the fish into deeper waters. There, the creature transformed into a tentacled leviathan and warned the Champion to not bring the Light to the depths below.]],
     },
     {
         heading      = "Spiders, Spiders Everywhere",
@@ -534,21 +599,56 @@ IMAGOdb.eras["the_war_within"].campaigns = {
                        "called the Black Blood. The Champions helped the renegade royal Weaver in her rebellion " ..
                        "against the queen but had to flee the capital when Alleria's thirst for revenge against " ..
                        "Xal'atath almost got them killed.",
-        loreBits     = "[Placeholder] Lore notes for this campaign will appear here.",
+        loreBits     = [[The Reckoning was immediately beset by a massive swarm of nerubians. Anduin heroically stayed behind to stop the spider creatures from destroying the airship but it bought his friends only little time. Faerin, Alleria, and the Champion couldn't prevent a crash-landing and while the lamplighter rallied and saved as many of her people as she could, Alleria set off alone to search for Anduin. A mysterious woman calling herself a "haranir" saw the fighting from afar and decided to help the heroes in need.
+
+While Faerin regrouped, the Champion traveled alongside the mysterious stranger for a while. She called herself Orweyna and had been investigating the Black Blood – a sinister substance that permeated Azj-Kahet and slowly drove those who touched it to madness. The two strangers split up at the sight of the City of Threads and the Champion was approached by a curious little spider carrying a scroll. They followed the tiny messenger to the Weaver's Lair and forged a cautious alliance with Widow Arak'nai, a powerful nerubian who openly defied Queen Ansurek.
+
+The Champion was sent to Siegehold to gather information on Queen Ansurek's army. They rescued survivors captured during Dalaran's fall, briefly teamed up with Flynn Fairwind, and noticed a more humanoid-looking group of nerubians giving everybody orders. They met General Anub'azal, former military leader of Ansurek's army, who harbored a great hatred against these new nerubians, the so-called Ascended.
+
+Back at the Weaver's Lair, the Champion was sent to the City of Threads to meet Arak'nai's contact, Queen Ansurek's closest advisor, Executor Nizrek. Unhappy with how the queen allied herself with the Void, Nizrek had used his influence to get a hold of Anduin Wrynn, who was alive and well in the nerubian's quarters. Alleria found them and they decided to pay witness to Queen Ansurek's speech that was taking place in the city at this time. Hidden carefully, Alleria grew furious as Ansurek declared that every nerubian would soon embrace the Void and ascend. Xal'atath was at her side, and the elven ranger loosened an arrow despite Anduin's orders not to. She missed and Queen Ansurek demanded the intruders' deaths.
+
+The entire city was on their heels and while Anduin and the Champion jumped down a waterfall to their safety, Alleria stayed behind, determined to confront Xal'atath once and for all. She didn't even come close to defeating her enemy and the Harbinger tried to convince the ranger to embrace the Void and join her side. Alleria resisted but wasn't pursued when she finally fled as well. The three heroes returned to Dornogal while the Weaver cemented new alliances with the General and the Vizier to start a rebellion.
+
+|cFFc8a84bSide Quests|r
+
+|cFFe0c06aMelody of Madness:|r
+The Champion rejoined Orweyna and several of her fellow haranir in their investigation of the Black Blood. They soon discovered that contact with the dark substance unveiled the horrors of a parallel plane known as the Unseeming, allowing its otherworldly denizens to see the intruder in turn. The experience disturbed even the battle-hardened Champion of Azeroth.
+
+|cFFe0c06aPawns and Puppetry:|r
+While in the City of Threads, the Champion saw strange puppets being sold in the streets that eerily resembled living creatures. They followed the trail to a nerubian entertainer merely calling himself the Puppetmaster, who abducted living creatures and transformed them into grotesque marionettes. The Champion was fortunate to escape his theater alive.
+
+|cFFe0c06aHaggling with Mmarl:|r
+Trade Prince Monte Gazlowe discovered another goblin operation of the Venture Company in the niffen settlement of Mmarl. He helped them out with their bug problem in exchange for information. As it turned out, these goblins operated from Undermine.]],
     },
     {
         heading      = "A Dark Heart Left Broken",
         zoneName     = "The War Within",
         flavorTeaser = "A Dark Heart Left Broken",
-        npcLinks     = {"alleria_windrunner_tww", "anduin_wrynn_tww", "khadgar_tww"},
+        npcLinks     = {"alleria_windrunner_tww", "anduin_wrynn_tww"},
         text         = "The reinforcements of the Horde and the Alliance arrived in Dornogal and quickly went on " ..
                        "the offensive against the nerubians. With the earthen, kobolds and Arathi at their side, " ..
-                       "they made short work of the nerubians in Hallowfall. {npc:alleria_windrunner_tww} confronted " ..
-                       "Xal'atath and managed to damage the Dark Heart, causing an enraged Xal'atath to retreat " ..
-                       "and freeing {npc:khadgar_tww}. {npc:anduin_wrynn_tww} found his faith again and healed the fallen " ..
-                       "archmage. The rebellion against Queen Ansurek was a success and the Weaver and Vizier " ..
-                       "were left in charge of Azj-Kahet.",
-        loreBits     = "[Placeholder] Lore notes for this campaign will appear here.",
+                       "they made short work of their enemies in Hallowfall. {npc:alleria_windrunner_tww} confronted " ..
+                       "Xal'atath and managed to damage the Dark Heart, causing the enraged Harbinger to retreat. " ..
+                       "Khadgar was freed but found himself on the verge of death. {npc:anduin_wrynn_tww} " ..
+                       "regained his faith and healed the fallen archmage. The rebellion against Queen Ansurek was a " ..
+                       "success and the Weaver and Vizier were left in charge of Azj-Kahet.",
+        loreBits     = [[An earthen stormrider gave the long-awaited signal: Ships from the Horde and Alliance had finally arrived on Khaz Algar's shores. Thrall and Jaina had succeeded in their tasks and together, the two factions began planning their offensive against Xal'atath's forces. While the armies under Lord Commander Turalyon and Lady Liadrin established their embassies in Dornogal, Thrall and the Champion learned that the stormrooks of Dornogal had vanished and the earthen were left without means to train more Stormriders – their most accomplished warriors.
+
+Thrall used his shamanistic knowledge to aid Stormward Lufsela, Baelgrim's successor, in communing with the elemental creatures and Kurdran Wildhammer gave the new recruits their first flying lessons – much to his old friend Turalyon's annoyance when electrified gryphons swooped low over his army. Soon after, the earthen of Dornogal declared themselves unbound, allowing everyone to choose to follow the Titan's edicts or reject them altogether. In immediate response, a massive titanic guardian rose from the ocean to wipe out the disobedient earthen. The new Stormriders were aided by Alleria, Jaina, and the Champion and managed to destroy the construct.
+
+Meanwhile in Azj-Kahet, Lillian Voss, the Champion and Y'tekhi followed the Weaver's new lead into Ansurek's Grand Splicer's laboratory. They discovered that the first Ascended nerubian was none other than Ansurek's mother who had been thought dead – Queen Neferess. She had mutated into a monster through forced experimentation. Xal'atath found them and controlled Y'tekhi to fight their allies. Lillian subdued her and the three escaped. The Champion then traveled to the Ringing Deeps, where they aided Dagran II and Brinthe to restore ancient battle golems to aid them in the fight ahead.
+
+The time for the final battle was at hand and when Xal'atath's army launched an assault on the Aegis Wall in Hallowfall, the armies of Dornogal quickly joined the defending Arathi. Queen Neferess, among the attacking nerubians, briefly regained her consciousness and was rescued. Amidst the fighting, Alleria suddenly heard Khadgar's voice and realized that this swarm of nerubians was merely a diversion. Together with Anduin Wrynn, she confronted the Harbinger in the Priory of the Sacred Flame, damaged the Dark Heart, and forced Xal'atath to retreat. Khadgar was freed but so weakened by the ordeal that he took his last breath in Alleria's arms. In that moment, Beledar returned to the Light and Anduin found hope in himself again. He called on the Light and saved Khadgar from the brink of death.
+
+The Weaver and the Vizier meanwhile put a stop to Queen Ansurek and successfully completed their rebellion. Ansurek died in her palace, forsaken by the very Harbinger she had devoted herself to. Xal'atath merely mocked her fallen ally for failing to withstand the outsiders.
+
+|cFFc8a84bSide Quests|r
+
+|cFFe0c06aThe Archive:|r
+Dagran II and Brinthe uncovered an ancient titanic vault underneath Dornogal and restored records of Keeper Archaedas over time. They discovered that the Coreway was a direct passage to Azeroth's world soul – a world soul so mighty that all cosmic forces wanted to claim her for themselves. Brinthe openly cursed the Titans after realizing that their directives had robbed the earthen of their free will.
+
+|cFFe0c06aThe General's Conviction:|r
+General Anub'azal confronted his nemesis and usurper, General Zev'kall, in a duel to the death. He won, but succumbed to his injuries. Even though he didn't live to see Ansurek's downfall, Zev'kall's death gave the rebellion the advantage it needed to claim victory.]],
     },
 }
 
@@ -560,7 +660,15 @@ IMAGOdb.eras["the_war_within"].patches = {
         logoPath = "Interface\\AddOns\\IMAGO\\Media\\Eras\\Patches\\tww_11_0_7.tga",
         logo_w   = 400, logo_h = 300,
         newZones = {"The Siren Isle"},
-        loreBits = "More Radiant Visions",
+        loreBits = [[An expedition of Hallowfall Arathi, awakened earthen, and Gazlowe's Greasemonkeys set out for the Siren Isle, accompanied by the Champion. A new song had lured them all to the small island and its source lay in its center: A giant humming crystal much like Beledar that extended for miles underground. The Arathi named it "Lorandel" and claimed it as holy, while the earthen wanted to study its properties. The goblins, naturally, sought to gain profit and the groups had difficulties working together.
+
+The Champion, meanwhile, found ruins of a Kul Tiran mining operation, yet there was no human to be found. They recovered records claiming the island was haunted and the frequent, almost unnatural storms gave that assessment credence. An old vrykul vault hid singing tablets and the Champion found evidence of an entity called "Cyrce" who used to reside on the island. Weeks of further research yielded no new finds. The secrets of the Siren Isle remained buried deep for the time being.
+
+On the shores of Khaz Algar, Archmage Aethas Sunreaver was desperately defending what little remained of Dalaran, in spite of his own dwindling health. The other mages of the Kirin Tor, while they had given up on Dalaran, could not stand to see their friend and comrade suffer and offered to aid him. Kalecgos recovered magical artifacts that were stolen by kobolds after the crash, and had to free himself from a pocket dimension inside a necklace left behind by Kel'Thuzad. Jaina Proudmoore destroyed dangerous artifacts the nerubians had taken from the magical floating city, including an arcane mana bomb. Afterwards, the surviving members of the Kirin Tor came together to honor their fallen brothers and sisters and accepted that Dalaran's age had come to an end.
+
+Meanwhile in Hallowfall, Orweyna and her haranir were still investigating the Black Blood, yet when the Champion found them, Orweyna's companions left her to continue alone. Haranir, they said, were not supposed to talk to outsiders and they couldn't follow their friend's visions any longer. Orweyna understood, yet her goddess' voice beckoned her to continue. She saw machines drilling through rocks and the Champion led her toward Opportunity Point in the Ringing Deeps.
+
+They teamed up with Monte Gazlowe and Renzik "the Shiv", who were investigating the goblins of the Opportunity Acquisitions for information about Undermine. Together with Orweyna, the team searched the mining facilities and uncovered who the leader of this operation truly was: Jastor Gallywix, Gazlowe's predecessor as Trade Prince of the Bilgewater Cartel, and persona non grata for both Horde and Alliance. With their investigation at an end for now, the group returned to Dornogal. Reluctantly, Orweyna accompanied them and began acquainting herself with her new allies.]],
         npcLinks = {"orweyna_tww"},
         text     = "Following the discovery of a new crystal, similar to Beledar, a team of Arathi, earthen and " ..
                    "goblins sailed to the Siren Isle. They found the inhabitants long dead and the island cursed " ..
@@ -574,7 +682,28 @@ IMAGOdb.eras["the_war_within"].patches = {
         logoPath = "Interface\\AddOns\\IMAGO\\Media\\Eras\\Patches\\tww_11_1.tga",
         logo_w   = 400, logo_h = 300,
         newZones = {"Undermine"},
-        loreBits = "Revolution down in Goblin Town",
+        loreBits = [[The way to Undermine was blasted open suddenly, when the cave walls of the Ringing Deeps near Opportunity Point were blown up from the inside. Gazlowe, Renzik, Orweyna, and the Champion uncovered a sprawling excavation site where goblins toiled under horrific conditions, driven to madness by exposure to the Black Blood. They dismantled as much as they could of the operation and teamed up with Grimla Fizzlecrank and Pamsy of the Venture Co. to gain access into Undermine. Gazlowe was reluctant to return to his former home but knew that Gallywix couldn't be trusted with the Black Blood.
+
+Gazlowe, being Trade Prince of the Bilgewater Cartel, had left Laslo Overbite as his representative in the Undermine and was distraught when he heard of his demise at Gallywix's hands. The trail of the Black Blood led them to Baron Revilgaz and Gazlowe's friend Marin Noggenfogger who both seemed to comply with Gallywix's orders. When they suspected Ethereal involvement, they contacted Alleria Windrunner. While Gazlowe was getting ever more disillusioned by the state of his former home, Renzik was adamant that they needed to change things down here, regardless of what their investigation would bring up. The SI:7 agent had left this town years ago, but wanted to finally make a difference and not run away anymore.
+
+Noggenfogger finally revealed the truth: Gallywix was fashioning powerful weapons infused with the Black Blood in exchange for repairing the Dark Heart for Xal'atath. To do that he had needed the other cartels' help and was still holding Noggenfogger's wife captive to force him to cooperate. In that moment, the entire group was ambushed by Shadowguard ethereals who had overheard them. They chased them but because they freed the hostages, the k'areshi found Gallywix first. With the completed Dark Heart in hand, they vanished once more. Since the ethereals certainly worked for Xal'atath, Alleria left the group to once more hunt the Harbinger, and Gazlowe was prepared to turn his back to the city as well.
+
+Just as Renzik tried to convince him to stay, a single red targeting dot appeared on Gazlowe's chest. Without hesitation, Renzik threw himself between the bullet and his fellow goblin, sacrificing his own life. Gallywix had ordered his manic sharpshooter, Nikki the Fixer, to take out his rival, but it was only with Renzik's death, that Gazlowe finally decided to fight for Undermine. Soon, the entirety of its fed-up and exploited citizens marched towards the Gallagio.
+
+Gallywix, retreating into his palace as he saw the angry mob, was relieved when Xal'atath arrived. She revealed that the ethereals had acted on their own and that the Dark Heart was now beyond her reach. She abandoned her ally, and former Trade Prince Jastor Gallywix perished soon after, buried under his own machines.
+
+Gazlowe decided to stay in the Undermine, at least for a while longer. After scattering Renzik's ashes alongside with SI:7 leader Mathias Shaw – Renzik's only real friend – he formed a new ruling council together with Noggenfogger, Revilgaz and Grimla and vowed to change how things would be down here.
+
+|cFFc8a84bSide Quests|r
+
+|cFFe0c06aHard Ways at the Gallagio:|r
+With Jastor Gallywix's death, the Gallagio was up for grabs and many goblins coveted it. The prime contender was Rosebud Gallywix and when he was murdered, it fell to the Champion to investigate the crime.
+
+|cFFe0c06aThe Verdigrease Knight:|r
+A band of kobolds in a cave named Campalot tasked the Champion with completing various heroic feats. When they did, they were granted knighthood and a seat at the Brown table. It was a great honor.
+
+|cFFe0c06aThe Highst:|r
+Skedgit Cinderbangs recruited the Champion for a heist with promise of great loot. Together with a money-loving shaman, his corrupt elementals, a handsome hobgoblin, and a very mediocre mage, they managed to land the gig. Instead of a fortune, however, Skedgit merely rescued her imprisoned grandmother, leaving the Champion empty-handed.]],
         npcLinks = {"orweyna_tww"},
         text     = "{npc:orweyna_tww} followed Monte Gazlowe and Renzik 'the Shiv' into Undermine after her visions " ..
                    "led them towards a goblin operation of Black Blood weaponry. They found out that Gallywix had " ..
@@ -590,7 +719,17 @@ IMAGOdb.eras["the_war_within"].patches = {
         logoPath = "Interface\\AddOns\\IMAGO\\Media\\Eras\\Patches\\tww_11_1_7.tga",
         logo_w   = 400, logo_h = 300,
         newZones = {"Arathi Highlands"},
-        loreBits = "Rise of the Red Dawn",
+        loreBits = [[After having joined the war effort on Khaz Algar, both King Danath Trollbane and Overlord Geya'rah received word from the Arathi Highlands. Outposts of the Horde and the Alliance had been raided and the capital needed its king. The Champion and Faerin Lothar, eager to visit her people's ancestral homeland, joined them.
+
+When they arrived at Newstead, they found the peaceful farmstead overrun by a group of bandits calling themselves "the Red Dawn". After ensuring Newstead was secured once more, Faerin and the Champion went to confront Colonel Veronica Nials, left in charge of Stromgarde before Danath had left, while the king headed towards Hammerfall. A foul mood reigned in the city and with shortages of food and paranoia due to the strong Horde presence nearby, civil unrest hung in the air. Marran Trollbane, Danath's niece and former regent of Stromgarde, still inspired much support even from behind prison bars and sowed dissent towards everyone who wasn't human.
+
+The Champion and Faerin knew they needed to inform Danath of his niece's apparent involvement and found more evidence of the Red Dawn's destructiveness on their way. Danath, as it turned out, had never arrived in Hammerfall. The Champion and Faerin distributed rations to the human refugees from the surrounding farmlands, while Eitrigg sent out armed outriders to search for the king. Without these warriors, however, Hammerfall's defenses were weakened significantly. The human refugees revealed themselves as Red Dawn and set Hammerfall to the torch. Even though they were defeated, the orcish stronghold suffered great losses and the Arathi Highlands were poised to become the stage of a new war.
+
+The outriders returned with grave news: Danath had been kidnapped and evidence had been planted by the Red Dawn to frame the Horde. The group had to act fast and while Faerin rushed back to Stromgarde, Eitrigg and Geya'rah led a skirmish to the abandoned Horde war fortress of Ar'gorok, where they found and rescued the king.
+
+Returning to the capital, they discovered that Colonel Nials had turned traitor, freed Marran and started a coup. Faerin engaged Danath's niece in a duel and proved superior. Defeated, the former regent said that Danath had put his own people second time and again to play hero and to fraternize with the Horde. Faerin was unmoved, but Danath forbade the killing blow and decided to send his niece and her followers into exile and stripped her of her title and name.
+
+Faerin was glad to have made a difference in the land she had heard so much about as a child, but was left pensive and disillusioned after seeing what had become of it.]],
         npcLinks = {"faerin_lothar_tww"},
         text     = "Excited to learn of her heritage, {npc:faerin_lothar_tww} accompanied Danath Trollbane to his " ..
                    "kingdom of Stromgarde. They found themselves in the middle of a civil war, as Danath's " ..
@@ -604,7 +743,30 @@ IMAGOdb.eras["the_war_within"].patches = {
         logoPath = "Interface\\AddOns\\IMAGO\\Media\\Eras\\Patches\\tww_11_2.tga",
         logo_w   = 400, logo_h = 300,
         newZones = {"Tazavesh", "K'aresh"},
-        loreBits = "The All-Devouring Returns",
+        loreBits = [[Alleria's mentor, Locus-Walker, had managed to track down the Dark Heart on the ethereal's devastated homeworld of K'aresh. The Shadowguard were using its power to return Dimensius – the void lord who destroyed the planet so many millennia ago - to full strength.
+
+Locus-Walker teleported Alleria and the Champion to Tazavesh, the broker city built by the ethereals from the Shadowlands, to find refuge after K'aresh's fall. Now it was floating in the skies of the remains of the broken world. Apart from the brokers, Locus-Walker spoke of another ally he had made, someone who had warned him of an impending attack of the Shadowguard. Indeed, the flying city was soon besieged by their void-wielding foes but Alleria and the Champion were experienced enough by now to repel their attackers without much difficulty.
+
+Owing their quick victory to Locus-Walker's new ally, Alleria's confidence turned into anger when her mentor introduced them. It turned out he was working alongside the Harbinger herself, Xal'atath. The being of the Void convinced her pursuer that without her, the heroes of Azeroth and K'aresh would stand no chance against a void lord and the universe would suffer as a result. Alleria, attuned to the forces of the Void, already felt Dimensius stirring, and had to admit Xal'atath was needed in this battle.
+
+The Harbinger showed the Champion and Windrunner how to transmute into energy to withstand Dimensius' devouring presence through the use of so-called Reshii ribbons. They were incredibly rare and only a few remained on the shattered world below them. To obtain them, they aided Ve'nari in her ambitious attempt to restore life on K'aresh and Xal'atath used her usual silver tongue to ally with the Wastelanders - ethereals sworn to Nexus-King Salhadaar. The Harbinger convinced Soul-Scribe, leader of the Wastelanders, that the world-soul of K'aresh still remained alive and thus, the group obtained an army.
+
+Dissent was sown in the fragile alliance, however, when Xal'atath revealed that it hadn't been Dimensius who destroyed K'aresh, but none other than Locus-Walker himself. In an attempt to kill the void lord, he had sacrificed his world and people and Alleria's trust in her mentor was shattered.
+
+Nevertheless, the group stormed Manaforge: Omega and put an end to the Shadowguard ethereals, including Salhadaar. It took everyone's power combined to take a stand against the still-weakened Dimensius and without Xal'atath's interventions, the Champion would have perished then and there. Finally, they managed to trap the void lord inside the Dark Heart and Xal'atath stayed behind while the others escaped. It was, however, a ruse. With a fully-empowered Dark Heart, Xal'atath re-emerged, killed Locus-Walker, and left Alleria and the Champion behind to mourn and realize their defeat.
+
+Yet a glimmer of hope remained after everything. To everyone's surprise, Xal'atath hadn't lied about K'aresh's fate. Soul-Scribe gave her life to renew the world-soul and Ve'nari vowed to protect it. The ethereals' world was broken and shattered, but it was still alive.
+
+|cFFc8a84bSide Quests|r
+
+|cFFe0c06aEcological Succession:|r
+Ve'nari invested her considerable fortune from her dangerous endeavors in the Maw to construct massive eco-domes on her former homeland. The Champion helped her recruit experts from across Azeroth to establish an ecosystem of native flora and fauna under the domes. Bit by bit, Ve'nari would return life to her world, no matter the cost or how long it took.
+
+|cFFe0c06aIn Search of Darkness:|r
+In the void elven base of Shan'dorah, the ren'dorei under Magister Umbric held the line on K'aresh against the Shadowguard. Leona Darkstrider worked with Adarus Duskblaze to learn how to fight with the ferocity of a demon hunter. Adarus in turn learned about the Void, but was consumed by the whispers in the end.
+
+|cFFe0c06aOf Boughs and Bonds:|r
+The Champion helped the broker Om'fennad find his long-lost sister on K'aresh. While he had escaped to the Shadowlands after their world's fall, she had remained here. Oaths held much meaning in ethereal culture, and Om'fennad had broken his when he fled. Still, he found and reconciled with his sister in the end, and both honored their late mother together.]],
         npcLinks = {"alleria_windrunner_tww"},
         text     = "Locus-Walker brought {npc:alleria_windrunner_tww} to the broker city of Tazavesh with grave news: " ..
                    "The Shadowguard ethereals under Nexus-King Salhadaar planned to use the Dark Heart to bring " ..
@@ -619,11 +781,21 @@ IMAGOdb.eras["the_war_within"].patches = {
         logoPath = "Interface\\AddOns\\IMAGO\\Media\\Eras\\Patches\\tww_11_2_7.tga",
         logo_w   = 400, logo_h = 300,
         newZones = {"Quel'Thalas"},
-        loreBits = "[Placeholder] Lore notes for this patch will appear here.",
-        npcLinks = {"vereesa_windrunner_midnight", "alleria_windrunner_tww", "sylvanas_windrunner_midnight"},
-        text     = "{npc:vereesa_windrunner_midnight} began to have horrible visions of her homeland of Quel'Thalas destroyed " ..
+        loreBits = [[Arator the Redeemer asked for the Champion's assistance in Dornogal. His aunt Vereesa had been plagued by ominous visions, and the young paladin didn't know how to help her anymore. They met Vereesa amidst the ruins of Dalaran and while she mourned the city – the last reminder of her late husband Rhonin – a new vision triggered. She saw Silvermoon consumed by the Void, its paladin defenders burned alive, Lor'themar, the Champion, and her sister Alleria swallowed by a terrible darkness, and a maniacal Magister Umbric killing Grand Magister Rommath.
+
+As if to prove her visions right, members of the Twilight's Hammer cult – now followers of Xal'atath and calling themselves the Twilight's Blade – ambushed the three. Even though they defeated the cultists, Arator knew that Silvermoon would soon become besieged by the Void. Alongside the Champion he set out to Tazavesh to find his mother. Magister Umbric told them where to find Alleria and the void elf vowed to return to his homeland as well to help defend it at all costs.
+
+Arator's mother was, unsurprisingly, on the hunt. Xal'atath still had the Dark Heart and Alleria used Ve'nari's help to trap and interrogate the Harbinger's remaining forces on K'aresh to find out where she was hiding. She refused Arator's request to return to Silvermoon with him.
+
+The young paladin didn't give up yet, however. Another Windrunner remained who had defended Silvermoon once before: Sylvanas, the Banshee Queen, former Ranger-General of Quel'Thalas. With Ve'nari's help, Arator traveled to the Maw and the Champion found themselves back in the hellscape where they had begun their journey through the Shadowlands years ago.
+
+They found Sylvanas continuing her long journey toward redemption. She sought out and protected the souls of the people she had damned to this hell and slowly but surely, she was sending them all to the afterlives they truly deserved. Her penance was not done and Sylvanas, just like Alleria, refused Arator's request. If Silvermoon needed a Windrunner to defend her, Sylvanas urged Arator to be a Windrunner himself and fight for their family's ancestral home. Alongside the Champion, Arator returned to Dornogal empty-handed but renewed in purpose.
+
+Meanwhile, Alleria Windrunner managed to find Xal'atath. Following her enemy through a void portal, she witnessed the Harbinger drain the Dark Heart of all its power. As the artifact fell to the ground, an enormous spire formed in the skies and tore a hole through space to unleash a terrible Voidstorm over Silvermoon.]],
+        npcLinks = {"alleria_windrunner_tww"},
+        text     = "Vereesa Windrunner began to have horrible visions of her homeland of Quel'Thalas destroyed " ..
                    "by the Void. Her nephew Arator believed her, and tried to rally his mother {npc:alleria_windrunner_tww} " ..
-                   "and his aunt {npc:sylvanas_windrunner_midnight} to join them in the defense of Silvermoon. Even though he had ventured " ..
+                   "and his aunt Sylvanas to join them in the defense of Silvermoon. Even though he had ventured " ..
                    "to K'aresh and even into the Maw to do so, he was denied by both. {npc:alleria_windrunner_tww}, " ..
                    "meanwhile, followed Xal'atath through the Void and witnessed her drain the Dark Heart of its " ..
                    "power, summoning a massive spire that tore open the skies over Silvermoon.",
@@ -632,11 +804,13 @@ IMAGOdb.eras["the_war_within"].patches = {
 
 -- TAB 4: KEY FIGURES
 IMAGOdb.eras["the_war_within"].keyFigures = {
-    { slug="alleria_windrunner_tww", arcLabel="The Obsessed Hunter",       blurb="Alleria hunted Xal'atath across Khaz Algar and far beyond. Her thirst for revenge bordered on dangerous obsession to the point of endangering herself and her allies." },
-    { slug="xal_atath_tww",           arcLabel="The Harbinger",             blurb="The Harbinger systematically empowered the Dark Heart with various energy sources while delaying the Champions repeatedly. She notably never attacked Alleria directly and managed to turn her losses into ultimate victory." },
-    { slug="anduin_wrynn_tww",       arcLabel="Broken, Then Reforged",     blurb="Started out a broken man after the events of the war in the Shadowlands, but finally regained his faith in the Light and in himself." },
-    { slug="faerin_lothar_tww",      arcLabel="Hope Against the Odds",     blurb="The young paladin hero inspired her people to not lose hope against the overwhelming odds. She herself was left disillusioned though after witnessing the civil unrest in Stromgarde." },
-    { slug="orweyna_tww",            arcLabel="Reluctant Servant of Fate", blurb="The reclusive scout was hesitant to aid the Champions, but realized that she needed outside help to fulfill the will of her goddess." },
+    { slug="alleria_windrunner_tww", arcLabel="The Obsessed Hunter",   blurb="Alleria hunted Xal'atath across Khaz Algar and far beyond. Her thirst for revenge bordered on dangerous obsession to the point of endangering herself and her allies." },
+    { slug="xal_atath_tww",          arcLabel="The Harbinger",         blurb="The Harbinger systematically empowered the Dark Heart with various energy sources while delaying the Champions repeatedly. She notably never attacked Alleria directly and managed to turn her losses into ultimate victory." },
+    { slug="anduin_wrynn_tww",       arcLabel="Broken, Then Reforged", blurb="Started out a broken man after the events of the war in the Shadowlands, but finally regained his faith in the Light and in himself." },
+    { slug="khadgar_tww",            arcLabel="The Guardian",          blurb="Proved his pure nature once more when he risked his life without hesitation protecting Dalaran. The war on Khaz Algar robbed him of the use of his legs, yet not of his resolve." },
+    { slug="magni_bronzebeard_tww",  arcLabel="A Second Chance",       blurb="Tried his hardest to redeem his past with his daughter Moira by becoming a good grandfather to Dagran. Fulfilled his duty to Azeroth and was accepted back by his family." },
+    { slug="faerin_lothar_tww",      arcLabel="The Faithful Flame",    blurb="The young paladin hero inspired her people to not lose hope against the overwhelming odds. She herself was left disillusioned, however, after witnessing the civil unrest in Stromgarde." },
+    { slug="orweyna_tww",            arcLabel="Servant of Fate",       blurb="The reclusive scout was hesitant to aid the Champions, but realized that she needed outside help to fulfill the will of her goddess." },
 }
 
 -- ============================================================

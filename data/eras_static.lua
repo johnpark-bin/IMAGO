@@ -28,7 +28,7 @@ IMAGOdb.eras["midnight"] = {
 -- ------------------------------------------------------------
 IMAGOdb.eras["the_war_within"] = {
     order              = 2,
-    coming_soon        = true,
+    coming_soon        = false,
     release_date       = "August 26, 2024",
     logoPath           = "Interface\\AddOns\\IMAGO\\Media\\Eras\\tww_logo.tga",
     bgPath             = "Interface\\AddOns\\IMAGO\\Media\\Eras\\tww_bg.tga",

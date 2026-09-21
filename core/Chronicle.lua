@@ -65,6 +65,27 @@ local eraColors = {
     ["Midnight"]  = {IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3]},       -- Deep void violet (Xal'atath)
 }
 
+-- Chronological order of timeline era labels
+local ERA_ORDER = {
+    Ancient = 1, ["Pre-WC1"] = 2, WC1 = 3, ["Pre-WC2"] = 4, WC2 = 5,
+    ["Pre-WC3"] = 6, WC3 = 7, ["Pre-Classic"] = 8, Classic = 9,
+    ["Pre-TBC"] = 10, TBC = 11, ["Pre-WotLK"] = 12, WotLK = 13,
+    ["Pre-Cata"] = 14, Cata = 15, ["Pre-MoP"] = 16, MoP = 17,
+    ["Pre-WoD"] = 18, WoD = 19, ["Pre-Legion"] = 20, Legion = 21,
+    ["Pre-BfA"] = 22, BfA = 23, ["Pre-SL"] = 24, SL = 25,
+    ["Pre-DF"] = 26, DF = 27, ["Pre-TWW"] = 28, TWW = 29,
+    ["Pre-MN"] = 30, Midnight = 31,
+}
+
+-- NPC records are expansion-scoped via their slug suffix: the timeline only
+-- shows entries up to that expansion, and the expansion's own era entry sits
+-- behind spoiler protection. Records without a suffix keep the legacy
+-- behavior (full timeline, Midnight era spoiler-gated).
+local SLUG_ERA = {
+    _midnight = "Midnight",
+    _tww      = "TWW",
+}
+
 IMAGO.Chronicle.ranks = IMAGO.Chronicle.ranks or {}
 IMAGO.Chronicle.zoneRanks = IMAGO.Chronicle.zoneRanks or {}
 
@@ -1834,13 +1855,34 @@ function IMAGO.Chronicle.RenderTimeline()
     local selfSlug = f.selectedNPCSlug
     local sharedNPCLinks, sharedZoneLinks = {}, {}
 
+    -- Expansion scoping: hide timeline entries beyond the NPC's own
+    -- expansion; that expansion's era entry gets spoiler protection.
+    local npcSlug = selfSlug or ""
+    local npcEra
+    for suffix, era in pairs(SLUG_ERA) do
+        if npcSlug:sub(-#suffix) == suffix then npcEra = era break end
+    end
+    local cutoffOrder = npcEra and ERA_ORDER[npcEra] or math.huge
+    local spoilerEra  = npcEra or "Midnight"
+
+    local visibleEntries = {}
+    for _, entry in ipairs(data.timeline) do
+        local ord = ERA_ORDER[entry.era]
+        if not ord or ord <= cutoffOrder then
+            visibleEntries[#visibleEntries + 1] = entry
+        end
+    end
+
+    IMAGOSaved.revealedSpoilers = IMAGOSaved.revealedSpoilers or {}
+    local isRevealed = IMAGOSaved.revealedSpoilers[npcSlug]
+        or (IMAGOSaved.revealedMidnight and IMAGOSaved.revealedMidnight[npcSlug])
+
     local y = 0
-    local entryCount = #data.timeline
     local contentW = math.max(1, (f.infoScroll:GetWidth() or 0) - IMAGO.LAYOUT.SCROLLBAR_GUTTER)
     local textW = math.max(310, contentW - 140)
     local dividerW = math.max(320, contentW - 60)
 
-    for i, entry in ipairs(data.timeline) do
+    for i, entry in ipairs(visibleEntries) do
         -- Subtle divider before each entry (except the first)
         if i > 1 then
             local divider = f.timelineContainer.dividers[i]
@@ -1884,22 +1926,23 @@ function IMAGO.Chronicle.RenderTimeline()
             entry.text or "", selfSlug, nil, sharedNPCLinks, sharedZoneLinks
         )
 
-        -- Midnight spoiler protection
-        local isMidnight = (entry.era == "Midnight")
-        local npcSlug = f.selectedNPCSlug or ""
-        IMAGOSaved.revealedMidnight = IMAGOSaved.revealedMidnight or {}
-        local isRevealed = IMAGOSaved.revealedMidnight[npcSlug]
+        -- Spoiler protection for the NPC's own expansion era
+        local isSpoilerEntry = (entry.era == spoilerEra)
 
-        if isMidnight and not isRevealed then
+        if isSpoilerEntry and not isRevealed then
             local L = IMAGO.L
-            txt:SetText("[" .. L["SPOILER_MIDNIGHT_TITLE"] .. "] — " .. L["SPOILER_MIDNIGHT_HINT"])
-            txt:SetTextColor(IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3]) -- Midnight void violet
+            local spoilerCol = eraColors[spoilerEra] or IMAGO_COLORS.VOID
+            local spoilerTitle = L["SPOILER_" .. spoilerEra .. "_TITLE"] or L["SPOILER_MIDNIGHT_TITLE"]
+            local spoilerHint  = L["SPOILER_" .. spoilerEra .. "_HINT"]  or L["SPOILER_MIDNIGHT_HINT"]
+            txt:SetText("[" .. spoilerTitle .. "] — " .. spoilerHint)
+            txt:SetTextColor(unpack(spoilerCol))
             txt.realText = linkedEntryText
             txt.npcSlug = npcSlug
             txt.isSpoiler = true
             txt:EnableMouse(true)
             txt:SetScript("OnMouseUp", function(self)
-                IMAGOSaved.revealedMidnight[self.npcSlug] = true
+                IMAGOSaved.revealedSpoilers[self.npcSlug] = true
+                if IMAGOSaved.revealedMidnight then IMAGOSaved.revealedMidnight[self.npcSlug] = true end
                 self:SetText(self.realText)
                 self:SetTextColor(IMAGO_COLORS.TEXT_PRIMARY[1], IMAGO_COLORS.TEXT_PRIMARY[2], IMAGO_COLORS.TEXT_PRIMARY[3])
                 self.isSpoiler = false
@@ -1913,16 +1956,16 @@ function IMAGO.Chronicle.RenderTimeline()
                 if self.isSpoiler then
                     GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
                     GameTooltip:SetText("⚠️ " .. L["SPOILER_TOOLTIP_TITLE"], IMAGO_COLORS.DANGER[1], IMAGO_COLORS.DANGER[2], IMAGO_COLORS.DANGER[3])
-                    GameTooltip:AddLine(L["SPOILER_TOOLTIP_DESC"], IMAGO_COLORS.TEXT_SECONDARY[1], IMAGO_COLORS.TEXT_SECONDARY[2], IMAGO_COLORS.TEXT_SECONDARY[3])
+                    GameTooltip:AddLine(L["SPOILER_TOOLTIP_DESC_" .. spoilerEra] or L["SPOILER_TOOLTIP_DESC"], IMAGO_COLORS.TEXT_SECONDARY[1], IMAGO_COLORS.TEXT_SECONDARY[2], IMAGO_COLORS.TEXT_SECONDARY[3])
                     GameTooltip:Show()
                     -- Hover effect: brighter text
-                    self:SetTextColor(IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3])
+                    self:SetTextColor(unpack(spoilerCol))
                 end
             end)
             txt:SetScript("OnLeave", function(self)
                 GameTooltip:Hide()
                 if self.isSpoiler then
-                    self:SetTextColor(IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3])
+                    self:SetTextColor(unpack(spoilerCol))
                 end
             end)
         else
