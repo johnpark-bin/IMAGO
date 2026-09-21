@@ -1,14 +1,14 @@
 -- ============================================================
--- IMAGO — core/Eras.lua  v3  (Mockup-Neuschrieb)
--- "Eras & Expansion Summaries" — 4-Tab-System
--- Sidebar: Gruppen-Labels + Era-Items (Dot · Name · Version-Tag)
--- Content: Expansion-Banner · Tab-Bar · ScrollFrame pro Tab
+-- IMAGO — core/Eras.lua  v3  (mockup rewrite)
+-- "Eras & Expansion Summaries" — 4-tab system
+-- Sidebar: group labels + era items (dot · name · version tag)
+-- Content: expansion banner · tab bar · ScrollFrame per tab
 -- ============================================================
 
 IMAGO.Eras = IMAGO.Eras or {}
 
 -- ============================================================
--- KONSTANTEN & FARBEN  (HTML-Mockup → WoW 0-1 Range)
+-- CONSTANTS & COLORS  (HTML mockup → WoW 0-1 range)
 -- ============================================================
 
 
@@ -36,7 +36,7 @@ local SIDEBAR_W = LAYOUT.SIDEBAR_WIDTH
 local BANNER_H  = 120
 
 -- ============================================================
--- VERSION-TAGS & RÖMISCHE ZIFFERN (pro Era-Slug)
+-- VERSION TAGS & ROMAN NUMERALS (per era slug)
 -- ============================================================
 
 local ERA_VERSION = {
@@ -69,15 +69,15 @@ local ERA_ROMAN = {
     classic                = "I",
 }
 
--- order <= MODERN_CUTOFF → "Modern Era", sonst "Classic Era"
--- Classic (1), TBC (2), WotLK (3) haben order >= 10; Cataclysm = order 9 ist Modern
+-- order <= MODERN_CUTOFF → "Modern Era", otherwise "Classic Era"
+-- Classic (1), TBC (2), WotLK (3) have order >= 10; Cataclysm = order 9 is Modern
 local MODERN_CUTOFF = 9
 
--- Session-lokaler Navigationsverlauf
+-- Session-local navigation history
 local erasViewHistory = {}
 local ERAS_TAB_INDEX  = 3
 
--- Fortschrittsränge (lore-thematisch)
+-- Progress ranks (lore-themed)
 IMAGO.Eras.ranks = {
     { perc =   0, key = "ERAS_RANK_SEEKER"    },
     { perc =   1, key = "ERAS_RANK_APPRENTICE" },
@@ -88,7 +88,7 @@ IMAGO.Eras.ranks = {
 }
 
 -- ============================================================
--- HILFSFUNKTIONEN
+-- HELPER FUNCTIONS
 -- ============================================================
 
 local function GetSortedEras()
@@ -150,7 +150,7 @@ local function StyleScrollBar(scrollName)
 end
 
 -- ============================================================
--- HAUPT-FRAME ERSTELLEN
+-- CREATE MAIN FRAME
 -- ============================================================
 
 function IMAGO.Eras.CreateFrame()
@@ -162,7 +162,7 @@ function IMAGO.Eras.CreateFrame()
     IMAGO.Eras.frame = E
 
     -- --------------------------------------------------------
-    -- WRAPPER  (füllt den Chronicle-Innenbereich)
+    -- WRAPPER  (fills the Chronicle content area)
     -- --------------------------------------------------------
     E.wrapper = CreateFrame("Frame", "IMAGOErasWrapper", chronicle)
     E.wrapper:SetPoint("TOPLEFT",     chronicle, "TOPLEFT",      LAYOUT.SIDEBAR_OFFSET_LEFT, -LAYOUT.WORKSPACE_TOP)
@@ -176,7 +176,7 @@ function IMAGO.Eras.CreateFrame()
     E.wrapper.bg:SetAlpha((IMAGOSaved and IMAGOSaved.opaqueUI) and 1.0 or 0.95)
 
     -- --------------------------------------------------------
-    -- LINKE SIDEBAR
+    -- LEFT SIDEBAR
     -- --------------------------------------------------------
     E.sidebar = CreateFrame("Frame", "IMAGOErasSidebar", E.wrapper)
     E.sidebar:SetPoint("TOPLEFT",    E.wrapper, "TOPLEFT",    0, 0)
@@ -188,7 +188,7 @@ function IMAGO.Eras.CreateFrame()
     E.sidebar.bg:SetColorTexture(unpack(C_BG_SIDEBAR))
     E.sidebar.bg:SetAlpha((IMAGOSaved and IMAGOSaved.opaqueUI) and 1.0 or 0.85)
 
-    -- Sidebar: rechte Trennlinie (1px, gold dim)
+    -- Sidebar: right divider (1px, gold dim)
     do
         local line = E.sidebar:CreateTexture(nil, "ARTWORK")
         line:SetWidth(1)
@@ -197,7 +197,7 @@ function IMAGO.Eras.CreateFrame()
         line:SetColorTexture(IMAGO_COLORS.DIVIDER[1], IMAGO_COLORS.DIVIDER[2], IMAGO_COLORS.DIVIDER[3], 0.8)
     end
 
-    -- Sidebar: Überschrift → klickbarer Overview-Button
+    -- Sidebar: heading → clickable overview button
     E.overviewBtn = CreateFrame("Button", nil, E.sidebar)
     E.overviewBtn:SetPoint("TOPLEFT",  E.sidebar, "TOPLEFT",  0, 0)
     E.overviewBtn:SetSize(SIDEBAR_W, LAYOUT.SIDEBAR_HEADER_HEIGHT)
@@ -213,7 +213,7 @@ function IMAGO.Eras.CreateFrame()
     end
     E.overviewBtn:SetScript("OnClick", function() IMAGO.Eras.ShowErasOverview() end)
 
-    -- Sidebar: Trennlinie unter Überschrift
+    -- Sidebar: divider under heading
     do
         local div = E.sidebar:CreateTexture(nil, "ARTWORK")
         div:SetHeight(1)
@@ -236,7 +236,7 @@ function IMAGO.Eras.CreateFrame()
     E.sidebarRows = {}
 
     -- --------------------------------------------------------
-    -- RECHTE CONTENT PANE
+    -- RIGHT CONTENT PANE
     -- --------------------------------------------------------
     E.contentPane = CreateFrame("Frame", "IMAGOErasContentPane", E.wrapper)
     E.contentPane:SetPoint("TOPLEFT",     E.sidebar, "TOPRIGHT",    LAYOUT.CONTENT_PADDING_LEFT, 0)
@@ -250,19 +250,19 @@ function IMAGO.Eras.CreateFrame()
     E.banner:SetPoint("TOPRIGHT", E.contentPane, "TOPRIGHT", 0, 0)
     E.banner:SetHeight(BANNER_H)
 
-    -- Banner: Basis-Farbe (IMAGO-Hintergrund)
+    -- Banner: base color (IMAGO background)
     do
         local base = E.banner:CreateTexture(nil, "BACKGROUND", nil, -2)
         base:SetAllPoints()
         base:SetColorTexture(unpack(C_BG_MAIN))
     end
 
-    -- Banner: Era-spezifisches Artwork (bgPath)
+    -- Banner: era-specific artwork (bgPath)
     E.banner.eraBg = E.banner:CreateTexture(nil, "BACKGROUND", nil, -1)
     E.banner.eraBg:SetAllPoints()
     E.banner.eraBg:SetAlpha(0)
 
-    -- Banner: Gradient-Overlay (oben leicht → unten dunkel)
+    -- Banner: gradient overlay (light top → dark bottom)
     do
         local grad = E.banner:CreateTexture(nil, "ARTWORK", nil, 0)
         grad:SetAllPoints()
@@ -272,7 +272,7 @@ function IMAGO.Eras.CreateFrame()
             CreateColor(0, 0, 0, 0.85))
     end
 
-    -- Banner: Dekorative Licht-Punkte ("Sterne")
+    -- Banner: decorative light dots ("stars")
     local starData = {
         {0.07, 0.15}, {0.21, 0.32}, {0.38, 0.11}, {0.52, 0.42},
         {0.68, 0.20}, {0.79, 0.55}, {0.88, 0.13}, {0.95, 0.37},
@@ -282,13 +282,13 @@ function IMAGO.Eras.CreateFrame()
         local star = E.banner:CreateTexture(nil, "OVERLAY")
         star:SetSize(2, 2)
         star:SetPoint("TOPLEFT", E.banner, "TOPLEFT",
-            s[1] * 800,             -- relative X (Banner-Breite ≈ 800px)
+            s[1] * 800,             -- relative X (banner width ≈ 800px)
             -(s[2] * BANNER_H))
         star:SetColorTexture(C_GOLD[1], C_GOLD[2], C_GOLD[3], 0.45)
         table.insert(E.banner.stars, star)
     end
 
-    -- Banner: Era-Name (unten links)
+    -- Banner: era name (bottom left)
     E.banner.nameLabel = E.banner:CreateFontString(nil, "OVERLAY")
     E.banner.nameLabel:SetFont(FONT_TITLE, 28, "")
     E.banner.nameLabel:SetPoint("BOTTOMLEFT", E.banner, "BOTTOMLEFT", 16, 46)
@@ -297,27 +297,27 @@ function IMAGO.Eras.CreateFrame()
     E.banner.nameLabel:SetShadowOffset(1, -1)
     E.banner.nameLabel:SetText("")
 
-    -- Banner: Meta-Zeile (Erweiterung XII · Region)
+    -- Banner: meta line (Expansion XII · Region)
     E.banner.metaLabel = E.banner:CreateFontString(nil, "OVERLAY")
     E.banner.metaLabel:SetFont(FONT_BODY, 11, "")
     E.banner.metaLabel:SetPoint("TOPLEFT", E.banner.nameLabel, "BOTTOMLEFT", 0, -5)
     E.banner.metaLabel:SetTextColor(unpack(C_GOLD_DIM))
     E.banner.metaLabel:SetText("")
 
-    -- Banner: Römische Ziffer (rechts, groß, sehr transparent)
+    -- Banner: Roman numeral (right, large, very transparent)
     E.banner.romanLabel = E.banner:CreateFontString(nil, "OVERLAY")
     E.banner.romanLabel:SetFont(FONT_TITLE, 40, "")
     E.banner.romanLabel:SetPoint("BOTTOMRIGHT", E.banner, "BOTTOMRIGHT", -16, 10)
     E.banner.romanLabel:SetTextColor(C_GOLD[1], C_GOLD[2], C_GOLD[3], 0.20)
     E.banner.romanLabel:SetText("")
 
-    -- Banner: Logo (rechts, optional — gesetzt via data.logoPath)
+    -- Banner: logo (right, optional — set via data.logoPath)
     E.banner.logo = E.banner:CreateTexture(nil, "OVERLAY")
-    E.banner.logo:SetSize(90, 70)  -- 1280x1000 Verhältnis
+    E.banner.logo:SetSize(90, 70)  -- 1280x1000 ratio
     E.banner.logo:SetPoint("RIGHT", E.banner, "RIGHT", -20, 8)
     E.banner.logo:SetAlpha(0)
 
-    -- Banner: Unterlinie
+    -- Banner: underline
     do
         local line = E.contentPane:CreateTexture(nil, "ARTWORK")
         line:SetHeight(1)
@@ -327,7 +327,7 @@ function IMAGO.Eras.CreateFrame()
     end
 
     -- --------------------------------------------------------
-    -- TAB-BAR (4 gleichbreite Buttons)
+    -- TAB BAR (4 equal-width buttons)
     -- --------------------------------------------------------
     local tabDefs = {
         { id = "overview",   key = "ERAS_TAB_OVERVIEW",   fallback = "Overview"   },
@@ -360,20 +360,20 @@ function IMAGO.Eras.CreateFrame()
         hl:SetAllPoints()
         hl:SetColorTexture(C_GOLD[1], C_GOLD[2], C_GOLD[3], 0.08)
 
-        -- Aktiver Tab: leicht andersfarbiger Hintergrund
+        -- Active tab: slightly different background
         btn.activeBg = btn:CreateTexture(nil, "BACKGROUND")
         btn.activeBg:SetAllPoints()
         btn.activeBg:SetColorTexture(unpack(C_BG_TAB_ACT))
         btn.activeBg:Hide()
 
-        -- Tab-Beschriftung
+        -- Tab label
         btn.textFS = btn:CreateFontString(nil, "OVERLAY")
         btn.textFS:SetFont(FONT_BODY, 13, "")
         btn.textFS:SetPoint("CENTER", 0, 0)
         btn.textFS:SetText(string.upper(IMAGO.L[def.key] or def.fallback))
         btn.textFS:SetTextColor(unpack(C_TEXT_MUTED))
 
-        -- Aktive Unterlinie (2px, gold)
+        -- Active underline (2px, gold)
         btn.activeLine = btn:CreateTexture(nil, "OVERLAY")
         btn.activeLine:SetPoint("BOTTOMLEFT",  btn, "BOTTOMLEFT",   3, 0)
         btn.activeLine:SetPoint("BOTTOMRIGHT", btn, "BOTTOMRIGHT", -3, 0)
@@ -390,7 +390,7 @@ function IMAGO.Eras.CreateFrame()
         E.tabOrder[i]  = btn
     end
 
-    -- Tabs gleichmäßig verteilen bei Größenänderung
+    -- Distribute tabs evenly on resize
     local function RelayoutTabs(paneW)
         paneW = paneW or E.tabBar:GetWidth()
         if not paneW or paneW < 4 then return end
@@ -406,7 +406,7 @@ function IMAGO.Eras.CreateFrame()
     E.tabBar:SetScript("OnSizeChanged", function(_, w) RelayoutTabs(w) end)
     RelayoutTabs()
 
-    -- Tab-Unterlinie
+    -- Tab underline
     do
         local line = E.contentPane:CreateTexture(nil, "ARTWORK")
         line:SetHeight(1)
@@ -416,7 +416,7 @@ function IMAGO.Eras.CreateFrame()
     end
 
     -- --------------------------------------------------------
-    -- CONTENT AREA (unterhalb Tab-Bar, Rest der Pane)
+    -- CONTENT AREA (below tab bar, rest of the pane)
     -- --------------------------------------------------------
     E.contentArea = CreateFrame("Frame", nil, E.contentPane)
     E.contentArea:SetPoint("TOPLEFT",     E.tabBar,      "BOTTOMLEFT",  0, -1)
@@ -427,7 +427,7 @@ function IMAGO.Eras.CreateFrame()
         bg:SetColorTexture(unpack(C_BG_MAIN))
     end
 
-    -- 4 ScrollFrames, eines pro Tab
+    -- 4 ScrollFrames, one per tab
     local scrollIds = {
         { id = "overview",   name = "IMAGOErasOvScroll"    },
         { id = "story",      name = "IMAGOErasStScroll"    },
@@ -456,7 +456,7 @@ function IMAGO.Eras.CreateFrame()
     end
 
     -- --------------------------------------------------------
-    -- LOCKED-PAGE (Entdecker-Modus, NPC noch nicht getroffen)
+    -- LOCKED PAGE (explorer mode, NPC not yet met)
     -- --------------------------------------------------------
     E.lockedPage = CreateFrame("Frame", nil, E.contentPane)
     E.lockedPage:SetPoint("TOPLEFT",     E.tabBar, "BOTTOMLEFT",  0, -1)
@@ -496,7 +496,7 @@ function IMAGO.Eras.CreateFrame()
     end
 
     -- --------------------------------------------------------
-    -- WIP-PAGE (coming_soon Ären)
+    -- WIP PAGE (coming_soon eras)
     -- --------------------------------------------------------
     E.wipPage = CreateFrame("Frame", nil, E.contentPane)
     E.wipPage:SetPoint("TOPLEFT",     E.tabBar, "BOTTOMLEFT",  0, -1)
@@ -542,7 +542,7 @@ function IMAGO.Eras.CreateFrame()
     sp.logo:SetPoint("TOP", sp, "TOP", 0, -55)
     sp.logo:SetTexture("Interface\\AddOns\\IMAGO\\Media\\Logo.tga")
 
-    -- Logo-Linie
+    -- Logo line
     sp.logoLine = sp:CreateTexture(nil, "ARTWORK")
     sp.logoLine:SetSize(520, 1)
     sp.logoLine:SetPoint("TOP", sp.logo, "BOTTOM", 0, -5)
@@ -551,13 +551,13 @@ function IMAGO.Eras.CreateFrame()
         CreateColor(C_GOLD[1], C_GOLD[2], C_GOLD[3], 0),
         CreateColor(C_GOLD[1], C_GOLD[2], C_GOLD[3], 0.5))
 
-    -- Rang-Label ("LORE STATUS")
+    -- Rank label ("LORE STATUS")
     sp.rankLabel = sp:CreateFontString(nil, "OVERLAY")
     sp.rankLabel:SetFont(FONT_BODY, 13, "")
     sp.rankLabel:SetPoint("TOP", sp.logoLine, "BOTTOM", 0, -30)
     sp.rankLabel:SetTextColor(C_GOLD_DIM[1], C_GOLD_DIM[2], C_GOLD_DIM[3])
 
-    -- Rang-Name (groß)
+    -- Rank name (large)
     sp.rankName = sp:CreateFontString(nil, "OVERLAY")
     sp.rankName:SetFont(FONT_BODY, 24, "OUTLINE")
     sp.rankName:SetPoint("TOP", sp.rankLabel, "BOTTOM", 0, -8)
@@ -600,7 +600,7 @@ function IMAGO.Eras.CreateFrame()
     end
 
     -- --------------------------------------------------------
-    -- MODE-BUTTON + BACK-BUTTON in contentPane (wie Chronicle)
+    -- MODE BUTTON + BACK BUTTON in contentPane (like Chronicle)
     -- --------------------------------------------------------
     E.erasModeBtn = CreateFrame("Button", nil, E.contentPane, "BackdropTemplate")
     E.erasModeBtn:SetSize(85, 22)
@@ -689,7 +689,7 @@ function IMAGO.Eras.CreateFrame()
         end)
     end
 
-    -- Render-Pools (je ein Pool pro Tab)
+    -- Render pools (one pool per tab)
     E.pools = {
         overview   = {},
         story      = {},
@@ -702,7 +702,7 @@ function IMAGO.Eras.CreateFrame()
 end
 
 -- ============================================================
--- SIDEBAR AUFBAUEN
+-- BUILD SIDEBAR
 -- ============================================================
 
 local function BuildSidebar()
@@ -714,7 +714,7 @@ local function BuildSidebar()
     local ROW_H      = 36
     local y          = 6
 
-    -- Vorherige Rows aufräumen
+    -- Clean up previous rows
     for _, row in ipairs(E.sidebarRows) do
         if row.Hide then row:Hide() end
     end
@@ -726,7 +726,7 @@ local function BuildSidebar()
         local slug = entry.slug
         local data = entry.data
 
-        -- Gruppen-Label (nur bei Wechsel)
+        -- Group label (only on change)
         local group = ((data.order or 99) <= MODERN_CUTOFF)
             and (IMAGO.L["ERAS_GROUP_MODERN"]  or "Modern Era")
             or  (IMAGO.L["ERAS_GROUP_CLASSIC"] or "Classic Era")
@@ -735,7 +735,7 @@ local function BuildSidebar()
             lastGroup = group
             if i > 1 then
                 y = y + 10
-                -- Trennlinie oberhalb der 2. Gruppe
+                -- Divider above the 2nd group
                 local div = content:CreateTexture(nil, "ARTWORK")
                 div:SetHeight(1)
                 div:SetPoint("TOPLEFT",  content, "TOPLEFT",  8, -y)
@@ -754,12 +754,12 @@ local function BuildSidebar()
             y = y + 18
         end
 
-        -- Name ohne "World of Warcraft: " Präfix; Fallback wenn gsub alles entfernt (z.B. "classic")
+        -- Name without the "World of Warcraft: " prefix; fallback if gsub removes everything (e.g. "classic")
         local rawName     = data.name or slug
         local displayName = rawName:gsub("^[Ww]orld of [Ww]arcraft:?%s*", "")
         if displayName == "" then displayName = rawName end
 
-        -- Era-Item Button
+        -- Era item button
         local row = CreateFrame("Button", nil, content)
         row:SetSize(LAYOUT.SIDEBAR_USABLE_WIDTH, ROW_H)
         row:SetPoint("TOPLEFT", content, "TOPLEFT", 0, -y)
@@ -769,7 +769,7 @@ local function BuildSidebar()
         hl:SetAllPoints()
         hl:SetColorTexture(IMAGO_COLORS.BG_HOVER[1], IMAGO_COLORS.BG_HOVER[2], IMAGO_COLORS.BG_HOVER[3], 0.3)
 
-        -- Aktive linke Border (2px, gold)
+        -- Active left border (2px, gold)
         row.leftBorder = row:CreateTexture(nil, "OVERLAY")
         row.leftBorder:SetWidth(2)
         row.leftBorder:SetPoint("TOPLEFT",    row, "TOPLEFT",    0, 0)
@@ -783,7 +783,7 @@ local function BuildSidebar()
         row.dot:SetPoint("LEFT", row, "LEFT", 12, 0)
         row.dot:SetColorTexture(unpack(C_TEXT_MUTED))
 
-        -- Era-Name
+        -- Era name
         row.label = row:CreateFontString(nil, "OVERLAY")
         IMAGO.ApplyTextStyle(row.label, "NAV_ITEM")
         row.label:SetPoint("LEFT",  row.dot, "RIGHT", 8,    0)
@@ -791,7 +791,7 @@ local function BuildSidebar()
         row.label:SetJustifyH("LEFT")
         row.label:SetWordWrap(false)
 
-        -- Version-Tag (rechts)
+        -- Version tag (right)
         row.versionTag = row:CreateFontString(nil, "OVERLAY")
         IMAGO.ApplyTextStyle(row.versionTag, "NAV_META")
         row.versionTag:SetPoint("RIGHT", row, "RIGHT", -10, 0)
@@ -800,7 +800,7 @@ local function BuildSidebar()
         row.versionTag:SetText(ERA_VERSION[slug] or "")
 
         row.label:SetText(displayName)
-        -- Alle Eras immer anklickbar
+        -- All eras always clickable
         local s = slug
         row:SetScript("OnClick", function() IMAGO.Eras.OpenToEra(s) end)
         row:SetScript("OnEnter", function(self)
@@ -810,7 +810,7 @@ local function BuildSidebar()
             GameTooltip:Hide()
         end)
 
-        -- Visueller Zustand
+        -- Visual state
         local isNPCLocked = (data.unlock_npc and data.unlock_npc ~= "")
             and not (IMAGOSaved and IMAGOSaved.erasEncyclopediaMode)
             and not (IMAGOSaved.seenEras and IMAGOSaved.seenEras[slug])
@@ -838,7 +838,7 @@ local function BuildSidebar()
 end
 
 -- ============================================================
--- SIDEBAR-SELEKTION AKTUALISIEREN
+-- UPDATE SIDEBAR SELECTION
 -- ============================================================
 
 local function UpdateSidebarSelection(activeSlug)
@@ -878,7 +878,7 @@ local function UpdateSidebarSelection(activeSlug)
 end
 
 -- ============================================================
--- DASHBOARD ANZEIGEN  (Einstiegspunkt für Chronicle Tab 4)
+-- SHOW DASHBOARD  (entry point for Chronicle tab 4)
 -- ============================================================
 
 function IMAGO.Eras.ApplyOpaqueUI()
@@ -895,12 +895,12 @@ function IMAGO.Eras.ShowDashboard()
     E.wrapper:Show()
     IMAGO.Eras.ApplyOpaqueUI()
     if #E.sidebarRows == 0 then BuildSidebar() end
-    -- Immer Overview als Startseite zeigen
+    -- Always show overview as the start page
     IMAGO.Eras.ShowErasOverview()
 end
 
 -- ============================================================
--- ERA ÖFFNEN
+-- OPEN ERA
 -- ============================================================
 
 function IMAGO.Eras.OpenToEra(slug, subTab, scrollY)
@@ -918,7 +918,7 @@ function IMAGO.Eras.OpenToEra(slug, subTab, scrollY)
     E.wrapper:Show()
     IMAGO.Eras.ApplyOpaqueUI()
     if #E.sidebarRows == 0 then BuildSidebar() end
-    -- Overview/Locked/WIP ausblenden, Banner immer zeigen
+    -- Hide overview/locked/WIP, always show banner
     if E.overviewPage    then E.overviewPage:Hide()    end
     if E.lockedPage      then E.lockedPage:Hide()      end
     if E.wipPage         then E.wipPage:Hide()         end
@@ -927,10 +927,10 @@ function IMAGO.Eras.OpenToEra(slug, subTab, scrollY)
     if E.banner          then E.banner:Show()          end
     UpdateSidebarSelection(slug)
 
-    -- Banner: Era-BG (center-crop: kein Verzerren, nur schneiden)
+    -- Banner: era BG (center-crop: no distortion, only cropping)
     if data.bgPath and data.bgPath ~= "" then
         E.banner.eraBg:SetTexture(data.bgPath)
-        E.banner.eraBg:SetTexCoord(0, 1, 0.37, 0.63)  -- zeigt vertikale Mitte ~26% des Bildes
+        E.banner.eraBg:SetTexCoord(0, 1, 0.37, 0.63)  -- shows the vertical middle ~26% of the image
         E.banner.eraBg:SetAlpha(0.28)
     else
         E.banner.eraBg:SetTexture(nil)
@@ -938,13 +938,13 @@ function IMAGO.Eras.OpenToEra(slug, subTab, scrollY)
         E.banner.eraBg:SetAlpha(0)
     end
 
-    -- Banner: Name (Fallback wenn gsub alles entfernt, z.B. slug "classic")
+    -- Banner: name (fallback if gsub removes everything, e.g. slug "classic")
     local rawNm = data.name or slug
     local nm    = rawNm:gsub("^[Ww]orld of [Ww]arcraft:?%s*", "")
     if nm == "" then nm = rawNm end
     E.banner.nameLabel:SetText(nm)
 
-    -- Banner: Meta-Zeile
+    -- Banner: meta line
     local roman = ERA_ROMAN[slug] or ""
     local meta  = {}
     if slug == "classic" then
@@ -972,7 +972,7 @@ function IMAGO.Eras.OpenToEra(slug, subTab, scrollY)
         E.banner.romanLabel:SetAlpha(0.20)
     end
 
-    -- Zustand: Explorer-gesperrt / WIP / normaler Inhalt
+    -- State: explorer-locked / WIP / normal content
     local isExplorerLocked = (data.unlock_npc and data.unlock_npc ~= "")
         and not (IMAGOSaved and IMAGOSaved.erasEncyclopediaMode)
         and not (IMAGOSaved.seenEras and IMAGOSaved.seenEras[slug])
@@ -1010,7 +1010,7 @@ function IMAGO.Eras.OpenToEra(slug, subTab, scrollY)
 end
 
 -- ============================================================
--- SUB-TABS UMSCHALTEN
+-- SWITCH SUB-TABS
 -- ============================================================
 
 function IMAGO.Eras.ShowSubTab(mode)
@@ -1018,7 +1018,7 @@ function IMAGO.Eras.ShowSubTab(mode)
     local E = IMAGO.Eras.frame
     IMAGO.Eras.activeSubTab = mode
 
-    -- Alle ScrollFrames verstecken + Pools leeren
+    -- Hide all ScrollFrames + clear pools
     for id, sf in pairs(E.scrollFrames) do
         sf:Hide()
     end
@@ -1026,7 +1026,7 @@ function IMAGO.Eras.ShowSubTab(mode)
         HidePool(pool)
     end
 
-    -- Tab-Styling
+    -- Tab styling
     for id, btn in pairs(E.tabs) do
         local active = (id == mode)
         if active then
@@ -1057,7 +1057,7 @@ function IMAGO.Eras.ShowSubTab(mode)
 end
 
 -- ============================================================
--- HILFSFUNKTION: Scroll-Content-Breite ermitteln
+-- HELPER: determine scroll content width
 -- ============================================================
 
 local function GetContentW(tabId)
@@ -1068,7 +1068,7 @@ local function GetContentW(tabId)
 end
 
 -- ============================================================
--- HILFSFUNKTIONEN FÜR TAB-RENDERING
+-- HELPER FUNCTIONS FOR TAB RENDERING
 -- ============================================================
 
 local function GetNPCDisplayName(slug)
@@ -1098,7 +1098,7 @@ end
 -- TAB 1: OVERVIEW
 -- ============================================================
 
--- Hilfsfunktion: Card-Frame aus Pool holen oder neu anlegen
+-- Helper: get card frame from pool or create new
 local function GetCard(pool, key, parent)
     local f = pool[key]
     if not f then
@@ -1121,8 +1121,8 @@ function IMAGO.Eras.RenderOverview(data)
     local W       = GetContentW("overview")
     local PAD     = 14
     local INNER   = W - PAD * 2
-    local GAP     = 6    -- horizontaler Spalt zwischen 3-Spalten
-    local VSEP    = 16   -- vertikaler Abstand zwischen Sektionen
+    local GAP     = 6    -- horizontal gap between the 3 columns
+    local VSEP    = 16   -- vertical spacing between sections
     local y       = PAD
 
     content:SetWidth(W + 16)
@@ -1145,7 +1145,7 @@ function IMAGO.Eras.RenderOverview(data)
     end
 
     -- --------------------------------------------------------
-    -- 1. HOOK TEXT  (summary mit gold linker Border)
+    -- 1. HOOK TEXT  (summary with gold left border)
     -- --------------------------------------------------------
     local hookBorder = PoolTex(pool, "hookBorder", content)
     hookBorder:SetWidth(2)
@@ -1179,10 +1179,10 @@ function IMAGO.Eras.RenderOverview(data)
         { key="kf2", lbl=IMAGO.L["ERAS_STAT_ANTAGONIST"] or "Antagonist", val=data.antagonist or "—" },
         { key="kf3", lbl=IMAGO.L["ERAS_STAT_CONFLICT"]   or "Conflict",   val=data.conflict   or "—" },
     }
-    local KF_LBL_H  = 14    -- approx. Zeilenhöhe bei 11px
-    local KF_GAP_LV = 8     -- Abstand Label→Wert
-    local KF_MIN_H  = 84    -- Mindesthöhe der Karte
-    local KF_IPAD   = 10    -- horizontaler Innenabstand
+    local KF_LBL_H  = 14    -- approx. line height at 11px
+    local KF_GAP_LV = 8     -- label→value spacing
+    local KF_MIN_H  = 84    -- minimum card height
+    local KF_IPAD   = 10    -- horizontal inner padding
     local kfMaxH    = 0
     for i, kf in ipairs(kfDefs) do
         local card = GetCard(pool, kf.key, content)
@@ -1216,7 +1216,7 @@ function IMAGO.Eras.RenderOverview(data)
         if h > kfMaxH then kfMaxH = h end
         card:Show()
     end
-    -- 2. Pass: Kartenhöhe angleichen + Inhalt vertikal zentrieren
+    -- 2nd pass: equalize card heights + vertically center content
     for _, kf in ipairs(kfDefs) do
         local c  = pool[kf.key]
         local lf = pool[kf.key.."L"]
@@ -1244,7 +1244,7 @@ function IMAGO.Eras.RenderOverview(data)
     y = y + kfMaxH + VSEP
 
     -- --------------------------------------------------------
-    -- 3. BIG QUESTION BOX  (optional, wenn data.fastFacts.bigQuestion)
+    -- 3. BIG QUESTION BOX  (optional, if data.fastFacts.bigQuestion)
     -- --------------------------------------------------------
     local bqText = data.fastFacts and data.fastFacts.bigQuestion
     if bqText and bqText ~= "" then
@@ -1279,7 +1279,7 @@ function IMAGO.Eras.RenderOverview(data)
         bqFS:SetWordWrap(true)
         bqFS:Show()
 
-        -- vertikal zentrieren
+        -- center vertically
         local textH    = math.max(bqFS:GetStringHeight(), 20)
         local contentH = BQ_LBL_H + BQ_GAP_LV + textH
         local bqH      = math.max(BQ_MIN_H, contentH + 28)
@@ -1353,7 +1353,7 @@ function IMAGO.Eras.RenderOverview(data)
             if h > pMaxH then pMaxH = h end
             card:Show()
         end
-        -- 2. Pass: Kartenhöhe angleichen + Inhalt vertikal zentrieren
+        -- 2nd pass: equalize card heights + vertically center content
         for _, pd in ipairs(pillarDefs) do
             local c  = pool[pd.key]
             local lf = pool[pd.key.."L"]
@@ -1408,13 +1408,13 @@ function IMAGO.Eras.ShowLorePopup(text, title)
         p:SetScript("OnDragStart", p.StartMoving)
         p:SetScript("OnDragStop",  p.StopMovingOrSizing)
 
-        -- Schließen-Button
+        -- Close button
         local cb = CreateFrame("Button", nil, p, "UIPanelCloseButton")
         cb:SetSize(24, 24)
         cb:SetPoint("TOPRIGHT", p, "TOPRIGHT", 2, 2)
         cb:SetScript("OnClick", function() p:Hide() end)
 
-        -- Zwei Theme-Buttons: Dunkel | Pergament
+        -- Two theme buttons: Dark | Parchment
         local function MakeThemeBtn(xOff)
             local btn = CreateFrame("Button", nil, p, "BackdropTemplate")
             btn:SetSize(18, 18)
@@ -1428,12 +1428,12 @@ function IMAGO.Eras.ShowLorePopup(text, title)
         end
         p._darkBtn  = MakeThemeBtn(-52)
         p._parchBtn = MakeThemeBtn(-32)
-        -- Dunkel-Button: C_BG_CARD Farbe
+        -- Dark button: C_BG_CARD color
         p._darkBtn:SetBackdropColor(C_BG_CARD[1], C_BG_CARD[2], C_BG_CARD[3], 1)
-        -- Pergament-Button: warmes Creme
+        -- Parchment button: warm cream
         p._parchBtn:SetBackdropColor(0.84, 0.78, 0.60, 1)
 
-        -- Headline (lesbare Schrift)
+        -- Headline (legible font)
         p.headlineFS = p:CreateFontString(nil, "OVERLAY")
         p.headlineFS:SetFont(FONT_BODY, 14, "")
         p.headlineFS:SetPoint("TOPLEFT",  p, "TOPLEFT",  12, -10)
@@ -1441,7 +1441,7 @@ function IMAGO.Eras.ShowLorePopup(text, title)
         p.headlineFS:SetWordWrap(false)
         p.headlineFS:SetText(IMAGO.L["ERAS_LORE_HEADLINE"] or "Would you like to know the whole story?")
 
-        -- Subtitle (Kampagnenname)
+        -- Subtitle (campaign name)
         p.titleFS = p:CreateFontString(nil, "OVERLAY")
         p.titleFS:SetFont(FONT_BODY, 11, "")
         p.titleFS:SetPoint("TOPLEFT",  p, "TOPLEFT",  12, -28)
@@ -1455,7 +1455,7 @@ function IMAGO.Eras.ShowLorePopup(text, title)
         div:SetPoint("TOPRIGHT", p, "TOPRIGHT", -6, -46)
         p._div = div
 
-        -- ScrollFrame für langen Text
+        -- ScrollFrame for long text
         local sf = CreateFrame("ScrollFrame", "IMAGOLoreScroll", p, "UIPanelScrollFrameTemplate")
         sf:SetPoint("TOPLEFT",     p, "TOPLEFT",     8, -52)
         sf:SetPoint("BOTTOMRIGHT", p, "BOTTOMRIGHT", -24, 8)
@@ -1479,12 +1479,12 @@ function IMAGO.Eras.ShowLorePopup(text, title)
         p._sf = sf
         p._darkMode = true
 
-        -- Inline-Farben im Text je nach Theme ersetzen
+        -- Replace inline text colors depending on theme
         local function ProcessLoreText(raw, darkMode)
             if darkMode or not raw then return raw end
-            local t = raw:gsub("|cFFc8a84b", "|cFF3D1A00")  -- Gold → Dunkelbraun (Sektion)
+            local t = raw:gsub("|cFFc8a84b", "|cFF3D1A00")  -- Gold → dark brown (section)
                          :gsub("|c" .. IMAGO_HEX.GOLD, "|cFF3D1A00")
-                         :gsub("|cFFe0c06a", "|cFF5C2E00")  -- Hell-Gold → Braun (Questname)
+                         :gsub("|cFFe0c06a", "|cFF5C2E00")  -- Light gold → brown (quest name)
                          :gsub("|c" .. IMAGO_HEX.GOLD_BRIGHT, "|cFF5C2E00")
             return t
         end
@@ -1499,7 +1499,7 @@ function IMAGO.Eras.ShowLorePopup(text, title)
                 p.titleFS:SetTextColor(C_GOLD_DIM[1], C_GOLD_DIM[2], C_GOLD_DIM[3])
                 p.textFS:SetTextColor(unpack(C_TEXT_PRI))
                 p._div:SetColorTexture(IMAGO_COLORS.DIVIDER[1], IMAGO_COLORS.DIVIDER[2], IMAGO_COLORS.DIVIDER[3], 0.8)
-                -- Dunkel-Button: aktiv (gold Rahmen), Pergament-Button: inaktiv
+                -- Dark button: active (gold border), parchment button: inactive
                 p._darkBtn:SetBackdropBorderColor(C_GOLD[1], C_GOLD[2], C_GOLD[3], 1)
                 p._parchBtn:SetBackdropBorderColor(0.40, 0.32, 0.18, 0.45)
             else
@@ -1509,7 +1509,7 @@ function IMAGO.Eras.ShowLorePopup(text, title)
                 p.titleFS:SetTextColor(0.46, 0.32, 0.10, 1)
                 p.textFS:SetTextColor(0.10, 0.06, 0.02, 1)
                 p._div:SetColorTexture(0.50, 0.38, 0.18, 0.6)
-                -- Pergament-Button: aktiv (dunkelbraun Rahmen), Dunkel-Button: inaktiv
+                -- Parchment button: active (dark brown border), dark button: inactive
                 p._parchBtn:SetBackdropBorderColor(0.30, 0.16, 0.04, 1)
                 p._darkBtn:SetBackdropBorderColor(C_BG_CARD[1]+0.15, C_BG_CARD[2]+0.15, C_BG_CARD[3]+0.15, 0.45)
             end
@@ -1636,7 +1636,7 @@ function IMAGO.Eras.ShowImagePopup(texturePath, logo_w, logo_h)
 end
 
 -- ============================================================
--- HILFSFUNKTION: Artwork-Strip erstellen/updaten
+-- HELPER: create/update artwork strip
 -- ============================================================
 
 local ART_W   = 22
@@ -1686,7 +1686,7 @@ local function ApplyArtworkStrip(pool, key, content, card, cardH, logoPath, logo
 end
 
 -- ============================================================
--- ERAS FORTSCHRITT
+-- ERAS PROGRESS
 -- ============================================================
 
 function IMAGO.Eras.GetProgress()
@@ -1728,7 +1728,7 @@ local function RenderErasOverview()
     local E = IMAGO.Eras.frame
     if not E or not E.overviewPage then return end
     local sp = E.overviewPage
-    if not sp.rankLabel then return end  -- noch nicht initialisiert
+    if not sp.rankLabel then return end  -- not yet initialized
 
     local seen, total, pct = IMAGO.Eras.GetProgress()
 
@@ -1877,7 +1877,7 @@ function IMAGO.Eras.ShowEraDiscoveryDialog(eraSlug, npcData)
 
     local d = IMAGO.Eras.discoveryDialog
 
-    -- Inhalte befüllen
+    -- Populate contents
     d.titleFS:SetText(npcData and npcData.name or "")
     if eraData.logoPath and eraData.logoPath ~= "" then
         d.eraLogo:SetTexture(eraData.logoPath)
@@ -1951,7 +1951,7 @@ function IMAGO.Eras.RenderStory(data)
     local HEADER_H  = 38
     local BADGE_H    = 18
     local BADGE_YOFF = 10
-    local LORE_W     = 28   -- Platz für Lore-Button rechts
+    local LORE_W     = 28   -- room for lore button on the right
 
     for i, cam in ipairs(camps) do
         local key  = "sc_" .. i
@@ -1961,7 +1961,7 @@ function IMAGO.Eras.RenderStory(data)
         card:SetWidth(INNER - ART_W - ART_GAP)
         card:ClearAllPoints()
         card:SetPoint("TOPLEFT", content, "TOPLEFT", PAD, -y)
-        -- NPC-Hyperlink-Handler (einmalig pro card-Objekt)
+        -- NPC hyperlink handler (once per card object)
         if not card._npcSetup then
             card._npcSetup = true
             card:EnableMouse(true)
@@ -1973,7 +1973,7 @@ function IMAGO.Eras.RenderStory(data)
             end)
         end
 
-        -- Zone-Tag Pill-Badge (dynamische Breite)
+        -- Zone tag pill badge (dynamic width)
         local zBG = GetCard(pool, key .. "_zbg", card)
         zBG:SetBackdropColor(C_GOLD[1]*0.18, C_GOLD[2]*0.18, C_GOLD[3]*0.10, 1)
         zBG:SetBackdropBorderColor(C_GOLD[1], C_GOLD[2], C_GOLD[3], 0.8)
@@ -1983,7 +1983,7 @@ function IMAGO.Eras.RenderStory(data)
         local zFS = PoolFS(pool, key .. "_z", zBG)
         zFS:SetFont(FONT_BODY, 9, "")
         zFS:SetWordWrap(false)
-        zFS:SetWidth(500)  -- unkonstrained für Messung
+        zFS:SetWidth(500)  -- unconstrained for measurement
         zFS:SetText(string.upper(cam.zoneName or ""))
         zFS:SetTextColor(C_GOLD[1], C_GOLD[2], C_GOLD[3])
         zFS:SetJustifyH("CENTER")
@@ -1995,7 +1995,7 @@ function IMAGO.Eras.RenderStory(data)
         zBG:Show()
         zFS:Show()
 
-        -- Flavor-Titel: volle Card-Breite, absolut zentriert
+        -- Flavor title: full card width, absolutely centered
         local fFS = PoolFS(pool, key .. "_f", card)
         fFS:SetFont(FONT_BODY, 13, "")
         fFS:ClearAllPoints()
@@ -2008,7 +2008,7 @@ function IMAGO.Eras.RenderStory(data)
         fFS:SetWordWrap(false)
         fFS:Show()
 
-        -- Header-Trennlinie
+        -- Header divider
         local hdiv = PoolTex(pool, key .. "_hdiv", card)
         hdiv:SetHeight(1)
         hdiv:ClearAllPoints()
@@ -2017,7 +2017,7 @@ function IMAGO.Eras.RenderStory(data)
         hdiv:SetColorTexture(IMAGO_COLORS.DIVIDER[1], IMAGO_COLORS.DIVIDER[2], IMAGO_COLORS.DIVIDER[3], 0.8)
         hdiv:Show()
 
-        -- Plot-Text
+        -- Plot text
         local bFS = PoolFS(pool, key .. "_b", card)
         bFS:SetFont(FONT_BODY, 14, "")
         bFS:ClearAllPoints()
@@ -2030,7 +2030,7 @@ function IMAGO.Eras.RenderStory(data)
         bFS:SetWordWrap(true)
         bFS:Show()
 
-        -- Lore-Button (oben rechts, nur wenn loreBits vorhanden)
+        -- Lore button (top right, only when loreBits present)
         local loreBtn = PoolBtn(pool, key .. "_lore", card)
         loreBtn:SetSize(20, 20)
         loreBtn:ClearAllPoints()
@@ -2064,7 +2064,7 @@ function IMAGO.Eras.RenderStory(data)
             loreBtn:Hide()
         end
 
-        -- NPC-Chip-Buttons (klickbar, da OnHyperlinkClick in dieser WoW-Version unzuverlässig)
+        -- NPC chip buttons (clickable, since OnHyperlinkClick is unreliable in this WoW version)
         local NPC_BTN_H = 18
         local npcLinks  = cam.npcLinks or {}
         local npcRowH   = 0
@@ -2173,7 +2173,7 @@ function IMAGO.Eras.RenderPatches(data)
         card:ClearAllPoints()
         card:SetPoint("TOPLEFT", content, "TOPLEFT", PAD, -y)
 
-        -- Version-Badge (dynamische Breite, kleiner als Zone-Badge)
+        -- Version badge (dynamic width, smaller than zone badge)
         local vBG = GetCard(pool, key .. "_vbg", card)
         vBG:SetBackdropColor(C_GOLD[1]*0.18, C_GOLD[2]*0.18, C_GOLD[3]*0.10, 1)
         vBG:SetBackdropBorderColor(C_GOLD[1], C_GOLD[2], C_GOLD[3], 0.8)
@@ -2193,7 +2193,7 @@ function IMAGO.Eras.RenderPatches(data)
         vBG:Show()
         vFS:Show()
 
-        -- Zone-Badge (rechts vom Version-Badge, hover bei mehreren Zonen)
+        -- Zone badge (right of version badge, hover for multiple zones)
         local newZones = patch.newZones or {}
         local zBG = GetCard(pool, key .. "_zbg", card)
         zBG:SetBackdropColor(C_GOLD[1]*0.18, C_GOLD[2]*0.18, C_GOLD[3]*0.10, 1)
@@ -2240,7 +2240,7 @@ function IMAGO.Eras.RenderPatches(data)
             zBG:SetScript("OnLeave", nil)
         end
 
-        -- Patch-Titel: volle Card-Breite, absolut zentriert (wie Story)
+        -- Patch title: full card width, absolutely centered (like Story)
         local tFS = PoolFS(pool, key .. "_t", card)
         tFS:SetFont(FONT_BODY, 13, "")
         tFS:ClearAllPoints()
@@ -2253,7 +2253,7 @@ function IMAGO.Eras.RenderPatches(data)
         tFS:SetWordWrap(false)
         tFS:Show()
 
-        -- Header-Trennlinie
+        -- Header divider
         local hdiv = PoolTex(pool, key .. "_hdiv", card)
         hdiv:SetHeight(1)
         hdiv:ClearAllPoints()
@@ -2262,7 +2262,7 @@ function IMAGO.Eras.RenderPatches(data)
         hdiv:SetColorTexture(IMAGO_COLORS.DIVIDER[1], IMAGO_COLORS.DIVIDER[2], IMAGO_COLORS.DIVIDER[3], 0.8)
         hdiv:Show()
 
-        -- i-Lore-Button (oben rechts, identisch mit Story)
+        -- i-Lore button (top right, identical to Story)
         local loreBtn = PoolBtn(pool, key .. "_lore", card)
         loreBtn:SetSize(20, 20)
         loreBtn:ClearAllPoints()
@@ -2296,7 +2296,7 @@ function IMAGO.Eras.RenderPatches(data)
             loreBtn:Hide()
         end
 
-        -- Plot-Text
+        -- Plot text
         local bFS = PoolFS(pool, key .. "_b", card)
         bFS:SetFont(FONT_BODY, 14, "")
         bFS:ClearAllPoints()
@@ -2309,7 +2309,7 @@ function IMAGO.Eras.RenderPatches(data)
         bFS:SetWordWrap(true)
         bFS:Show()
 
-        -- NPC-Hyperlink-Handler (einmalig pro card-Objekt)
+        -- NPC hyperlink handler (once per card object)
         if not card._npcSetup then
             card._npcSetup = true
             card:EnableMouse(true)
@@ -2321,7 +2321,7 @@ function IMAGO.Eras.RenderPatches(data)
             end)
         end
 
-        -- NPC-Chip-Buttons unterhalb Trennlinie (identisch mit Story-Tab)
+        -- NPC chip buttons below divider (identical to Story tab)
         local NPC_BTN_H = 18
         local npcLinks  = patch.npcLinks or {}
         local npcRowH   = 0
@@ -2435,7 +2435,7 @@ function IMAGO.Eras.RenderCharacters(data)
             local npcName = GetNPCDisplayName(fig.slug)
             local xOff    = PAD + col * (CARD_W + GAP)
 
-            -- Äußere Card (C_BG_CARD, dünner Gold-Rahmen)
+            -- Outer card (C_BG_CARD, thin gold border)
             local card = GetCard(pool, key, content)
             card:SetBackdropColor(C_BG_CARD[1], C_BG_CARD[2], C_BG_CARD[3], 1)
             card:SetBackdropBorderColor(C_BORDER[1], C_BORDER[2], C_BORDER[3], C_BORDER[4])
@@ -2443,7 +2443,7 @@ function IMAGO.Eras.RenderCharacters(data)
             card:ClearAllPoints()
             card:SetPoint("TOPLEFT", content, "TOPLEFT", xOff, -y)
 
-            -- ZEILE 1: Arc-Label Kopfzeile (lila getönt, volle Breite)
+            -- ROW 1: arc label header (purple tinted, full width)
             local arcRow = GetCard(pool, key .. "_arcrow", card)
             arcRow:SetBackdropColor(C_PURPLE_BG[1], C_PURPLE_BG[2], C_PURPLE_BG[3], C_PURPLE_BG[4])
             arcRow:SetBackdropBorderColor(0, 0, 0, 0)
@@ -2463,7 +2463,7 @@ function IMAGO.Eras.RenderCharacters(data)
             arcFS:SetPoint("CENTER", arcRow, "CENTER", 0, 0)
             arcFS:Show()
 
-            -- Untere Trennlinie der Arc-Zeile (lila)
+            -- Bottom divider of the arc row (purple)
             local arcDiv = PoolTex(pool, key .. "_arcdiv", card)
             arcDiv:SetHeight(1)
             arcDiv:ClearAllPoints()
@@ -2472,7 +2472,7 @@ function IMAGO.Eras.RenderCharacters(data)
             arcDiv:SetColorTexture(0.416, 0.298, 0.678, 0.40)
             arcDiv:Show()
 
-            -- ZEILE 2: Name-Zeile (dunkler Header-Hintergrund)
+            -- ROW 2: name row (dark header background)
             local nameRow = GetCard(pool, key .. "_namerow", card)
             nameRow:SetBackdropColor(0.08, 0.06, 0.04, 1)
             nameRow:SetBackdropBorderColor(0, 0, 0, 0)
@@ -2493,7 +2493,7 @@ function IMAGO.Eras.RenderCharacters(data)
             nmFS:SetPoint("RIGHT", nameRow, "RIGHT", -30, 0)
             nmFS:Show()
 
-            -- Untere Trennlinie der Name-Zeile
+            -- Bottom divider of the name row
             local nameDiv = PoolTex(pool, key .. "_namediv", card)
             nameDiv:SetHeight(1)
             nameDiv:ClearAllPoints()
@@ -2502,7 +2502,7 @@ function IMAGO.Eras.RenderCharacters(data)
             nameDiv:SetColorTexture(C_BORDER[1], C_BORDER[2], C_BORDER[3], C_BORDER[4])
             nameDiv:Show()
 
-            -- › Fates-Button (rechts in der Name-Zeile)
+            -- › Fates button (right in the name row)
             local fatesBtn = PoolBtn(pool, key .. "_fates", nameRow)
             fatesBtn:SetSize(20, 20)
             fatesBtn:ClearAllPoints()
@@ -2531,7 +2531,7 @@ function IMAGO.Eras.RenderCharacters(data)
             end)
             fatesBtn:Show()
 
-            -- ZEILE 3: Blurb-Text (identisch mit Story Plot-Text)
+            -- ROW 3: blurb text (identical to Story plot text)
             local bFS = PoolFS(pool, key .. "_blurb", card)
             bFS:SetFont(FONT_BODY, 14, "")
             bFS:ClearAllPoints()
@@ -2550,7 +2550,7 @@ function IMAGO.Eras.RenderCharacters(data)
             card:Show()
         end
 
-        -- Einheitliche Kartenhöhe pro Zeile
+        -- Uniform card height per row
         for _, rk in pairs(rowKeys) do
             local c = pool[rk]
             if c then c:SetHeight(rowMaxH) end
@@ -2573,7 +2573,7 @@ function IMAGO.Eras.NavigateToNPC(slug)
     local sf      = E.scrollFrames[IMAGO.Eras.activeSubTab]
     local scrollY = (sf and sf:IsShown()) and sf:GetVerticalScroll() or 0
 
-    -- Zustand direkt in opts, da erasViewHistory von ClearHistory() geleert wird
+    -- State directly in opts, since erasViewHistory is cleared by ClearHistory()
     if IMAGO.Chronicle.OpenToNPCSlug then
         IMAGO.Chronicle.OpenToNPCSlug(slug, {
             skipDiscoveryCinematic = true,
@@ -2594,7 +2594,7 @@ function IMAGO.Eras.GoBack()
 end
 
 function IMAGO.Eras.UpdateBackBtn()
-    -- Back-Button-Logik (optional, kein eigener Frame in dieser Version)
+    -- Back button logic (optional, no dedicated frame in this version)
 end
 
 function IMAGO.Eras.ClearHistory()
@@ -2602,7 +2602,7 @@ function IMAGO.Eras.ClearHistory()
 end
 
 -- ============================================================
--- TAB-INDEX SETZEN (wird von Chronicle.lua aufgerufen)
+-- SET TAB INDEX (called by Chronicle.lua)
 -- ============================================================
 
 function IMAGO.Eras.SetTabIndex(idx)

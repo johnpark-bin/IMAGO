@@ -1,5 +1,5 @@
 -- ============================================================
 -- IMAGO — locales/deDE/data/eras.lua
--- Deutsche Übersetzungen für Eras-Lore-Texte.
--- Noch keine Übersetzungen vorhanden — enUS-Fallback wird verwendet.
+-- German translations for Eras lore texts.
+-- No translations yet — the enUS fallback is used.
 -- ============================================================

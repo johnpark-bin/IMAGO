@@ -1,6 +1,6 @@
 -- ============================================================
 -- IMAGO — core/Locale_deDE.lua
--- Deutsche Lokalisierung
+-- German localization
 -- ============================================================
 
 IMAGO = IMAGO or {}
@@ -9,7 +9,7 @@ IMAGO.LocaleData = IMAGO.LocaleData or {}
 local L = {}
 IMAGO.LocaleData.deDE = L
 
--- UI-Texte
+-- UI texts
 L["WINDOW_TITLE"]                   = "Chronik der Unvergessenen"
 L["UNDISCOVERED"]                   = "Unentdeckt"
 L["UNDISCOVERED_LORE"]              = "Finde diese Person in der Welt, um ihr Schicksal zu entschlüsseln."
@@ -51,7 +51,7 @@ L["CMD_HELP_OPEN_DESC"]             = "Öffnet oder schließt die Chronik"
 L["CMD_HELP_SETTINGS_DESC"]         = "Öffnet die Addon-Einstellungen"
 L["CMD_HELP_HELP_DESC"]             = "Zeigt diese Hilfe an"
 
--- Kategorien (Midnight Fraktionen)
+-- Categories (Midnight factions)
 L["CAT_QUELTHALAS"]                 = "Verteidiger von Quel'Thalas"
 L["CAT_LIGHT"]                      = "Vorhut des Lichts"
 L["CAT_AMANI"]                      = "Der Amani-Stamm"
@@ -62,7 +62,7 @@ L["CAT_NEUTRAL"]                    = "Unabhängige & Rätselhafte"
 L["CAT_ARCANTINA"]                  = "Die Arcantina"
 
 -- ============================================================
--- TAB 2: ZONEN (DASHBOARD & DETAILS)
+-- TAB 2: ZONES (DASHBOARD & DETAILS)
 -- ============================================================
 L["FOOTER_ZONES_PROGRESS"]          = "%d / %d Zonen entdeckt (%d%%)"
 L["STARTPAGE_ZONES_RANK"]           = "ERKUNDUNGS-STATUS"
@@ -74,7 +74,7 @@ L["ZONE_POI_HEADER"]                = "INTERESSANTE ORTE"
 L["ZONE_UNDISCOVERED"]              = "Unentdeckt"
 
 -- ============================================================
--- TAB 3: INSTANZEN (COMING SOON)
+-- TAB 3: INSTANCES (COMING SOON)
 -- ============================================================
 L["COMING_SOON_INSTANCES_TITLE"]    = "VERBORGENE INSTANZEN"
 L["COMING_SOON_INSTANCES_DESC"]     = "Dungeons, Raids und Tiefen.\nDie Echos der mächtigsten Feinde warten auf ihre Entdeckung.\n\n|cFF9370DB[ IN ENTWICKLUNG ]|r"
@@ -86,7 +86,7 @@ L["CHAT_DISCOVERY"]                 = "|cFF9370DB[IMAGO]|r Deine Chronik erzitte
 L["QUEST_DISCOVERY"]                = "|cFF9370DB[IMAGO]|r Deine Chronik erzittert nach Abschluss der Quest: |cFFFFD700%s|r... ein neues Echo wurde gebunden: |cFFFFD700%s|r"
 L["CHAT_KNOWN"]                     = "|cFF888888[IMAGO]|r Archiv-Eintrag abgerufen: |cFFCCCCCC%s|r"
 
--- Validierung
+-- Validation
 L["VAL_START"]                      = "|cFFFFD700[IMAGO]|r Starte Datenbank-Validierung..."
 L["VAL_ERR_ID"]                     = "|cFFFF0000Fehler:|r %s hat weder displayID noch ids-Array!"
 L["VAL_WARN_LORE"]                  = "|cFFFF8C00Warnung:|r %s hat keine Lore in der aktuellen Sprache!"
@@ -175,7 +175,7 @@ L["CONFIRM_UNLOCK_DESC"]            = "Dieser Eintrag wird für dich lesbar, zä
 L["BACK"]                           = "Zurück"
 
 -- ============================================================
--- TAB 5: ERAS (Expansions-Chronik)
+-- TAB 5: ERAS (expansion chronicle)
 -- ============================================================
 L["TAB_ERAS"]                 = "Ären"
 L["ERAS_DASHBOARD_TITLE"]     = "ZEITALTER VON AZEROTH"
@@ -228,7 +228,7 @@ L["ERAS_WIP_TITLE"]             = "In Entwicklung"
 L["ERAS_WIP_BODY"]              = "Der Inhalt für diese Ära wird noch entwickelt.\nSchau bald wieder vorbei!"
 L["ERAS_ORIGINAL_GAME"]         = "Original Game"
 
--- NPC-Kategorien (Midnight / The War Within)
+-- NPC categories (Midnight / The War Within)
 L["CAT_QUELTHALAS"]             = "Verteidiger von Quel'Thalas"
 L["CAT_LIGHT"]                  = "Champions des Lichts"
 L["CAT_AMANI"]                  = "Die Amani"

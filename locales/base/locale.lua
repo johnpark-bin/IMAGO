@@ -9,7 +9,7 @@ IMAGO.LocaleData = IMAGO.LocaleData or {}
 local L = {}
 IMAGO.LocaleData.enUS = L
 
--- English (default für enUS, enGB, und alle anderen)
+-- English (default for enUS, enGB, and all others)
 L["WINDOW_TITLE"]                   = "Chronicle of the Unforgotten"
 L["UNDISCOVERED"]                   = "Undiscovered"
 L["UNDISCOVERED_LORE"]              = "Find this person in the world to uncover their fate."

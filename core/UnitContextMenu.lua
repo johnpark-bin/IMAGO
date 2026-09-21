@@ -1,6 +1,6 @@
 -- ============================================================
 -- IMAGO — core/UnitContextMenu.lua
--- Eintrag im Ziel-Rechtsklickmenü (Menu API, ab ~11.0)
+-- Entry in the target right-click menu (Menu API, ~11.0+)
 -- ============================================================
 
 IMAGO.UnitContextMenu = {}
@@ -46,7 +46,7 @@ function IMAGO.UnitContextMenu.Init()
         if not IMAGOSaved or not IMAGOSaved.enabled then return end
         if not rootDescription or type(rootDescription.CreateButton) ~= "function" then return end
 
-        -- Immer dynamisches Ziel; vermeidet veraltete Tokens zwischen Menü öffnen und Klick.
+        -- Always a dynamic target; avoids stale tokens between menu open and click.
         local unit = "target"
         if not UnitExists(unit) or UnitIsPlayer(unit) then return end
 

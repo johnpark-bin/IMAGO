@@ -1,6 +1,6 @@
 -- ============================================================
 -- IMAGO — core/Locale_ruRU.lua
--- Russische Lokalisierung (UI-Chrome nur — Lore bleibt EN/DE)
+-- Russian localization (UI chrome only — lore stays EN/DE)
 -- ============================================================
  
 IMAGO = IMAGO or {}
@@ -9,7 +9,7 @@ IMAGO.LocaleData = IMAGO.LocaleData or {}
 local L = {}
 IMAGO.LocaleData.ruRU = L
  
--- UI-Texte (übersetzt)
+-- UI texts (translated)
 L["WINDOW_TITLE"]                   = "Хроники Незабытых"
 L["UNDISCOVERED"]                   = "Не известно"
 L["UNDISCOVERED_LORE"]              = "Найдите этого персонажа, чтобы раскрыть его судьбу."

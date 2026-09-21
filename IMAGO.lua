@@ -1,6 +1,6 @@
 -- ============================================================
--- IMAGO — Die Welt hat eine Geschichte.
--- IMAGO.lua — Hauptdatei: Init, Events, Koordination & Scanner
+-- IMAGO — The world has a story.
+-- IMAGO.lua — Main file: init, events, coordination & scanner
 -- ============================================================
 
 IMAGO = IMAGO or {}
@@ -33,7 +33,7 @@ local defaults = {
     closeOnCombat = true,
     enableBreakContact = true,
     breakContactDistance = 50,
-    -- Debug: Chat-Ausgabe bei Zonen-Checks (raw vs. aufgelöste uiMapID)
+    -- Debug: chat output for zone checks (raw vs. resolved uiMapID)
     debugMap      = false,
     -- Mode Toggle
     encyclopediaMode = false,
@@ -44,7 +44,7 @@ local defaults = {
 }
 
 -- ============================================================
--- HILFSFUNKTIONEN
+-- HELPER FUNCTIONS
 -- ============================================================
 
 local DEV_PLAYERS = {
@@ -65,7 +65,7 @@ function IMAGO.IsDeveloper()
 end
 
 
---- Liefert den NPC-Datensatz für einen Slug aus der kategorisierten Datenbank.
+--- Returns the NPC record for a slug from the categorized database.
 function IMAGO.GetNPCData(slug)
     if not IMAGOdb or not IMAGOdb.npcs or not slug then return nil end
     for cat, entries in pairs(IMAGOdb.npcs) do
@@ -76,7 +76,7 @@ function IMAGO.GetNPCData(slug)
     return nil
 end
 
---- Baut den Reverse-Lookup (NPC-ID → Slug) für alle Kategorien auf.
+--- Builds the reverse lookup (NPC ID → slug) for all categories.
 function IMAGO.BuildReverseLookup()
     if not IMAGOdb or not IMAGOdb.npcs then return end
     IMAGOdb.idToSlug = {}
@@ -95,17 +95,17 @@ function IMAGO.BuildReverseLookup()
     end
 end
 
---- Liefert die NPC-ID und den Typ aus einer GUID (sicher gegen Secret Strings).
+--- Returns the NPC ID and type from a GUID (safe against secret strings).
 function IMAGO.GetNPCIDFromGUID(guid)
     if not guid then return nil, nil end
     
-    -- Ab WoW 11.0 (Retail) ist dies der sicherste Weg für "Secret Strings"
+    -- Since WoW 11.0 (Retail) this is the safest way for "secret strings"
     if C_CreatureInfo and C_CreatureInfo.GetCreatureIDFromGUID then
         local npcID = C_CreatureInfo.GetCreatureIDFromGUID(guid)
         if npcID then return npcID, "Creature" end
     end
 
-    -- Fallback für ältere Versionen oder falls obiges fehlschlägt
+    -- Fallback for older versions or if the above fails
     local ok, cType, _, _, _, _, npcIDStr = pcall(strsplit, "-", guid)
     if ok and cType then
         local isNPC = false
@@ -115,7 +115,7 @@ function IMAGO.GetNPCIDFromGUID(guid)
     return nil, nil
 end
 
---- Fügt einen Eintrag zur Historie hinzu (maximal 50 Einträge).
+--- Adds an entry to the history (max 50 entries).
 function IMAGO.AddToHistory(entry)
     IMAGOSaved.history = IMAGOSaved.history or {}
     table.insert(IMAGOSaved.history, 1, entry)
@@ -125,7 +125,7 @@ function IMAGO.AddToHistory(entry)
 end
 
 -- ============================================================
--- DAS SCANNER-MODUL
+-- THE SCANNER MODULE
 -- ============================================================
 IMAGO.Scanner = {}
 
@@ -176,7 +176,7 @@ function IMAGO.Scanner.DiscoverNPC(npcID, questName)
             end
         end
 
-        -- Era-Discovery prüfen
+        -- Check era discovery
         local eraSlug = IMAGOdb.eraByNPCSlug and IMAGOdb.eraByNPCSlug[slug]
         if eraSlug and not (IMAGOSaved.seenEras or {})[eraSlug] then
             local eData = IMAGOdb.eras and IMAGOdb.eras[eraSlug]
@@ -209,7 +209,7 @@ function IMAGO.Scanner.SweepQuestUnlocks()
 end
 
 local lastNPCID = nil
--- Letzter verarbeiteter Zonen-Schlüssel: "c:<uiMapID>" = IMAGO-Zone, "r:<uiMapID>" = nur Rohtabellen-ID
+-- Last processed zone key: "c:<uiMapID>" = IMAGO zone, "r:<uiMapID>" = raw table ID only
 local lastZoneKey = nil
 local zoneCheckNilRetries = 0
 local ZONE_CHECK_NIL_MAX = 12
@@ -217,7 +217,7 @@ local ZONE_CHECK_NIL_MAX = 12
 function IMAGO.Scanner.EnsureZoneProgressTables()
     if not IMAGOSaved then return end
     IMAGOSaved.seenZones = IMAGOSaved.seenZones or {}
-    -- String-Keys aus älteren Saves in echte uiMapID-Zahlen übernehmen
+    -- Migrate string keys from older saves to real uiMapID numbers
     local sz = IMAGOSaved.seenZones
     local toMigrate = {}
     for k, v in pairs(sz) do
@@ -242,7 +242,7 @@ function IMAGO.Scanner.EnsureZoneProgressTables()
     IMAGOSaved.discoveredZones = IMAGOSaved.seenZones
 end
 
---- WoW-Checkbuttons liefern oft 1/nil statt true/false — für zuverlässige Logik normalisieren.
+--- WoW checkbuttons often return 1/nil instead of true/false — normalize for reliable logic.
 function IMAGO.Scanner.IsShowOnceOnlyEnabled(type)
     if not IMAGOSaved then return false end
     local v
@@ -263,7 +263,7 @@ function IMAGO.Scanner.IsZoneMarkedSeen(zoneId)
     return not not (IMAGOSaved.seenZones[n] or IMAGOSaved.seenZones[tostring(n)])
 end
 
---- Liefert die erste uiMapID auf dem Pfad (inkl. Start) mit Eintrag in IMAGOdb.zones, sonst nil.
+--- Returns the first uiMapID on the path (incl. start) with an entry in IMAGOdb.zones, else nil.
 function IMAGO.Scanner.ResolveTrackedZoneMapID(uiMapID)
     if not uiMapID or type(uiMapID) ~= "number" or not IMAGOdb or not IMAGOdb.zones then
         return nil
@@ -290,9 +290,9 @@ function IMAGO.Scanner.CheckNPC()
         return 
     end
 
-    -- Während Combat Lockdown können Unit-GUIDs als „Secret Strings“ vorliegen;
-    -- jede String-Operation (z. B. strsplit) würde dann fehlschlagen. Lore-Popup
-    -- ist hier ohnehin nicht zuverlässig aktualisierbar.
+    -- During combat lockdown, unit GUIDs may be "secret strings";
+    -- any string operation (e.g. strsplit) would then fail. The lore popup
+    -- cannot be updated reliably here anyway.
     if InCombatLockdown() then
         return
     end
@@ -334,9 +334,9 @@ function IMAGO.Scanner.CheckZone()
     local canonicalMapID = IMAGO.Scanner.ResolveTrackedZoneMapID(rawMapID)
     local key = canonicalMapID and ("c:" .. tostring(canonicalMapID)) or ("r:" .. tostring(rawMapID))
 
-    -- Nach /reload ist lastZoneKey nil: ohne Seeding würde DiscoverZone erneut laufen.
-    -- Wenn die Zone schon in seenZones steht und „nur einmal“ aktiv ist, Zustand angleichen
-    -- und kein redundantes Popup auslösen.
+    -- After /reload, lastZoneKey is nil: without seeding, DiscoverZone would run again.
+    -- If the zone is already in seenZones and "only once" is active, align the state
+    -- and do not fire a redundant popup.
     if lastZoneKey == nil and canonicalMapID and IMAGO.Scanner.IsShowOnceOnlyEnabled("zone")
         and IMAGO.Scanner.IsZoneMarkedSeen(canonicalMapID) then
         lastZoneKey = key
@@ -374,7 +374,7 @@ function IMAGO.Scanner.CheckInstance() end
 function IMAGO.Scanner.CheckEncounter(id) end
 
 -- ============================================================
--- ZONEN-SCANNER & AUTO-POPUP
+-- ZONE SCANNER & AUTO-POPUP
 -- ============================================================
 
 function IMAGO.Scanner.DiscoverZone(mapID)
@@ -438,7 +438,7 @@ function IMAGO.CreateMinimapButton()
     
     local function UpdatePosition()
         local angle = math.rad(IMAGOSaved.minimapPos or 220)
-        -- HIER DER FIX: Radius dynamisch berechnen (Minimap-Breite / 2 + Puffer)
+        -- THE FIX: calculate the radius dynamically (minimap width / 2 + buffer)
         local radius = (Minimap:GetWidth() / 2) + 5 
         local x = math.cos(angle) * radius
         local y = math.sin(angle) * radius
@@ -473,7 +473,7 @@ function IMAGO.CreateMinimapButton()
         dragFrame:SetScript("OnUpdate", nil)
     end)
 
-    -- Tooltip beim Hovern
+    -- Tooltip on hover
     dragFrame:SetScript("OnEnter", function(self)
         GameTooltip:SetOwner(self, "ANCHOR_BOTTOMLEFT")
         GameTooltip:AddLine(IMAGO.L["MINIMAP_TOOLTIP_TITLE"], 1, 0.85, 0.1)
@@ -486,7 +486,7 @@ function IMAGO.CreateMinimapButton()
         GameTooltip:Hide()
     end)
 
-    -- Reagiert auf UI-Skalierung und Änderungen am Edit-Mode
+    -- Reacts to UI scale and Edit Mode changes
     dragFrame:SetScript("OnEvent", UpdatePosition)
     UpdatePosition()
     
@@ -499,7 +499,7 @@ function IMAGO.CreateMinimapButton()
 end
 
 -- ============================================================
--- FEATURE: "WUSSTEST DU SCHON?"
+-- FEATURE: "DID YOU KNOW?"
 -- ============================================================
 local function ShowLoginFact()
     if not IMAGOSaved.enabled then return end
@@ -710,7 +710,7 @@ hooksecurefunc(WorldMapFrame, "OnMapChanged", InjectIMAGOMapButton)
 WorldMapFrame:HookScript("OnShow", InjectIMAGOMapButton)
 
 -- ============================================================
--- EVENTS & INITIALISIERUNG
+-- EVENTS & INITIALIZATION
 -- ============================================================
 local initFrame = CreateFrame("Frame")
 initFrame:RegisterEvent("ADDON_LOADED")
@@ -792,7 +792,7 @@ function IMAGO.Init()
     end
     IMAGOSaved.viewedNPCs = IMAGOSaved.viewedNPCs or {}
     
-    -- Normalisierung der Booleans
+    -- Normalize the booleans
     IMAGOSaved.enabled = (IMAGOSaved.enabled == true or IMAGOSaved.enabled == 1)
     IMAGOSaved.showOnceOnlyNPC = (IMAGOSaved.showOnceOnlyNPC == true or IMAGOSaved.showOnceOnlyNPC == 1)
     IMAGOSaved.showOnceOnlyZone = (IMAGOSaved.showOnceOnlyZone == true or IMAGOSaved.showOnceOnlyZone == 1)
@@ -804,7 +804,7 @@ function IMAGO.Init()
     IMAGOSaved.hideMinimap = (IMAGOSaved.hideMinimap == true or IMAGOSaved.hideMinimap == 1)
     IMAGOSaved.debugMap = (IMAGOSaved.debugMap == true or IMAGOSaved.debugMap == 1)
 
-    -- Locale initialisieren (liest IMAGOSaved.language Override)
+    -- Initialize locale (reads IMAGOSaved.language override)
     if IMAGO.Locale.Init then IMAGO.Locale.Init() end
 
     IMAGO.isDeveloper = IMAGO.IsDeveloper()
@@ -854,7 +854,7 @@ function IMAGO.Init()
         IMAGOSaved.migratedSlugSuffix = true
     end
 
-    -- Era-Unlock-NPC Reverse-Lookup aufbauen
+    -- Build era-unlock NPC reverse lookup
     IMAGOdb.eraByNPCSlug = {}
     for eraSlug, eraData in pairs(IMAGOdb.eras or {}) do
         if eraData.unlock_npc and eraData.unlock_npc ~= "" then
@@ -958,7 +958,7 @@ function IMAGO.Init()
             
         elseif msg == "map" then
             if not isDev then return end
-            -- DAS ULTIMATIVE DEV-TOOL FÜR ZONEN-IDS
+            -- THE ULTIMATE DEV TOOL FOR ZONE IDS
             local mapID = C_Map.GetBestMapForUnit("player")
             if mapID then
                 local mapInfo = C_Map.GetMapInfo(mapID)
@@ -992,7 +992,7 @@ function IMAGO.Init()
         elseif msg == "unlockall" then
             if not isDev then return end
             local count = 0
-            -- 1. NPCs freischalten
+            -- 1. Unlock NPCs
             for cat, entries in pairs(IMAGOdb.npcs or {}) do
                 if type(entries) == "table" then
                     for slug, _ in pairs(entries) do
@@ -1005,7 +1005,7 @@ function IMAGO.Init()
                 end
             end
             
-            -- 2. Zonen freischalten
+            -- 2. Unlock zones
             for mapID, _ in pairs(IMAGOdb.zones or {}) do
                 if not IMAGOSaved.seenZones[mapID] then
                     IMAGOSaved.seenZones[mapID] = true
@@ -1013,11 +1013,11 @@ function IMAGO.Init()
                 end
             end
             
-            -- Output im Chat
+            -- Output in chat
             local successMsg = IMAGO.L["CMD_UNLOCKALL_SUCCESS"] and string.format(IMAGO.L["CMD_UNLOCKALL_SUCCESS"], count) or string.format("|cFF9370DB[IMAGO]|r Alle Archive geöffnet. %d neue Einträge entschlüsselt.", count)
             print(successMsg)
             
-            -- UI sofort aktualisieren, falls offen
+            -- Refresh the UI immediately if open
             if IMAGO.Chronicle and IMAGO.Chronicle.frame and IMAGO.Chronicle.frame:IsShown() then
                 IMAGO.Chronicle.UpdateList()
             end
@@ -1106,7 +1106,7 @@ function IMAGO.Locale.Init()
     if locale == "deDE" then targetL = L_DE
     elseif locale == "ruRU" then targetL = L_RU
     end
-    -- Fallback: Wenn Schlüssel fehlen, aus EN holen
+    -- Fallback: pull missing keys from EN
     for k, v in pairs(L_EN) do
         IMAGO.L[k] = targetL[k] or v
     end

@@ -1,6 +1,6 @@
 -- ============================================================
 -- IMAGO — core/Display.lua
--- Die kinoreife Titelkarte: Einblenden, halten, ausblenden
+-- The cinematic title card: fade in, hold, fade out
 -- ============================================================
 
 IMAGO.Display = {}
@@ -236,7 +236,7 @@ function IMAGO.Display.CreateFrame()
 
     attachProgressFontString(f)
 
-    -- Kein UIPanelCloseButtonTemplate: in manchen Clients nicht als inherit verfügbar.
+    -- No UIPanelCloseButtonTemplate: not available as an inherit in some clients.
     f.closeButton = CreateFrame("Button", nil, f)
     f.closeButton:SetSize(28, 28)
     f.closeButton:SetPoint("TOPRIGHT", f, "TOPRIGHT", -4, -4)
@@ -384,7 +384,7 @@ function IMAGO.Display.Show(title, bodyText, category, isNew, npcSlug)
     local totalHeight = paddingTop + titleHeight + spacing + bodyHeight + progressBlock + paddingBottom
     f:SetHeight(math.max(115, totalHeight))
 
-    -- Timer-Logik für automatisches Schließen
+    -- Timer logic for automatic closing
     if closeTimer then closeTimer:Cancel(); closeTimer = nil end
     if not IMAGOSaved.noMainLoreTimerClose then
         closeTimer = C_Timer.After(30, function()

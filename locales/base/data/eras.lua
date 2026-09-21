@@ -1,11 +1,11 @@
 ﻿-- ============================================================
 -- IMAGO — locales/base/data/eras.lua  (enUS fallback)
--- 4-Tab-Schema: summary, fastFacts, campaigns, patches, keyFigures
--- NPC-Links via {npc:slug_midnight} in Texten (werden lila eingefärbt).
+-- 4-tab schema: summary, fastFacts, campaigns, patches, keyFigures
+-- NPC links via {npc:slug_midnight} in texts (rendered in purple).
 -- ============================================================
 
 -- ============================================================
--- MIDNIGHT  (vollständige Daten)
+-- MIDNIGHT  (complete data)
 -- ============================================================
 IMAGOdb.eras["midnight"].name       = "World of Warcraft: Midnight"
 IMAGOdb.eras["midnight"].logoPath   = "Interface\\AddOns\\IMAGO\\Media\\Eras\\Logos\\midnight_logo.tga"
@@ -15,7 +15,7 @@ IMAGOdb.eras["midnight"].antagonist = "Xal'atath"
 IMAGOdb.eras["midnight"].conflict   = "Defense of the Sunwell"
 IMAGOdb.eras["midnight"].year       = 2026
 
--- TAB 1: OVERVIEW — Zusammenfassung + Fast Facts
+-- TAB 1: OVERVIEW — summary + fast facts
 IMAGOdb.eras["midnight"].summary =
     "Xal'atath's plans have come to fruition and the blood elves of Silvermoon bear witness to a massive " ..
     "Voidstorm breaching the skies above the Sunwell. The Harbinger of the Void seeks to corrupt its holy " ..
@@ -29,7 +29,7 @@ IMAGOdb.eras["midnight"].fastFacts = {
     bigQuestion  = "Will the Sunwell endure as Quel'Thalas' lifeline - or become the Void's most devastating weapon against all of Azeroth?",
 }
 
--- TAB 2: CAMPAIGNS & REGIONS — Startzonen mit Karten-Overlays
+-- TAB 2: CAMPAIGNS & REGIONS — starting zones with map overlays
 IMAGOdb.eras["midnight"].campaigns = {
     {
         heading      = "Call of the Light",
@@ -380,7 +380,7 @@ IMAGOdb.eras["midnight"].campaigns = {
     },
 }
 
--- TAB 3: PATCHES & NEW HORIZONS — Chronologische Patch-Timeline
+-- TAB 3: PATCHES & NEW HORIZONS — chronological patch timeline
 IMAGOdb.eras["midnight"].patches = {
     {
         version  = "12.0.7",
@@ -434,7 +434,7 @@ IMAGOdb.eras["midnight"].patches = {
     },
 }
 
--- TAB 4: KEY FIGURES — Hybrid (slug + era-spezifischer Blurb)
+-- TAB 4: KEY FIGURES — hybrid (slug + era-specific blurb)
 IMAGOdb.eras["midnight"].keyFigures = {
     { slug="lorthemar_theron_midnight", arcLabel="Last Bastion of Defense",                    blurb="The leader of the blood elves was in charge of the defense of Quel'Thalas. He compromised and fought hard, and eventually saw his nation survive." },
     { slug="lady_liadrin_midnight",     arcLabel="Mender of Bridges",                          blurb="Summoned the Vanguard of the Light and forged a tentative alliance with the Amani, breaking a cycle of hatred that lasted for thousands of years." },
@@ -445,7 +445,7 @@ IMAGOdb.eras["midnight"].keyFigures = {
 }
 
 -- ============================================================
--- THE WAR WITHIN  (vollständige Daten)
+-- THE WAR WITHIN  (complete data)
 -- ============================================================
 IMAGOdb.eras["the_war_within"].name       = "World of Warcraft: The War Within"
 IMAGOdb.eras["the_war_within"].logoPath   = "Interface\\AddOns\\IMAGO\\Media\\Eras\\Logos\\the_war_within_logo.tga"

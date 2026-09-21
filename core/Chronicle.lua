@@ -1,6 +1,6 @@
 -- ============================================================
 -- IMAGO — core/Chronicle.lua
--- Die Chronik: 10/10 Cinematic UI, Dashboard, Search & Filter
+-- The Chronicle: 10/10 cinematic UI, dashboard, search & filter
 -- ============================================================
 
 IMAGO.Chronicle = IMAGO.Chronicle or {}
@@ -32,37 +32,37 @@ end
 local LAYOUT = IMAGO.LAYOUT
 
 local eraColors = {
-    ["Ancient"]   = {0.85, 0.65, 0.13},     -- Titanen-Bronze (Schöpfung/Alte Götter)
-    ["Pre-WC1"]   = {0.60, 0.10, 0.10},     -- Blut-Rot (Orc-Invasion/Erster Krieg)
-    ["WC1"]       = {0.60, 0.10, 0.10},     -- Blut-Rot (Orc-Invasion/Erster Krieg)
-    ["Pre-WC2"]   = {0.10, 0.30, 0.80},     -- Lordaeron-Blau (Allianz/Zweiter Krieg)
-    ["WC2"]       = {0.10, 0.30, 0.80},     -- Lordaeron-Blau (Allianz/Zweiter Krieg)
-    ["Pre-WC3"]   = {0.45, 0.80, 0.20},     -- Seuchen-Grün (Die Geißel/Dritter Krieg)
-    ["WC3"]       = {0.45, 0.80, 0.20},     -- Seuchen-Grün (Die Geißel/Dritter Krieg)
-    ["Pre-Classic"]   = {0.7, 0.7, 0.7},        -- Neutrales Stein-Grau (Alte Welt)
-    ["Classic"]   = {0.7, 0.7, 0.7},        -- Neutrales Stein-Grau (Alte Welt)
-    ["Pre-TBC"]   = {0.12, 1.0, 0.0},       -- Dunkleres Wald/Teufelsgrün (Scherbenwelt)
-    ["TBC"]       = {0.12, 1.0, 0.0},       -- Dunkleres Wald/Teufelsgrün (Scherbenwelt)
-    ["Pre-WotLK"] = {0.0, 0.8, 1.0},        -- Frost-Blau (Eiskrone/Arthas)
-    ["WotLK"]     = {0.0, 0.8, 1.0},        -- Frost-Blau (Eiskrone/Arthas)
-    ["Pre-Cata"]  = {1.0, 0.27, 0.0},       -- Magma-Rot (Todesschwinge)
-    ["Cata"]      = {1.0, 0.27, 0.0},       -- Magma-Rot (Todesschwinge)
-    ["Pre-MoP"]   = {0.0, 1.0, 0.59},       -- Jade-Grün (Pandaria)
-    ["MoP"]       = {0.0, 1.0, 0.59},       -- Jade-Grün (Pandaria)
-    ["Pre-WoD"]   = {0.77, 0.12, 0.23},     -- Eisenhorden-Dunkelrot (Grommash)
-    ["WoD"]       = {0.77, 0.12, 0.23},     -- Eisenhorden-Dunkelrot (Grommash)
-    ["Pre-Legion"]= {0.19, 1.0, 0.0},       -- STECHENDES TEUFELSGRÜN (Brennende Legion)
-    ["Legion"]    = {0.19, 1.0, 0.0},       -- STECHENDES TEUFELSGRÜN (Brennende Legion)
-    ["Pre-BfA"]   = {1.0, 0.82, 0.0},       -- Azerit-Gold (Herz von Azeroth)
-    ["BfA"]       = {1.0, 0.82, 0.0},       -- Azerit-Gold (Herz von Azeroth)
-    ["Pre-SL"]    = {0.64, 0.21, 0.93},     -- Anima-Violett (Schattenlande)
-    ["SL"]        = {0.64, 0.21, 0.93},     -- Anima-Violett (Schattenlande)
-    ["Pre-DF"]    = {1.0, 0.49, 0.04},      -- Aspekt-Bernstein (Drachenschwarm)
-    ["DF"]        = {1.0, 0.49, 0.04},      -- Aspekt-Bernstein (Drachenschwarm)
-    ["Pre-TWW"]   = {0.0, 0.8, 1.0},        -- Strahlendes Blau (Der Ruf des Lichts)
-    ["TWW"]       = {0.0, 0.8, 1.0},        -- Strahlendes Blau (Der Ruf des Lichts)
-    ["Pre-MN"]    = {IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3]},       -- Tiefes Leeren-Violett (Xal'atath)
-    ["Midnight"]  = {IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3]},       -- Tiefes Leeren-Violett (Xal'atath)
+    ["Ancient"]   = {0.85, 0.65, 0.13},     -- Titanic bronze (Creation/Old Gods)
+    ["Pre-WC1"]   = {0.60, 0.10, 0.10},     -- Blood red (orc invasion/First War)
+    ["WC1"]       = {0.60, 0.10, 0.10},     -- Blood red (orc invasion/First War)
+    ["Pre-WC2"]   = {0.10, 0.30, 0.80},     -- Lordaeron blue (Alliance/Second War)
+    ["WC2"]       = {0.10, 0.30, 0.80},     -- Lordaeron blue (Alliance/Second War)
+    ["Pre-WC3"]   = {0.45, 0.80, 0.20},     -- Plague green (the Scourge/Third War)
+    ["WC3"]       = {0.45, 0.80, 0.20},     -- Plague green (the Scourge/Third War)
+    ["Pre-Classic"]   = {0.7, 0.7, 0.7},        -- Neutral stone gray (old world)
+    ["Classic"]   = {0.7, 0.7, 0.7},        -- Neutral stone gray (old world)
+    ["Pre-TBC"]   = {0.12, 1.0, 0.0},       -- Darker forest/fel green (Outland)
+    ["TBC"]       = {0.12, 1.0, 0.0},       -- Darker forest/fel green (Outland)
+    ["Pre-WotLK"] = {0.0, 0.8, 1.0},        -- Frost blue (Icecrown/Arthas)
+    ["WotLK"]     = {0.0, 0.8, 1.0},        -- Frost blue (Icecrown/Arthas)
+    ["Pre-Cata"]  = {1.0, 0.27, 0.0},       -- Magma red (Deathwing)
+    ["Cata"]      = {1.0, 0.27, 0.0},       -- Magma red (Deathwing)
+    ["Pre-MoP"]   = {0.0, 1.0, 0.59},       -- Jade green (Pandaria)
+    ["MoP"]       = {0.0, 1.0, 0.59},       -- Jade green (Pandaria)
+    ["Pre-WoD"]   = {0.77, 0.12, 0.23},     -- Iron Horde dark red (Grommash)
+    ["WoD"]       = {0.77, 0.12, 0.23},     -- Iron Horde dark red (Grommash)
+    ["Pre-Legion"]= {0.19, 1.0, 0.0},       -- PIERCING FEL GREEN (Burning Legion)
+    ["Legion"]    = {0.19, 1.0, 0.0},       -- PIERCING FEL GREEN (Burning Legion)
+    ["Pre-BfA"]   = {1.0, 0.82, 0.0},       -- Azerite gold (Heart of Azeroth)
+    ["BfA"]       = {1.0, 0.82, 0.0},       -- Azerite gold (Heart of Azeroth)
+    ["Pre-SL"]    = {0.64, 0.21, 0.93},     -- Anima violet (Shadowlands)
+    ["SL"]        = {0.64, 0.21, 0.93},     -- Anima violet (Shadowlands)
+    ["Pre-DF"]    = {1.0, 0.49, 0.04},      -- Aspect amber (dragonflights)
+    ["DF"]        = {1.0, 0.49, 0.04},      -- Aspect amber (dragonflights)
+    ["Pre-TWW"]   = {0.0, 0.8, 1.0},        -- Radiant blue (the call of the Light)
+    ["TWW"]       = {0.0, 0.8, 1.0},        -- Radiant blue (the call of the Light)
+    ["Pre-MN"]    = {IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3]},       -- Deep void violet (Xal'atath)
+    ["Midnight"]  = {IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3]},       -- Deep void violet (Xal'atath)
 }
 
 IMAGO.Chronicle.ranks = IMAGO.Chronicle.ranks or {}
@@ -216,7 +216,7 @@ function IMAGO.Chronicle.ShowCinematic(npcData, callback)
     cf.name:SetText(npcData and npcData.name or "")
     cf.sub:SetText(IMAGO.L["CINEMATIC_CONTINUE"])
 
-    -- FIX: Wieder SetCreature mit sicherem Cache-Reload Timer
+    -- FIX: SetCreature again with a safe cache-reload timer
     cf.model:ClearModel()
     local modelID = GetValidModelID(npcData)
     if modelID then 
@@ -252,7 +252,7 @@ function IMAGO.Chronicle.ShowCinematic(npcData, callback)
 end
 
 -- ============================================================
--- DAS HAUPTFENSTER
+-- THE MAIN WINDOW
 -- ============================================================
 function IMAGO.Chronicle.CreateFrame()
     if IMAGO.Chronicle.frame then return end
@@ -270,7 +270,7 @@ function IMAGO.Chronicle.CreateFrame()
     f:SetScript("OnDragStop", f.StopMovingOrSizing)
     f:Hide()
 
-    -- ESC zum Schließen ermöglichen
+    -- Allow ESC to close
     table.insert(UISpecialFrames, "IMAGOChronicleFrame")
 
     local backdropDefault = {
@@ -308,7 +308,7 @@ function IMAGO.Chronicle.CreateFrame()
         if IMAGO.Chronicle.SetBackEnabled then IMAGO.Chronicle.SetBackEnabled(false) end
     end)
 
-    -- 1. NEU: Header-Hintergrund (Verdunkelt den oberen Bereich für mehr Fokus)
+    -- 1. NEW: Header background (darkens the top area for more focus)
     f.headerBg = f:CreateTexture(nil, "BACKGROUND")
     f.headerBg:SetPoint("TOPLEFT", f, "TOPLEFT", 4, -4)
     f.headerBg:SetPoint("TOPRIGHT", f, "TOPRIGHT", -4, -4)
@@ -320,7 +320,7 @@ function IMAGO.Chronicle.CreateFrame()
         f.headerBg:SetGradient("VERTICAL", CreateColor(0, 0, 0, 0.7), CreateColor(0, 0, 0, 0))
     end
 
-    -- 2. NEU: Trennlinie unter dem Titel (Schneidet Header vom Inhalt ab)
+    -- 2. NEW: Divider under the title (separates header from content)
     f.headerLine = f:CreateTexture(nil, "ARTWORK")
     f.headerLine:SetPoint("TOPLEFT", f, "TOPLEFT", 4, -49)
     f.headerLine:SetPoint("TOPRIGHT", f, "TOPRIGHT", -4, -49)
@@ -328,12 +328,12 @@ function IMAGO.Chronicle.CreateFrame()
     f.headerLine:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
     f.headerLine:SetGradient("HORIZONTAL", CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0), CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.4))
 
-    -- 3. Der Titel selbst (Minimal größer & mit Gravur-Schatten)
+    -- 3. The title itself (slightly larger & with engraved shadow)
     f.title = f:CreateFontString(nil, "OVERLAY")
-    f.title:SetFont(FONT_TITLE, 24, "OUTLINE") -- Von 22 auf 24 vergrößert für mehr Präsenz
+    f.title:SetFont(FONT_TITLE, 24, "OUTLINE") -- Increased from 22 to 24 for more presence
     f.title:SetPoint("TOP", f, "TOP", 0, -16)
     f.title:SetTextColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3])
-    f.title:SetShadowColor(0, 0, 0, 1) -- NEU: Der Drop-Shadow
+    f.title:SetShadowColor(0, 0, 0, 1) -- NEW: The drop shadow
     f.title:SetShadowOffset(2, -2)
     f.title:SetText("IMAGO — " .. (IMAGO.L["WINDOW_TITLE"] or "Chronik der Unvergessenen"))
 
@@ -387,9 +387,9 @@ function IMAGO.Chronicle.CreateFrame()
 
     local btnText = f.filterBtn:GetFontString()
     if btnText then
-        -- Zwingt den Text, 15 Pixel schmaler zu sein als der Button selbst
+        -- Forces the text to be 15px narrower than the button itself
         btnText:SetWidth(f.filterBtn:GetWidth() - 15) 
-        -- Verhindert Zeilenumbrüche und aktiviert automatisch das "..." am Ende
+        -- Prevents line wraps and automatically enables the trailing "..."
         btnText:SetWordWrap(false) 
     end
     
@@ -518,7 +518,7 @@ function IMAGO.Chronicle.CreateFrame()
     f.sidebar.zonesHeader:Hide()
 
     -- ============================================================
-    -- RECHTE SEITE: DAS DETAIL-FRAME
+    -- RIGHT SIDE: THE DETAIL FRAME
     -- ============================================================
     f.detailFrame = CreateFrame("Frame", nil, f, "BackdropTemplate")
     f.detailFrame:SetPoint("TOPLEFT", f.sidebar, "TOPRIGHT", LAYOUT.CONTENT_PADDING_LEFT, 0)
@@ -526,7 +526,7 @@ function IMAGO.Chronicle.CreateFrame()
     f.detailFrame:SetBackdrop((IMAGOSaved and IMAGOSaved.opaqueUI) and detailBackdropOpaque or detailBackdropDefault)
     f.detailFrame:SetBackdropColor(IMAGO_COLORS.BG_MAIN[1], IMAGO_COLORS.BG_MAIN[2], IMAGO_COLORS.BG_MAIN[3], (IMAGOSaved and IMAGOSaved.opaqueUI) and 1.0 or 0.95)
 
-    -- NEU: Das Fraktions-Icon (Fix für den aktuellen Fehler!)
+    -- NEW: The faction icon (fix for the current bug!)
     f.factionIcon = f.detailFrame:CreateTexture(nil, "ARTWORK")
     f.factionIcon:SetSize(50, 50)
     f.factionIcon:SetPoint("TOPRIGHT", f.detailFrame, "TOPRIGHT", -20, -10)
@@ -537,7 +537,7 @@ function IMAGO.Chronicle.CreateFrame()
     IMAGO.ApplyTextStyle(f.detailTitle, "DISPLAY")
     f.detailTitle:SetPoint("TOP", f.detailFrame, "TOP", 0, -15)
 
-    -- Die Zierlinien unter dem Titel
+    -- The decorative lines under the title
     f.detailLineLeft = f.detailFrame:CreateTexture(nil, "ARTWORK")
     f.detailLineLeft:SetSize(355, 1)
     f.detailLineLeft:SetPoint("TOPRIGHT", f.detailTitle, "BOTTOM", 0, -8)
@@ -550,10 +550,10 @@ function IMAGO.Chronicle.CreateFrame()
     f.detailLineRight:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
     f.detailLineRight:SetGradient("HORIZONTAL", CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.7), CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0))
 
-    -- Zonen-Elemente (Bild, Rahmen, Trenner)
+    -- Zone elements (image, border, divider)
     f.detailImage = f.detailFrame:CreateTexture(nil, "ARTWORK")
-    f.detailImage:SetSize(760, 200) -- Breites Panorama-Format
-    f.detailImage:SetPoint("TOP", f.detailFrame, "TOP", 0, -70) -- Mittig zentriert
+    f.detailImage:SetSize(760, 200) -- Wide panorama format
+    f.detailImage:SetPoint("TOP", f.detailFrame, "TOP", 0, -70) -- Centered
     f.detailImage:SetTexCoord(0, 1, 0.195, 0.805)
     f.detailImage:Hide()
 
@@ -661,9 +661,9 @@ function IMAGO.Chronicle.CreateFrame()
     f.detailModel = CreateFrame("PlayerModel", nil, f.detailFrame)
     f.detailModel:SetSize(280, 400)
     f.detailModel:SetPoint("TOPLEFT", f.detailFrame, "TOPLEFT", 10, -80)
-    -- Kein Rahmen - Modell steht frei im Raum
+    -- No border - the model floats freely
 
-    -- Animation-Switcher Buttons
+    -- Animation switcher buttons
     f.detailModel.animButtons = {}
     local anims = {
         {id=3, label="St", name="Static"},
@@ -688,7 +688,7 @@ function IMAGO.Chronicle.CreateFrame()
         btn:SetPoint("BOTTOMLEFT", 8 + (i-1)*24, 8)
         btn.animId = anim.id
 
-        -- Hintergrund
+        -- Background
         btn.bg = btn:CreateTexture(nil, "BACKGROUND")
         btn.bg:SetAllPoints()
         btn.bg:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
@@ -719,9 +719,9 @@ function IMAGO.Chronicle.CreateFrame()
 
     f.detailModel.UpdateAnimButtons = UpdateAnimButtons
 
-    -- OnShow Animation starten
+    -- Start OnShow animation
     f.detailModel:SetScript("OnShow", function(self)
-        self:SetAnimation(0) -- Stand als Default
+        self:SetAnimation(0) -- Idle as default
         if self.UpdateAnimButtons then
             self.UpdateAnimButtons(0)
         end
@@ -774,20 +774,20 @@ function IMAGO.Chronicle.CreateFrame()
     f.startPage = CreateFrame("Frame", nil, f.detailFrame)
     f.startPage:SetAllPoints()
 
-    -- 1. HEADER: Das Logo (isoliert)
+    -- 1. HEADER: The logo (isolated)
     f.startPage.logo = f.startPage:CreateTexture(nil, "ARTWORK")
     f.startPage.logo:SetSize(140, 140) 
     f.startPage.logo:SetPoint("TOP", f.startPage, "TOP", 0, -55)
     f.startPage.logo:SetTexture("Interface\\AddOns\\IMAGO\\Media\\Logo.tga")
 
-    -- Horizontale Trennlinie, um das Logo vom Rest der Daten abzuschneiden
+    -- Horizontal divider to separate the logo from the rest of the data
     f.startPage.logoLine = f.startPage:CreateTexture(nil, "ARTWORK")
     f.startPage.logoLine:SetSize(520, 1)
     f.startPage.logoLine:SetPoint("TOP", f.startPage.logo, "BOTTOM", 0, -5)
     f.startPage.logoLine:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
     f.startPage.logoLine:SetGradient("HORIZONTAL", CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0), CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.5))
 
-    -- 2. HERO SECTION: Der aktuelle Rang
+    -- 2. HERO SECTION: The current rank
     f.startPage.rankLabel = f.startPage:CreateFontString(nil, "OVERLAY")
     IMAGO.ApplyTextStyle(f.startPage.rankLabel, "NAV_ITEM", IMAGO_COLORS.GOLD_MUTED)
     f.startPage.rankLabel:SetPoint("TOP", f.startPage.logoLine, "BOTTOM", 0, -30)
@@ -796,15 +796,15 @@ function IMAGO.Chronicle.CreateFrame()
     IMAGO.ApplyTextStyle(f.startPage.rankName, "RANK_TITLE")
     f.startPage.rankName:SetPoint("TOP", f.startPage.rankLabel, "BOTTOM", 0, -8)
 
-    -- 3. ZWEI-SPALTEN-LAYOUT: Die Meilensteine
-    -- Vertikale Trennlinie in der Mitte
+    -- 3. TWO-COLUMN LAYOUT: The milestones
+    -- Vertical divider in the middle
     f.startPage.vLine = f.startPage:CreateTexture(nil, "ARTWORK")
     f.startPage.vLine:SetSize(1, 200)
     f.startPage.vLine:SetPoint("TOP", f.startPage.rankName, "BOTTOM", 0, -35)
     f.startPage.vLine:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
     f.startPage.vLine:SetGradient("VERTICAL", CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.3), CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0))
 
-    -- LINKE SPALTE (Erreichtes - Rechtsbündig ausgerichtet)
+    -- LEFT COLUMN (achieved - right-aligned)
     f.startPage.completedLabel = f.startPage:CreateFontString(nil, "OVERLAY")
     IMAGO.ApplyTextStyle(f.startPage.completedLabel, "NAV_ITEM", IMAGO_COLORS.GOLD)
     f.startPage.completedLabel:SetPoint("TOPRIGHT", f.startPage.vLine, "TOPLEFT", -20, 0)
@@ -829,50 +829,50 @@ function IMAGO.Chronicle.CreateFrame()
     f.hintPage:SetAllPoints()
     f.hintPage:Hide()
 
-    -- 1. Ein unsichtbarer Ankerpunkt, an TOP orientiert mit 100px Abstand nach unten
+    -- 1. An invisible anchor point, oriented to TOP with a 100px offset downward
     f.hintPage.centerAnchor = CreateFrame("Frame", nil, f.hintPage)
     f.hintPage.centerAnchor:SetPoint("TOP", f.detailFrame, "TOP", 0, -200)
     f.hintPage.centerAnchor:SetSize(1, 1)
 
-    -- 2. Die Void-Aura (Pulsierend, im Hintergrund)
+    -- 2. The void aura (pulsing, in the background)
     f.hintPage.aura = f.hintPage:CreateTexture(nil, "BACKGROUND")
-    f.hintPage.aura:SetSize(300, 300) -- Etwas größer als das Original
+    f.hintPage.aura:SetSize(300, 300) -- Slightly larger than the original
     f.hintPage.aura:SetPoint("CENTER", f.hintPage.centerAnchor, "CENTER", 0, 0)
     f.hintPage.aura:SetTexture("Interface\\AddOns\\IMAGO\\Media\\undiscovered.tga") 
-    f.hintPage.aura:SetVertexColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3]) -- Magisches Gold
+    f.hintPage.aura:SetVertexColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3]) -- Magic gold
 
     local agAura = f.hintPage.aura:CreateAnimationGroup()
     local fadeOut = agAura:CreateAnimation("Alpha")
     fadeOut:SetFromAlpha(0.8)
     fadeOut:SetToAlpha(0.2)
-    fadeOut:SetDuration(2.5) -- Atmet langsam aus
+    fadeOut:SetDuration(2.5) -- Breathes out slowly
     fadeOut:SetOrder(1)
     fadeOut:SetSmoothing("IN_OUT")
     local fadeIn = agAura:CreateAnimation("Alpha")
     fadeIn:SetFromAlpha(0.2)
     fadeIn:SetToAlpha(0.8)
-    fadeIn:SetDuration(2.5) -- Atmet langsam ein
+    fadeIn:SetDuration(2.5) -- Breathes in slowly
     fadeIn:SetOrder(2)
     fadeIn:SetSmoothing("IN_OUT")
     agAura:SetLooping("REPEAT")
     agAura:Play()
 
-    -- 3. Die Void-Silhouette (Statisch, fest verankert)
+    -- 3. The void silhouette (static, firmly anchored)
     f.hintPage.icon = f.hintPage:CreateTexture(nil, "ARTWORK")
     f.hintPage.icon:SetSize(250, 250) 
     f.hintPage.icon:SetPoint("CENTER", f.hintPage.centerAnchor, "CENTER", 0, 0)
     f.hintPage.icon:SetTexture("Interface\\AddOns\\IMAGO\\Media\\undiscovered.tga")
-    -- Reduziert die Deckkraft auf 75%, damit es geisterhafter wirkt
+    -- Reduces opacity to 75% for a more ghostly look
     f.hintPage.icon:SetAlpha(0.4)
 
-    -- 4. Der Warn-Text (Fließt jetzt wieder sauber unter dem Icon mit)
+    -- 4. The warning text (flows cleanly below the icon again)
     f.hintPage.warning = f.hintPage:CreateFontString(nil, "OVERLAY")
     f.hintPage.warning:SetFont(FONT_BODY, 15, "OUTLINE")
     f.hintPage.warning:SetPoint("TOP", f.hintPage.icon, "BOTTOM", 0, -20)
     f.hintPage.warning:SetTextColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3])
     f.hintPage.warning:SetText(IMAGO.L["HINT_IDENTITY_HIDDEN"])
 
-    -- 5. Die Beschreibung
+    -- 5. The description
     f.hintPage.desc = f.hintPage:CreateFontString(nil, "OVERLAY")
     f.hintPage.desc:SetFont(FONT_BODY, 14)
     f.hintPage.desc:SetPoint("TOP", f.hintPage.warning, "BOTTOM", 0, -15)
@@ -957,7 +957,7 @@ function IMAGO.Chronicle.CreateFrame()
         btn:Show()
     end
     -- ==========================================
-    -- CONFIRM DIALOG (wiederverwendbar)
+    -- CONFIRM DIALOG (reusable)
     -- ==========================================
     f.confirmDialog = CreateFrame("Frame", nil, f, "BackdropTemplate")
     f.confirmDialog:SetSize(320, 130)
@@ -1061,14 +1061,14 @@ function IMAGO.Chronicle.CreateFrame()
     f.modeDropdown.entryExplorer = CreateDropdownEntry(f.modeDropdown, IMAGO.L["MODE_EXPLORER"], -5, false)
     f.modeDropdown.entryEncyclopedia = CreateDropdownEntry(f.modeDropdown, IMAGO.L["MODE_ENCYCLOPEDIA"], -27, true)
 
-    -- Explorer: sofort umschalten
+    -- Explorer: switch immediately
     f.modeDropdown.entryExplorer:SetScript("OnClick", function()
         IMAGOSaved.encyclopediaMode = false
         f.modeDropdown:Hide()
         IMAGO.Chronicle.UpdateList()
     end)
 
-    -- Enzyklopädie: erst Bestätigung
+    -- Encyclopedia: confirmation first
     f.modeDropdown.entryEncyclopedia:SetScript("OnClick", function()
         if IMAGOSaved.encyclopediaMode then
             f.modeDropdown:Hide()
@@ -1142,7 +1142,7 @@ function IMAGO.Chronicle.CreateFrame()
         if not prev then return end
 
         if prev.type == "eras" then
-            -- Zurück zum Eras-Tab mit gespeichertem Zustand
+            -- Back to the Eras tab with saved state
             IMAGO.Chronicle.SelectMainTab(3)
             if IMAGO.Eras and IMAGO.Eras.OpenToEra then
                 IMAGO.Eras.OpenToEra(prev.erasSlug, prev.erasSubTab, prev.erasScrollY)
@@ -1179,7 +1179,7 @@ function IMAGO.Chronicle.CreateFrame()
         end
     end
 
-    -- Dropdown bei Klick außerhalb schließen
+    -- Close dropdown on outside click
     f:HookScript("OnMouseDown", function()
         if f.modeDropdown:IsShown() then f.modeDropdown:Hide() end
     end)
@@ -1187,7 +1187,7 @@ function IMAGO.Chronicle.CreateFrame()
     f.UpdateModeBtn = UpdateModeBtn
 
     -- ==-- ==========================================
-    -- NEU: HAUPT-REITER (BOTTOM TABS) LOKALISIERT
+    -- NEW: MAIN TABS (BOTTOM TABS) LOCALIZED
     -- ==========================================
     f.numTabs = 5
     local tabNames = {IMAGO.L["TAB_FATES"], IMAGO.L["TAB_ZONES"], IMAGO.L["TAB_ERAS"], IMAGO.L["TAB_INSTANCES"], IMAGO.L["TAB_CREDITS"]}
@@ -1209,7 +1209,7 @@ function IMAGO.Chronicle.CreateFrame()
     end
 
     -- ==========================================
-    -- NEU: DER "COMING SOON" SCREEN
+    -- NEW: THE "COMING SOON" SCREEN
     -- ==========================================
     f.comingSoonPage = CreateFrame("Frame", nil, f)
     f.comingSoonPage:SetAllPoints()
@@ -1241,7 +1241,7 @@ function IMAGO.Chronicle.CreateFrame()
     f.comingSoonPage.desc:SetSpacing(8)
 
     -- ==========================================
-    -- EXPANSION GRID — Fates Tab Startseite
+    -- EXPANSION GRID — Fates tab home page
     -- ==========================================
     f.expansionGrid = CreateFrame("Frame", nil, f)
     f.expansionGrid:SetPoint("TOPLEFT",     f, "TOPLEFT",      8, -50)
@@ -1486,13 +1486,13 @@ function IMAGO.Chronicle.CreateFrame()
     end
 
     -- ==========================================
-    -- NEU: LOGIK ZUM WECHSELN DER TABS (LOKALISIERT)
+    -- NEW: TAB SWITCHING LOGIC (LOCALIZED)
     -- ==========================================
     function IMAGO.Chronicle.SelectMainTab(index)
         PanelTemplates_SetTab(f, index) 
         f.activeTabIndex = index 
         
-        -- RESET: Alles auf der rechten Seite SICHER verstecken
+        -- RESET: Safely hide everything on the right side
         if f.detailTitle then f.detailTitle:Hide() end
         if f.detailLineLeft then f.detailLineLeft:Hide() end
         if f.detailLineRight then f.detailLineRight:Hide() end
@@ -1504,7 +1504,7 @@ function IMAGO.Chronicle.CreateFrame()
         if f.hintPage then f.hintPage:Hide() end
         if f.startPage then f.startPage:Hide() end
         if f.detailImage then f.detailImage:Hide() end
-        if f.detailImageBorder then f.detailImageBorder:Hide() end -- NEU: Rahmen verstecken
+        if f.detailImageBorder then f.detailImageBorder:Hide() end -- NEW: hide the border
         if f.detailSeparator then f.detailSeparator:Hide() end
         
         if f.detailImage then f.detailImage:Hide() end
@@ -1524,7 +1524,7 @@ function IMAGO.Chronicle.CreateFrame()
                 IMAGO.Eras.ClearHistory()
             end
             if index == 1 and not f.activeExpansion then
-                -- Fates: Expansion-Grid anzeigen
+                -- Fates: show expansion grid
                 f.searchBox:Hide(); f.filterBtn:Hide()
                 f.sidebar:Hide(); f.detailFrame:Hide()
                 if f.sidebar.zonesHeader then f.sidebar.zonesHeader:Hide() end
@@ -1532,9 +1532,9 @@ function IMAGO.Chronicle.CreateFrame()
                     f.expansionGrid.RefreshCounts()
                     f.expansionGrid:Show()
                 end
-                IMAGO.Chronicle.UpdateList()  -- Footer aktualisieren
+                IMAGO.Chronicle.UpdateList()  -- Update footer
             else
-                -- Tab 1 mit Expansion oder Tab 2 (Zonen)
+                -- Tab 1 with expansion or tab 2 (zones)
                 f.searchBox:SetShown(index == 1)
                 f.filterBtn:SetShown(index == 1)
                 if index == 1 and f.expansionBackBtn then f.expansionBackBtn:Show() end
@@ -1558,7 +1558,7 @@ function IMAGO.Chronicle.CreateFrame()
             end
             IMAGO.Eras.ShowDashboard()
         elseif index == 4 then
-            -- Haupt-UI verstecken (Für Instanzen-Tab)
+            -- Hide main UI (for the instances tab)
             f.searchBox:Hide()
             f.filterBtn:Hide()
             f.sidebar:Hide()
@@ -1567,31 +1567,31 @@ function IMAGO.Chronicle.CreateFrame()
             f.comingSoonPage.title:SetText(IMAGO.L["COMING_SOON_INSTANCES_TITLE"])
             f.comingSoonPage.desc:SetText(IMAGO.L["COMING_SOON_INSTANCES_DESC"])
             f.comingSoonPage:Show()
-            -- Eras-Frames verstecken
+            -- Hide Eras frames
             if IMAGO.Eras and IMAGO.Eras.frame then
                 IMAGO.Eras.frame.wrapper:Hide()
             end
         elseif index == 5 then
-            -- Credits-Tab
+            -- Credits tab
             f.searchBox:Hide()
             f.filterBtn:Hide()
             f.sidebar:Hide()
             f.detailFrame:Hide()
             f.comingSoonPage:Hide()
-            -- Eras-Frames verstecken
+            -- Hide Eras frames
             if IMAGO.Eras and IMAGO.Eras.frame then
                 IMAGO.Eras.frame.wrapper:Hide()
             end
             
             if not f.creditsPage then
-                -- Statischer Header-Bereich (nicht scrollbar)
+                -- Static header area (not scrollable)
                 f.creditsHeader = CreateFrame("Frame", nil, f)
                 f.creditsHeader:SetSize(f:GetWidth(), 250)
                 f.creditsHeader:SetPoint("TOP", f, "TOP", 0, 0)
 
                 f.creditsHeader.logo = f.creditsHeader:CreateTexture(nil, "ARTWORK")
                 f.creditsHeader.logo:SetSize(100, 100)
-                f.creditsHeader.logo:SetPoint("TOP", 0, -85) -- Weiter nach unten versetzt
+                f.creditsHeader.logo:SetPoint("TOP", 0, -85) -- Shifted further down
                 f.creditsHeader.logo:SetTexture("Interface\\AddOns\\IMAGO\\Media\\Logo.tga")
 
                 f.creditsHeader.title = f.creditsHeader:CreateFontString(nil, "OVERLAY")
@@ -1616,28 +1616,28 @@ function IMAGO.Chronicle.CreateFrame()
                 f.creditsHeader.topHint:SetTextColor(IMAGO_COLORS.TEXT_MUTED[1], IMAGO_COLORS.TEXT_MUTED[2], IMAGO_COLORS.TEXT_MUTED[3])
                 f.creditsHeader.topHint:SetJustifyH("CENTER")
 
-                -- Elegante goldene Trennlinie (Gradient)
+                -- Elegant golden divider (gradient)
                 f.creditsHeader.separator = f.creditsHeader:CreateTexture(nil, "ARTWORK")
                 f.creditsHeader.separator:SetSize(400, 1)
                 f.creditsHeader.separator:SetPoint("TOP", f.creditsHeader.topHint, "BOTTOM", 0, -20)
                 f.creditsHeader.separator:SetTexture("Interface\\ChatFrame\\ChatFrameBackground")
                 f.creditsHeader.separator:SetGradient("HORIZONTAL", CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0), CreateColor(IMAGO_COLORS.GOLD[1], IMAGO_COLORS.GOLD[2], IMAGO_COLORS.GOLD[3], 0.4))
 
-                -- Nur die Namensliste ist scrollbar
+                -- Only the name list is scrollable
                 f.creditsPage = CreateFrame("ScrollFrame", "IMAGOCreditsScrollFrame", f, "UIPanelScrollFrameTemplate")
-                f.creditsPage:SetPoint("TOPLEFT", f.creditsHeader, "BOTTOMLEFT", 0, -40) -- Von -10 auf -40 erhöht
+                f.creditsPage:SetPoint("TOPLEFT", f.creditsHeader, "BOTTOMLEFT", 0, -40) -- Increased from -10 to -40
                 f.creditsPage:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", 0, 50)
                 
                 local content = CreateFrame("Frame", nil, f.creditsPage)
-                content:SetSize(f:GetWidth(), 1) -- Volle Breite für perfekte Zentrierung
+                content:SetSize(f:GetWidth(), 1) -- Full width for perfect centering
                 f.creditsPage:SetScrollChild(content)
                 f.creditsPage.content = content
 
-                -- Scrollbar Styling & Positionierung
+                -- Scrollbar styling & positioning
                 if _G[f.creditsPage:GetName().."ScrollBar"] then
                     local sb = _G[f.creditsPage:GetName().."ScrollBar"]
                     sb:ClearAllPoints()
-                    sb:SetPoint("TOPRIGHT", f.creditsPage, "TOPRIGHT", -15, 0) -- Scrollbar bündig oben
+                    sb:SetPoint("TOPRIGHT", f.creditsPage, "TOPRIGHT", -15, 0) -- Scrollbar flush at the top
                     sb:SetPoint("BOTTOMRIGHT", f.creditsPage, "BOTTOMRIGHT", -15, 0)
                     sb:SetWidth(10)
                     for _, res in ipairs({sb:GetRegions()}) do
@@ -1686,17 +1686,17 @@ function IMAGO.Chronicle.CreateFrame()
                     {name = "Kittywulfe", roles = "Tester"},
                 }
 
-                local yOffset = -40 -- Mehr Platz nach der Trennlinie
+                local yOffset = -40 -- More space after the divider
                 local spacing = 25
                 for i, person in ipairs(contributors) do
                     local entry = content:CreateFontString(nil, "OVERLAY")
                     
                     if person.top then
-                        -- Edles Gold für Top-Mitglieder
+                        -- Noble gold for top members
                         entry:SetFont(FONT_BODY, 16, "OUTLINE")
                         entry:SetText(string.format("|cFFC8A84B%s|r  |cFFD4AF37(%s)|r", person.name, person.roles))
                     else
-                        -- Dezentes Silber für alle anderen
+                        -- Subtle silver for everyone else
                         entry:SetFont(FONT_BODY, 14, "")
                         entry:SetText(string.format("|cFFC0C0C0%s|r  |cFF888888(%s)|r", person.name, person.roles))
                     end
@@ -1824,7 +1824,7 @@ function IMAGO.Chronicle.RenderTimeline()
     end
     f.timelineContainer:Show()
 
-    -- Alle vorherigen Elemente verstecken (pairs für sparse tables)
+    -- Hide all previous elements (pairs for sparse tables)
     for _, fs in pairs(f.timelineContainer.eras) do fs:Hide() end
     for _, fs in pairs(f.timelineContainer.texts) do fs:Hide() end
     for _, div in pairs(f.timelineContainer.dividers) do div:Hide() end
@@ -1841,7 +1841,7 @@ function IMAGO.Chronicle.RenderTimeline()
     local dividerW = math.max(320, contentW - 60)
 
     for i, entry in ipairs(data.timeline) do
-        -- Dezente Trennlinie vor jedem Eintrag (außer dem ersten)
+        -- Subtle divider before each entry (except the first)
         if i > 1 then
             local divider = f.timelineContainer.dividers[i]
             if not divider then
@@ -1884,7 +1884,7 @@ function IMAGO.Chronicle.RenderTimeline()
             entry.text or "", selfSlug, nil, sharedNPCLinks, sharedZoneLinks
         )
 
-        -- Midnight Spoiler-Schutz
+        -- Midnight spoiler protection
         local isMidnight = (entry.era == "Midnight")
         local npcSlug = f.selectedNPCSlug or ""
         IMAGOSaved.revealedMidnight = IMAGOSaved.revealedMidnight or {}
@@ -1893,7 +1893,7 @@ function IMAGO.Chronicle.RenderTimeline()
         if isMidnight and not isRevealed then
             local L = IMAGO.L
             txt:SetText("[" .. L["SPOILER_MIDNIGHT_TITLE"] .. "] — " .. L["SPOILER_MIDNIGHT_HINT"])
-            txt:SetTextColor(IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3]) -- Midnight-Leeren-Violett
+            txt:SetTextColor(IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3]) -- Midnight void violet
             txt.realText = linkedEntryText
             txt.npcSlug = npcSlug
             txt.isSpoiler = true
@@ -1915,7 +1915,7 @@ function IMAGO.Chronicle.RenderTimeline()
                     GameTooltip:SetText("⚠️ " .. L["SPOILER_TOOLTIP_TITLE"], IMAGO_COLORS.DANGER[1], IMAGO_COLORS.DANGER[2], IMAGO_COLORS.DANGER[3])
                     GameTooltip:AddLine(L["SPOILER_TOOLTIP_DESC"], IMAGO_COLORS.TEXT_SECONDARY[1], IMAGO_COLORS.TEXT_SECONDARY[2], IMAGO_COLORS.TEXT_SECONDARY[3])
                     GameTooltip:Show()
-                    -- Hover-Effekt: Text heller
+                    -- Hover effect: brighter text
                     self:SetTextColor(IMAGO_COLORS.VOID[1], IMAGO_COLORS.VOID[2], IMAGO_COLORS.VOID[3])
                 end
             end)
@@ -1956,14 +1956,14 @@ function IMAGO.Chronicle.UpdateList()
     local activeTab = f.activeTabIndex or 1
     local yOffset = 4
 
-    -- 1. Alles ausblenden, um einen sauberen Start zu garantieren
+    -- 1. Hide everything to guarantee a clean start
     for _, b in pairs(IMAGO.Chronicle.buttons or {}) do b:Hide() end
     for _, h in pairs(IMAGO.Chronicle.headers or {}) do h:Hide() end
     for _, zb in pairs(IMAGO.Chronicle.zoneButtons or {}) do zb:Hide() end
     if IMAGO.Chronicle.homeBtn then IMAGO.Chronicle.homeBtn:Hide() end
 
     -- ============================================================
-    -- CLEANUP: Versteckt Custom-Buttons, bevor neue Tabs laden
+    -- CLEANUP: Hides custom buttons before new tabs load
     -- ============================================================
     if f.sidebar.zonesHeader then
         f.sidebar.zonesHeader:Hide()
@@ -2414,12 +2414,12 @@ function IMAGO.Chronicle.UpdateList()
                                 local modelID = GetValidModelID(npc.data)
                                 if modelID then 
                                     f.detailModel:SetCreature(modelID)
-                                    -- Animation nach kurzer Verzögerung starten (Modell muss laden)
+                                    -- Start animation after a short delay (model must load)
                                     C_Timer.After(0.2, function()
                                         if f.detailModel:IsShown() then 
                                             f.detailModel:SetCreature(modelID)
                                             f.detailModel:SetAnimation(0)
-                                            -- Buttons auf Stand zurücksetzen
+                                            -- Reset buttons to idle
                                             if f.detailModel.UpdateAnimButtons then
                                                 f.detailModel.UpdateAnimButtons(0)
                                             end
@@ -2495,9 +2495,9 @@ function IMAGO.Chronicle.UpdateList()
                             f.detailLineRight:Show()
                             f.hintPage:Show()
                             
-                            -- NPC-PHANTOM: Aura wieder einschalten und Icon zurücksetzen
+                            -- NPC PHANTOM: re-enable aura and reset icon
                             IMAGO.Chronicle.SetDetailAction(nil)
-                            f.hintPage.aura:Show() -- HIER WIRD SIE WIEDER AKTIVIERT!
+                            f.hintPage.aura:Show() -- THIS IS WHERE IT GETS RE-ENABLED!
                             f.hintPage.warning:SetText(IMAGO.L["HINT_IDENTITY_HIDDEN"] or "IDENTITÄT VERBORGEN")
                             f.hintPage.icon:SetTexture("Interface\\AddOns\\IMAGO\\Media\\undiscovered.tga")
                             f.hintPage.icon:SetTexCoord(0, 1, 0, 1)
@@ -2542,7 +2542,7 @@ function IMAGO.Chronicle.UpdateList()
         end 
 
     -- ============================================================
-    -- TAB 2: ZONEN DER ERINNERUNG
+    -- TAB 2: ZONES OF MEMORY
     -- ============================================================
     elseif activeTab == 2 then
         if f.sidebar.zonesHeader then f.sidebar.zonesHeader:Show() end
@@ -2565,7 +2565,7 @@ function IMAGO.Chronicle.UpdateList()
 
         f.startPage.rankLabel:SetText(IMAGO.L["STARTPAGE_ZONES_RANK"])
         f.startPage.rankName:SetText(rankTitle)
-        f.startPage.completedLabel:SetText(IMAGO.L["STARTPAGE_COMPLETED"]) -- Wiederverwendung des existierenden Strings!
+        f.startPage.completedLabel:SetText(IMAGO.L["STARTPAGE_COMPLETED"]) -- Reusing the existing string!
         f.startPage.nextLabel:SetText(IMAGO.L["STARTPAGE_ZONES_NEXT"])
 
         local completedRanksStr, nextRanksStr = "", ""
@@ -2900,8 +2900,8 @@ function IMAGO.Chronicle.OpenToZoneMapID(mapID)
     return true
 end
 
---- Chronik öffnen (Tab Schicksale), Liste vorbereiten und dieselbe Logik wie ein Klick auf den NPC ausführen.
---- opts.skipDiscoveryCinematic: Entdeckungs-Zwischensequenz überspringen (z. B. Kontextmenü).
+--- Opens the Chronicle (Fates tab), prepares the list, and runs the same logic as a click on the NPC.
+--- opts.skipDiscoveryCinematic: skip the discovery cinematic (e.g. context menu).
 function IMAGO.Chronicle.OpenToNPCSlug(slug, opts)
     opts = opts or {}
     if type(slug) ~= "string" or slug == "" or not IMAGO.GetNPCData(slug) then
@@ -2917,7 +2917,7 @@ function IMAGO.Chronicle.OpenToNPCSlug(slug, opts)
     -- Push current page onto nav stack before navigating away.
     -- Skip if navigating back, or already on this NPC.
     if opts.fromEras then
-        -- Navigation kommt vom Eras-Tab: Stack leeren, Eras-Entry mit Zustand pushen
+        -- Navigation comes from the Eras tab: clear the stack, push an Eras entry with state
         wipe(navStack)
         table.insert(navStack, {
             type        = "eras",
