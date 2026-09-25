@@ -660,8 +660,8 @@ IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].lore = [[프레이야는 창조된 �
 IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].zones = {"하란다르"}
 IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].timeline = IMAGOdb.timelines.FREYA_KO
 
-IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].name = "이트리그"
-IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].aliases = {"이트리그"}
+IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].name = "아이트리그"
+IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].aliases = {"아이트리그"}
 IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].race = "오크"
 IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].lore = "무수한 전투의 노장으로 호드 역사 가장 중요한 오크 중 하나이며, 무고한 자에게 무수한 공포가 저질러진 과거 암흑 시대를 기억하는 몇 안 되는 이 중 하나다. 드레노어의 옛 호드를 위해 싸웠고 오늘날 아제로스의 새 호드를 위해 싸우며, 두 종족의 수년 전쟁 뒤 인간 티리온 폴드링과 유대를 맺었다. 대족장 시절 스랄과 가로쉬의 조언자로 일했고 필요할 때 후자와 실바나스 윈드러너에 맞서 일어났다. 마침내 명예가 누구에게서나 올 수 있음의 상징으로 로서의 아들에 받아들여졌다."
 IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].zones = {"불타는 평원", "아칸티나",  "아라시 고원", "실버문"}
