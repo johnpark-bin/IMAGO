@@ -165,8 +165,11 @@ L["CREDITS_ROLE_TESTER"]            = "테스터"
 -- 한밤 스포일러 보호
 L["SPOILER_MIDNIGHT_TITLE"]         = "한밤 사건"
 L["SPOILER_MIDNIGHT_HINT"]          = "클릭하여 표시"
+L["SPOILER_TWW_TITLE"]              = "내부 전쟁 사건"
+L["SPOILER_TWW_HINT"]               = "클릭하여 표시"
 L["SPOILER_TOOLTIP_TITLE"]          = "스포일러"
 L["SPOILER_TOOLTIP_DESC"]           = "확장팩 \"한밤\""
+L["SPOILER_TOOLTIP_DESC_TWW"]       = "확장팩 \"내부 전쟁\""
 
 -- 모드 전환
 L["MODE_LABEL"]                     = "모드"
