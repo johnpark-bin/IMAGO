@@ -28,7 +28,7 @@ IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["anduin_wrynn_tww"].lore = [[지배. 그 단�
 그것은 나락의 지옥에 끌려가 실바나스 윈드러너와 간수 조바알의 포로가 되기 전이었다. 지배당해 동맹과 친구를 공격하고 해치도록 강요당했고, 지키고자 싸운 세상을 파멸시키려는 조바알의 계획에 손을 빌렸다. 동료와 불굴의 의지 덕에 마침내 풀려났으나 자신의 생각과 간수의 명령을 더는 구분하지 못했다. 저지른 일에 죄책감에 시달린 안두인은 스톰윈드 왕국을 투랄리온 손에 맡기고 세상에서 사라졌다.
 
 5년이 흘렀으나 시간이 안두인을 치유하지 못했다. 더는 빛을 부르지 못하고 여전히 무너지고 낙담한 채 광휘의 노래를 듣기 시작했다. 언제나처럼 옳은 일을 하고 도움이 필요한 이를 돕고자 하리라. 그러나 자신을 믿지 못하는데 어떻게 남에게 믿음을 불어넣겠는가?]]
-IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["anduin_wrynn_tww"].zones = {"실리더스", "달라란", "도르노갈", "돈 섬", "할로우폴", "아즈카헤트"}
+IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["anduin_wrynn_tww"].zones = {"실리타스", "달라란", "도르노갈", "돈 섬", "할로우폴", "아즈카헤트"}
 -- 출처 유지
 IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["anduin_wrynn_tww"].timeline = IMAGOdb.timelines.ANDUIN_WRYNN_KO
 
@@ -36,7 +36,7 @@ IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["anduin_wrynn_tww"].timeline = IMAGOdb.timeli
 IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["magni_bronzebeard_tww"].name = "마그니 브론즈비어드"
 IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["magni_bronzebeard_tww"].aliases = {"The Speaker of Azeroth", "Magni", "마그니"}
 IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["magni_bronzebeard_tww"].race = "드워프"
-IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["magni_bronzebeard_tww"].lore = [[불타는 군단의 3차 침공 이래 아제로스는 대변자 마그니 브론즈비어드를 통해 백성과 소통했다. 살아 있는 수정으로 변한 아이언포지 전 왕은 새로운 위협이 닥칠 때마다 부름에 응해 아제로스 용사와 함께 어떤 수단으로든 세상을 지켰다.
+IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["magni_bronzebeard_tww"].lore = [[불타는 군단의 3차 침공 이래 아제로스는 대변자 마그니 브론즈비어드를 통해 백성과 소통했다. 살아 있는 수정으로 변한 아이언포 전 왕은 새로운 위협이 닥칠 때마다 부름에 응해 아제로스 용사와 함께 어떤 수단으로든 세상을 지켰다.
 
 그런데 정작 마그니가 광휘의 노래를 듣지 못한다. 환영이 아제로스에게서 온다는데 대변자는 한동안 침묵만 들었다.
 
@@ -50,10 +50,10 @@ IMAGOdb.npcs.CAT_DALARAN_SURVIVORS["magni_bronzebeard_tww"].timeline = IMAGOdb.t
 -- === CAT_HALLOWFALL_ARATHI ===
 
 -- FAERIN LOTHAR --
-IMAGOdb.npcs.CAT_HALLOWFALL_ARATHI["faerin_lothar_tww"].name = "파에린 로서"
+IMAGOdb.npcs.CAT_HALLOWFALL_ARATHI["faerin_lothar_tww"].name = "파에린 로사르"
 IMAGOdb.npcs.CAT_HALLOWFALL_ARATHI["faerin_lothar_tww"].aliases = {"Faerin", "파에린"}
 IMAGOdb.npcs.CAT_HALLOWFALL_ARATHI["faerin_lothar_tww"].race = "아라시"
-IMAGOdb.npcs.CAT_HALLOWFALL_ARATHI["faerin_lothar_tww"].lore = [[할로우폴 아라시는 외지인을 경계하는 편으로 먼 고향의 엄격한 전통을 물려받은 듯하다. 등불지기(아라시 성기사) 동료보다 훨씬 어린 파에린 로서는 세상을 훨씬 열린 마음으로 본다. 어릴 적 반항기 많은 아이로서 할로우폴행 비행선에 몰래 탔다가 지하에서 인생 대부분을 보냈다.
+IMAGOdb.npcs.CAT_HALLOWFALL_ARATHI["faerin_lothar_tww"].lore = [[할로우폴 아라시는 외지인을 경계하는 편으로 먼 고향의 엄격한 전통을 물려받은 듯하다. 등불지기(아라시 성기사) 동료보다 훨씬 어린 파에린 로사르는 세상을 훨씬 열린 마음으로 본다. 어릴 적 반항기 많은 아이로서 할로우폴행 비행선에 몰래 탔다가 지하에서 인생 대부분을 보냈다.
 
 도착의 추락에 눈과 팔을 잃었으나 정신까지 잃지 않았다. 신성한 불꽃에 대한 파에린의 믿음은 여전히 밝게 타오르고, 할로우폴과 아즈카헤트의 어둠에 흔들림 없는 낙관으로 맞선다.]]
 IMAGOdb.npcs.CAT_HALLOWFALL_ARATHI["faerin_lothar_tww"].zones = {"할로우폴", "아즈카헤트", "도르노갈", "아라시 고원"}
