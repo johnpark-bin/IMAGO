@@ -624,8 +624,8 @@ IMAGOdb.npcs.CAT_NEUTRAL["king_mrgl-mrgl_midnight"].zones = {"줄아만"}
 IMAGOdb.npcs.CAT_NEUTRAL["king_mrgl-mrgl_midnight"].timeline = IMAGOdb.timelines.KING_MRGL_MRGL_KO
 
 -- MONTE GAZLOWE --
-IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].name = "몬테 가즐로"
-IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].aliases = {"Monte", "가즐로"}
+IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].name = "몬테 가즈로"
+IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].aliases = {"Monte", "가즈로"}
 IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].race = "고블린"
 IMAGOdb.npcs.CAT_NEUTRAL["monte_gazlowe_midnight"].lore = [[오그리마의 설계자이자 빌지워터 카르텔의 무역왕은 영향력이 주로 배경에 느껴져도 호드에서 가장 중요한 일원 중 하나다. 싸움꾼이 아니고 스스로 영웅이라 여기지 않으며 대부분 그저 또 다른 탐욕 고블린으로 본다.
 
@@ -660,8 +660,8 @@ IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].lore = [[프레이야는 창조된 �
 IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].zones = {"하란다르"}
 IMAGOdb.npcs.CAT_NEUTRAL["freya_midnight"].timeline = IMAGOdb.timelines.FREYA_KO
 
-IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].name = "에이트리그"
-IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].aliases = {"에이트리그"}
+IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].name = "이트리그"
+IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].aliases = {"이트리그"}
 IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].race = "오크"
 IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].lore = "무수한 전투의 노장으로 호드 역사 가장 중요한 오크 중 하나이며, 무고한 자에게 무수한 공포가 저질러진 과거 암흑 시대를 기억하는 몇 안 되는 이 중 하나다. 드레노어의 옛 호드를 위해 싸웠고 오늘날 아제로스의 새 호드를 위해 싸우며, 두 종족의 수년 전쟁 뒤 인간 티리온 폴드링과 유대를 맺었다. 대족장 시절 스랄과 가로쉬의 조언자로 일했고 필요할 때 후자와 실바나스 윈드러너에 맞서 일어났다. 마침내 명예가 누구에게서나 올 수 있음의 상징으로 로서의 아들에 받아들여졌다."
 IMAGOdb.npcs.CAT_NEUTRAL["eitrigg_midnight"].zones = {"불타는 평원", "아칸티나",  "아라시 고원", "실버문"}
